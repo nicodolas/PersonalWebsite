@@ -1,0 +1,533 @@
+{
+  "nodes": [
+    {
+      "id": "ReviewLecturers_HUIT",
+      "description": "An academic review platform helping HUIT students view and rate lecturers.",
+      "description_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
+      "group": "Next.js 16",
+      "size": 15,
+      "tech": [
+        "Next.js 16",
+        "Node.js",
+        "express.js",
+        "TypeScript",
+        "TanStack Query",
+        "Shadcn UI",
+        "PostgreSQL",
+        "Prisma",
+        "n8n"
+      ],
+      "isBackup": true
+    },
+    {
+      "id": "Milk-tea Web Shop",
+      "description": "E-commerce platform for a milk tea shop featuring online payment.",
+      "description_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
+      "group": "Node.js",
+      "size": 15,
+      "tech": [
+        "Node.js",
+        "express.js",
+        "Next.js",
+        "JavaScript",
+        "PostgreSQL",
+        "SePay",
+        "Netlify"
+      ],
+      "isBackup": true
+    },
+    {
+      "id": "Age Prediction App",
+      "description": "Real-time age and gender prediction application using AI.",
+      "description_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
+      "group": "React",
+      "size": 15,
+      "tech": [
+        "React",
+        "AI API",
+        "Async/Await"
+      ],
+      "isBackup": true
+    },
+    {
+      "id": "3D Portfolio",
+      "description": "Interactive 3D portfolio website with a playable character.",
+      "description_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
+      "group": "React",
+      "size": 15,
+      "tech": [
+        "React",
+        "Three.js",
+        "R3F",
+        "Zustand"
+      ],
+      "isBackup": true
+    },
+    {
+      "id": "nicodolas",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Others",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [],
+      "githubUrl": "https://github.com/nicodolas/nicodolas"
+    },
+    {
+      "id": "ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "group": "Others",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [],
+      "githubUrl": "https://github.com/nicodolas/ziwei-doushu"
+    },
+    {
+      "id": "Claw-OMX-9Router-AI",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Others",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [],
+      "githubUrl": "https://github.com/nicodolas/Claw-OMX-9Router-AI"
+    },
+    {
+      "id": "claw-code",
+      "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
+      "description_vi": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
+      "group": "Others",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [],
+      "githubUrl": "https://github.com/nicodolas/claw-code"
+    },
+    {
+      "id": "ai-smoke-detect",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/nicodolas/ai-smoke-detect"
+    },
+    {
+      "id": "frontend-milk-tea",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "TypeScript"
+      ],
+      "githubUrl": "https://github.com/nicodolas/frontend-milk-tea"
+    },
+    {
+      "id": "myroom",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "size": 12,
+      "tech": [
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/nicodolas/myroom"
+    },
+    {
+      "id": "Bigdata",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "Python"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Bigdata"
+    },
+    {
+      "id": "Demo-Cipher-O",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "HTML"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Demo-Cipher-O"
+    },
+    {
+      "id": "PHP_WebBanHoa",
+      "description": "Bán Ho",
+      "description_vi": "Bán Ho",
+      "group": "Blade",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "Blade"
+      ],
+      "githubUrl": "https://github.com/nicodolas/PHP_WebBanHoa"
+    },
+    {
+      "id": "FE-Smoke-AI-React",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/nicodolas/FE-Smoke-AI-React"
+    },
+    {
+      "id": "Demo-Cipher",
+      "description": "Nhom13",
+      "description_vi": "Nhom13",
+      "group": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "HTML"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Demo-Cipher"
+    },
+    {
+      "id": "IoTKhoaBaoMat",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "HTML"
+      ],
+      "githubUrl": "https://github.com/nicodolas/IoTKhoaBaoMat"
+    },
+    {
+      "id": "dongcuuanhoa",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "HTML"
+      ],
+      "githubUrl": "https://github.com/nicodolas/dongcuuanhoa"
+    },
+    {
+      "id": "Watchshopmanager",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "C#",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "C#"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Watchshopmanager"
+    },
+    {
+      "id": "ChatBot_NiFi",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/nicodolas/ChatBot_NiFi"
+    },
+    {
+      "id": "MobileWatchShop",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Dart",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "Dart"
+      ],
+      "githubUrl": "https://github.com/nicodolas/MobileWatchShop"
+    },
+    {
+      "id": "Kmeans_AdvisoryMajor",
+      "description": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
+      "description_vi": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
+      "group": "Python",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "Python"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Kmeans_AdvisoryMajor"
+    },
+    {
+      "id": "flowershop",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Handlebars",
+      "stars": 1,
+      "forks": 0,
+      "size": 12,
+      "tech": [
+        "Handlebars"
+      ],
+      "githubUrl": "https://github.com/nicodolas/flowershop"
+    },
+    {
+      "id": "Bookstoremanagement",
+      "description": "Đồ án quản lý nhà sách C# winform",
+      "description_vi": "Đồ án quản lý nhà sách C# winform",
+      "group": "C#",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "C#"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Bookstoremanagement"
+    },
+    {
+      "id": "Valk_Hub",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "Lua",
+      "stars": 0,
+      "forks": 0,
+      "size": 10,
+      "tech": [
+        "Lua"
+      ],
+      "githubUrl": "https://github.com/nicodolas/Valk_Hub"
+    },
+    {
+      "id": "flower_shop",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "HTML",
+      "stars": 1,
+      "forks": 0,
+      "size": 12,
+      "tech": [
+        "HTML"
+      ],
+      "githubUrl": "https://github.com/nicodolas/flower_shop"
+    },
+    {
+      "id": "SJF",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "C++",
+      "stars": 1,
+      "forks": 0,
+      "size": 12,
+      "tech": [
+        "C++"
+      ],
+      "githubUrl": "https://github.com/nicodolas/SJF"
+    },
+    {
+      "id": "RR",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "group": "C++",
+      "stars": 1,
+      "forks": 0,
+      "size": 12,
+      "tech": [
+        "C++"
+      ],
+      "githubUrl": "https://github.com/nicodolas/RR"
+    }
+  ],
+  "links": [
+    {
+      "source": "ReviewLecturers_HUIT",
+      "target": "Milk-tea Web Shop",
+      "label": "Both use Node.js"
+    },
+    {
+      "source": "ReviewLecturers_HUIT",
+      "target": "frontend-milk-tea",
+      "label": "Both use TypeScript"
+    },
+    {
+      "source": "Milk-tea Web Shop",
+      "target": "ai-smoke-detect",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Milk-tea Web Shop",
+      "target": "myroom",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Milk-tea Web Shop",
+      "target": "FE-Smoke-AI-React",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Milk-tea Web Shop",
+      "target": "ChatBot_NiFi",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Age Prediction App",
+      "target": "3D Portfolio",
+      "label": "Both use React"
+    },
+    {
+      "source": "nicodolas",
+      "target": "ziwei-doushu",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "nicodolas",
+      "target": "Claw-OMX-9Router-AI",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "nicodolas",
+      "target": "claw-code",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "ziwei-doushu",
+      "target": "Claw-OMX-9Router-AI",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "ziwei-doushu",
+      "target": "claw-code",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "Claw-OMX-9Router-AI",
+      "target": "claw-code",
+      "label": "Same group: Others"
+    },
+    {
+      "source": "ai-smoke-detect",
+      "target": "myroom",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "ai-smoke-detect",
+      "target": "FE-Smoke-AI-React",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "ai-smoke-detect",
+      "target": "ChatBot_NiFi",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "myroom",
+      "target": "FE-Smoke-AI-React",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "myroom",
+      "target": "ChatBot_NiFi",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Bigdata",
+      "target": "Kmeans_AdvisoryMajor",
+      "label": "Both use Python"
+    },
+    {
+      "source": "Demo-Cipher-O",
+      "target": "Demo-Cipher",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Demo-Cipher-O",
+      "target": "IoTKhoaBaoMat",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Demo-Cipher-O",
+      "target": "dongcuuanhoa",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Demo-Cipher-O",
+      "target": "flower_shop",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "FE-Smoke-AI-React",
+      "target": "ChatBot_NiFi",
+      "label": "Both use JavaScript"
+    },
+    {
+      "source": "Demo-Cipher",
+      "target": "IoTKhoaBaoMat",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Demo-Cipher",
+      "target": "dongcuuanhoa",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Demo-Cipher",
+      "target": "flower_shop",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "IoTKhoaBaoMat",
+      "target": "dongcuuanhoa",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "IoTKhoaBaoMat",
+      "target": "flower_shop",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "dongcuuanhoa",
+      "target": "flower_shop",
+      "label": "Both use HTML"
+    },
+    {
+      "source": "Watchshopmanager",
+      "target": "Bookstoremanagement",
+      "label": "Both use C#"
+    },
+    {
+      "source": "SJF",
+      "target": "RR",
+      "label": "Both use C++"
+    }
+  ]
+}

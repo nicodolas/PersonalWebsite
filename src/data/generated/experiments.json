@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.031Z",
+  "data": {
+    "experiments": [
+      {
+        "id": "review-lecturers",
+        "name": "ReviewLecturers_HUIT",
+        "problem": "An academic review platform helping HUIT students view and rate lecturers.",
+        "problem_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
+        "approach": "Built using Next.js 16, Node.js, express.js, TypeScript.",
+        "approach_vi": "Xây dựng bằng Next.js 16, Node.js, express.js, TypeScript.",
+        "outcome": "Successfully deployed and online at: https://reviewgiangvienhuit.vercel.app/",
+        "outcome_vi": "Triển khai thành công trực tuyến tại: https://reviewgiangvienhuit.vercel.app/",
+        "lessons_learned": [
+          "Built automated ETL data pipelines with n8n and Google Drive API",
+          "Optimized database query performance with Prisma and Postgres"
+        ],
+        "lessons_learned_vi": [
+          "Xây dựng data pipeline tự động (ETL) với n8n và Google Drive API",
+          "Tối ưu hiệu suất query database với Prisma và Postgres"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "milk-tea-shop",
+        "name": "Milk-tea Web Shop",
+        "problem": "E-commerce platform for a milk tea shop featuring online payment.",
+        "problem_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
+        "approach": "Built using Node.js, express.js, Next.js, JavaScript.",
+        "approach_vi": "Xây dựng bằng Node.js, express.js, Next.js, JavaScript.",
+        "outcome": "Successfully deployed and online at: https://htea-milk-tea.netlify.app/",
+        "outcome_vi": "Triển khai thành công trực tuyến tại: https://htea-milk-tea.netlify.app/",
+        "lessons_learned": [
+          "Designed complex relational database schema (membership tiers, orders)",
+          "Integrated QR Code payment gateway"
+        ],
+        "lessons_learned_vi": [
+          "Thiết kế cơ sở dữ liệu quan hệ phức tạp (hạng thành viên, đơn hàng)",
+          "Tích hợp cổng thanh toán QR Code"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "age-prediction",
+        "name": "Age Prediction App",
+        "problem": "Real-time age and gender prediction application using AI.",
+        "problem_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
+        "approach": "Built using React, AI API, Async/Await.",
+        "approach_vi": "Xây dựng bằng React, AI API, Async/Await.",
+        "outcome": "Successfully deployed and online at: https://dudoantuoi.netlify.app/",
+        "outcome_vi": "Triển khai thành công trực tuyến tại: https://dudoantuoi.netlify.app/",
+        "lessons_learned": [
+          "Handled asynchronous state smoothly for visual feedback",
+          "Visualized JSON analysis results intuitively"
+        ],
+        "lessons_learned_vi": [
+          "Xử lý state bất đồng bộ mượt mà cho visual feedback",
+          "Hiển thị kết quả phân tích JSON trực quan"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "portfolio-3d",
+        "name": "3D Portfolio",
+        "problem": "Interactive 3D portfolio website with a playable character.",
+        "problem_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
+        "approach": "Built using React, Three.js, R3F, Zustand.",
+        "approach_vi": "Xây dựng bằng React, Three.js, R3F, Zustand.",
+        "outcome": "Successfully deployed and online at: https://roofolio.vercel.app/",
+        "outcome_vi": "Triển khai thành công trực tuyến tại: https://roofolio.vercel.app/",
+        "lessons_learned": [
+          "Implemented mobile joystick and FPS controls",
+          "Optimized 3D rendering in browser"
+        ],
+        "lessons_learned_vi": [
+          "Điều khiển FPS và joystick trên mobile",
+          "Tối ưu render 3D trên trình duyệt"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "ziwei-doushu",
+        "name": "ziwei-doushu",
+        "problem": "Need to explore ziwei-doushu development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển ziwei-doushu.",
+        "approach": "Creating a workspace using code.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng mã nguồn.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "ai-smoke-detect",
+        "name": "ai-smoke-detect",
+        "problem": "Need to explore ai-smoke-detect development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển ai-smoke-detect.",
+        "approach": "Creating a workspace using JavaScript.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "myroom",
+        "name": "myroom",
+        "problem": "Need to explore myroom development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển myroom.",
+        "approach": "Creating a workspace using JavaScript.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "ChatBot_NiFi",
+        "name": "ChatBot_NiFi",
+        "problem": "Need to explore ChatBot_NiFi development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển ChatBot_NiFi.",
+        "approach": "Creating a workspace using JavaScript.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "success"
+      },
+      {
+        "id": "Kmeans_AdvisoryMajor",
+        "name": "Kmeans_AdvisoryMajor",
+        "problem": "Need to explore Kmeans_AdvisoryMajor development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển Kmeans_AdvisoryMajor.",
+        "approach": "Creating a workspace using Python.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng Python.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "success"
+      }
+    ]
+  }
+}

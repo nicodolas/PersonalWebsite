@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.065Z",
+  "data": {
+    "clusters": [
+      {
+        "id": "ai-agents",
+        "label": "AI & Agentic Systems",
+        "label_vi": "Hệ Thống AI & Tác Nhân",
+        "description": "Intelligent tools, Model Context Protocol integration, LLM pipelines, and automated reasoning projects.",
+        "description_vi": "Công cụ thông minh, tích hợp giao thức MCP, đường ống mô hình ngôn ngữ lớn (LLM) và tác nhân tự động.",
+        "technologies": [
+          "Python",
+          "AI API"
+        ],
+        "repositories": [
+          "Age Prediction App"
+        ],
+        "eras": [
+          2026,
+          2025
+        ],
+        "achievements": [
+          "Gemini Certified"
+        ]
+      },
+      {
+        "id": "web-erp",
+        "label": "Modern Web & Enterprise ERP",
+        "label_vi": "Web Hiện Đại & ERP Doanh Nghiệp",
+        "description": "Responsive React/Next.js frameworks, Odoo ERP custom business flows, and relational databases.",
+        "description_vi": "Hệ sinh thái React/Next.js, giải pháp doanh nghiệp Odoo ERP và cơ sở dữ liệu quan hệ.",
+        "technologies": [
+          "JavaScript",
+          "TypeScript",
+          "Next.js",
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "React",
+          "Blade",
+          "Dart",
+          "Handlebars",
+          "TanStack Query",
+          "Shadcn UI",
+          "Prisma",
+          "SePay",
+          "Netlify",
+          "Three.js",
+          "Zustand"
+        ],
+        "repositories": [
+          "PHP_WebBanHoa",
+          "Watchshopmanager",
+          "MobileWatchShop",
+          "flowershop",
+          "flower_shop",
+          "ReviewLecturers_HUIT",
+          "Milk-tea Web Shop",
+          "3D Portfolio"
+        ],
+        "eras": [
+          2025,
+          2024
+        ],
+        "achievements": [
+          "English CEFR (B2)",
+          "Cột Mốc 1000 Commits",
+          "Tích Hợp Đồ Họa 3D",
+          "Bộ Sưu Tập Đồ Đồ Đồ"
+        ]
+      },
+      {
+        "id": "automation-cicd",
+        "label": "Automation & CI/CD Pipelines",
+        "label_vi": "Quy Trình Tự Động Hóa & CI/CD",
+        "description": "Workflow orchestration with n8n, automated testing runners, containerization, and daily scripts.",
+        "description_vi": "Điều phối công việc với n8n, kiểm thử tự động, đóng gói Docker và kịch bản tự động hóa.",
+        "technologies": [
+          "n8n"
+        ],
+        "repositories": [],
+        "eras": [
+          2026,
+          2025
+        ],
+        "achievements": []
+      },
+      {
+        "id": "systems-legacy",
+        "label": "Systems & Legacy Explorations",
+        "label_vi": "Hệ Thống & Thử Nghiệm Ngôn Ngữ",
+        "description": "Algorithms, embedded exploration, C/C++, Lua scripts, and basic programming language foundations.",
+        "description_vi": "Giải thuật, lập trình nhúng, ngôn ngữ C/C++, kịch bản Lua và nghiên cứu nền tảng.",
+        "technologies": [
+          "C#",
+          "C++",
+          "Lua"
+        ],
+        "repositories": [
+          "nicodolas",
+          "ziwei-doushu",
+          "Claw-OMX-9Router-AI",
+          "claw-code",
+          "ai-smoke-detect",
+          "frontend-milk-tea",
+          "myroom",
+          "Bigdata",
+          "Demo-Cipher-O",
+          "FE-Smoke-AI-React",
+          "Demo-Cipher",
+          "IoTKhoaBaoMat",
+          "dongcuuanhoa",
+          "ChatBot_NiFi",
+          "Kmeans_AdvisoryMajor",
+          "Bookstoremanagement",
+          "Valk_Hub",
+          "SJF",
+          "RR"
+        ],
+        "eras": [
+          2024,
+          2023
+        ],
+        "achievements": [
+          "Kho Lưu Trữ Đầu Tiên"
+        ]
+      }
+    ]
+  }
+}

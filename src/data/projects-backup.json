@@ -1,0 +1,153 @@
+[
+  {
+    "id": "review-lecturers",
+    "title": "ReviewLecturers_HUIT",
+    "year": "2026",
+    "images": [
+      "assets/projects/review-lecturers/1.webp",
+      "assets/projects/review-lecturers/2.webp",
+      "assets/projects/review-lecturers/3.webp",
+      "assets/projects/review-lecturers/4.webp",
+      "assets/projects/review-lecturers/5.webp",
+      "assets/projects/review-lecturers/6.webp",
+      "assets/projects/review-lecturers/7.webp",
+      "assets/projects/review-lecturers/8.webp"
+    ],
+    "description_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
+    "description_en": "An academic review platform helping HUIT students view and rate lecturers.",
+    "tech": [
+      "Next.js 16",
+      "Node.js",
+      "express.js",
+      "TypeScript",
+      "TanStack Query",
+      "Shadcn UI",
+      "PostgreSQL",
+      "Prisma",
+      "n8n"
+    ],
+    "links": {
+      "demo": "https://reviewgiangvienhuit.vercel.app/",
+      "repo": "#"
+    },
+    "highlights_vi": [
+      "Xây dựng data pipeline tự động (ETL) với n8n và Google Drive API",
+      "Tối ưu hiệu suất query database với Prisma và Postgres"
+    ],
+    "highlights_en": [
+      "Built automated ETL data pipelines with n8n and Google Drive API",
+      "Optimized database query performance with Prisma and Postgres"
+    ]
+  },
+  {
+    "id": "milk-tea-shop",
+    "title": "Milk-tea Web Shop",
+    "year": "2025",
+    "images": [
+      "assets/projects/milk-tea-shop/1.webp",
+      "assets/projects/milk-tea-shop/2.webp",
+      "assets/projects/milk-tea-shop/3.webp",
+      "assets/projects/milk-tea-shop/4.webp",
+      "assets/projects/milk-tea-shop/5.webp",
+      "assets/projects/milk-tea-shop/6.webp",
+      "assets/projects/milk-tea-shop/7.webp",
+      "assets/projects/milk-tea-shop/8.webp",
+      "assets/projects/milk-tea-shop/9.webp"
+    ],
+    "description_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
+    "description_en": "E-commerce platform for a milk tea shop featuring online payment.",
+    "tech": [
+      "Node.js",
+      "express.js",
+      "Next.js",
+      "JavaScript",
+      "PostgreSQL",
+      "SePay",
+      "Netlify"
+    ],
+    "links": {
+      "demo": "https://htea-milk-tea.netlify.app/",
+      "repo": "#"
+    },
+    "highlights_vi": [
+      "Thiết kế cơ sở dữ liệu quan hệ phức tạp (hạng thành viên, đơn hàng)",
+      "Tích hợp cổng thanh toán QR Code"
+    ],
+    "highlights_en": [
+      "Designed complex relational database schema (membership tiers, orders)",
+      "Integrated QR Code payment gateway"
+    ]
+  },
+  {
+    "id": "age-prediction",
+    "title": "Age Prediction App",
+    "year": "2025",
+    "images": [
+      "assets/projects/age-prediction/1.webp",
+      "assets/projects/age-prediction/2.webp",
+      "assets/projects/age-prediction/3.webp"
+    ],
+    "description_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
+    "description_en": "Real-time age and gender prediction application using AI.",
+    "tech": [
+      "React",
+      "AI API",
+      "Async/Await"
+    ],
+    "links": {
+      "demo": "https://dudoantuoi.netlify.app/",
+      "repo": "#"
+    },
+    "highlights_vi": [
+      "Xử lý state bất đồng bộ mượt mà cho visual feedback",
+      "Hiển thị kết quả phân tích JSON trực quan"
+    ],
+    "highlights_en": [
+      "Handled asynchronous state smoothly for visual feedback",
+      "Visualized JSON analysis results intuitively"
+    ]
+  },
+  {
+    "id": "portfolio-3d",
+    "title": "3D Portfolio",
+    "year": "2025",
+    "images": [
+      "assets/projects/portfolio-3d/1.webp",
+      "assets/projects/portfolio-3d/2.webp",
+      "assets/projects/portfolio-3d/3.webp",
+      "assets/projects/portfolio-3d/4.webp",
+      "assets/projects/portfolio-3d/5.webp",
+      "assets/projects/portfolio-3d/6.webp",
+      "assets/projects/portfolio-3d/7.webp",
+      "assets/projects/portfolio-3d/8.webp",
+      "assets/projects/portfolio-3d/9.webp",
+      "assets/projects/portfolio-3d/10.webp",
+      "assets/projects/portfolio-3d/11.webp",
+      "assets/projects/portfolio-3d/12.webp",
+      "assets/projects/portfolio-3d/13.webp",
+      "assets/projects/portfolio-3d/14.webp",
+      "assets/projects/portfolio-3d/15.webp",
+      "assets/projects/portfolio-3d/16.webp"
+    ],
+    "description_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
+    "description_en": "Interactive 3D portfolio website with a playable character.",
+    "tech": [
+      "React",
+      "Three.js",
+      "R3F",
+      "Zustand"
+    ],
+    "links": {
+      "demo": "https://roofolio.vercel.app/",
+      "repo": "#"
+    },
+    "highlights_vi": [
+      "Điều khiển FPS và joystick trên mobile",
+      "Tối ưu render 3D trên trình duyệt"
+    ],
+    "highlights_en": [
+      "Implemented mobile joystick and FPS controls",
+      "Optimized 3D rendering in browser"
+    ]
+  }
+]

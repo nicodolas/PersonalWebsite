@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070a;
+  --foreground: #e2e8f0;
+  
+  --terminal-green: #00ff66;
+  --terminal-green-glow: rgba(0, 255, 102, 0.15);
+  --terminal-blue: #00ccff;
+  --terminal-blue-glow: rgba(0, 204, 255, 0.15);
+  --terminal-purple: #bd93f9;
+  --terminal-orange: #ffb86c;
+  --terminal-red: #ff5555;
+  --terminal-bg: #090d16;
+  --terminal-bg-opacity: rgba(9, 13, 22, 0.85);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Cyberpunk / Terminal styling */
+.crt-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Scanline animation */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(0, 255, 102, 0.04) 50%,
+    rgba(255,255,255,0)
+  );
+  animation: scanline 8s linear infinite;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-green);
+}
+
+/* Glow utility classes */
+.glow-green {
+  text-shadow: 0 0 10px var(--terminal-green);
+}
+
+.glow-blue {
+  text-shadow: 0 0 10px var(--terminal-blue);
+}
+
+.border-glow-green {
+  box-shadow: 0 0 15px var(--terminal-green-glow);
+  border-color: rgba(0, 255, 102, 0.4);
+}
+
+.border-glow-blue {
+  box-shadow: 0 0 15px var(--terminal-blue-glow);
+  border-color: rgba(0, 204, 255, 0.4);
+}
+
+/* Custom layout elements */
+.system-prompt::before {
+  content: "visitor@neko:~$ ";
+  color: var(--terminal-green);
+  font-weight: bold;
+}
+
+/* Glowing cursor */
+.blinking-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--terminal-green);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent }
+  50% { background-color: var(--terminal-green) }
+}

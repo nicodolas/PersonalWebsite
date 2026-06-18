@@ -1,0 +1,25 @@
+{
+  "releases": [
+    {
+      "version": "v2026.06",
+      "date": "2026-06-01",
+      "monthName": "June 2026",
+      "monthNameVi": "Tháng 6 năm 2026",
+      "notes": [
+        "+ Refactored personal portfolio to Next.js 15 and GSAP",
+        "+ Configured automated GitHub Actions workflows for data fetching",
+        "+ Integrated dynamic project galaxy and terminal commands"
+      ]
+    },
+    {
+      "version": "v2026.05",
+      "date": "2026-05-01",
+      "monthName": "May 2026",
+      "monthNameVi": "Tháng 5 năm 2026",
+      "notes": [
+        "+ Researched AI agent tools and Model Context Protocol (MCP)",
+        "+ Updated n8n integration schemas for ReviewLecturers_HUIT"
+      ]
+    }
+  ]
+}

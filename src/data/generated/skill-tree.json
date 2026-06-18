@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.037Z",
+  "data": {
+    "trees": [
+      {
+        "id": "automation",
+        "label": "Automation & CI/CD",
+        "label_vi": "Tự Động Hóa & CI/CD",
+        "status": "mastered",
+        "children": [
+          {
+            "id": "github-actions",
+            "label": "GitHub Actions",
+            "label_vi": "GitHub Actions",
+            "status": "unlocked"
+          },
+          {
+            "id": "n8n",
+            "label": "n8n Workflows",
+            "label_vi": "Quy Trình n8n",
+            "status": "mastered"
+          },
+          {
+            "id": "docker-deploy",
+            "label": "Docker Containerization",
+            "label_vi": "Đóng Gói Docker",
+            "status": "unlocked"
+          }
+        ]
+      },
+      {
+        "id": "ai-systems",
+        "label": "AI & Agents Systems",
+        "label_vi": "Hệ Thống AI & Tác Nhân",
+        "status": "locked",
+        "children": [
+          {
+            "id": "mcp",
+            "label": "Model Context Protocol (MCP)",
+            "label_vi": "Giao Thức MCP",
+            "status": "locked"
+          },
+          {
+            "id": "ai-agents",
+            "label": "AI Agents Workflows",
+            "label_vi": "Quy Trình Tác Nhân AI",
+            "status": "locked"
+          },
+          {
+            "id": "rag",
+            "label": "RAG & LLM Integration",
+            "label_vi": "Tích Hợp RAG & LLM",
+            "status": "locked"
+          }
+        ]
+      },
+      {
+        "id": "web-erp",
+        "label": "Enterprise Web & ERP",
+        "label_vi": "Web Doanh Nghiệp & ERP",
+        "status": "mastered",
+        "children": [
+          {
+            "id": "nextjs",
+            "label": "Next.js 15/16 Full-Stack",
+            "label_vi": "Next.js 15/16 Full-Stack",
+            "status": "mastered"
+          },
+          {
+            "id": "odoo",
+            "label": "Odoo ERP customization",
+            "label_vi": "Tùy Biến Odoo ERP",
+            "status": "locked"
+          },
+          {
+            "id": "databases",
+            "label": "PostgreSQL & Prisma",
+            "label_vi": "PostgreSQL & Prisma",
+            "status": "mastered"
+          }
+        ]
+      }
+    ]
+  }
+}

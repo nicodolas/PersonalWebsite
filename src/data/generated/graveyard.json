@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.034Z",
+  "data": {
+    "projects": [
+      {
+        "id": "Valk_Hub",
+        "name": "Valk_Hub",
+        "date_archived": "2024-06-22",
+        "reason": "Project completed or paused. Technology interests shifted.",
+        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
+        "lessons_learned": "Explored build settings and foundations in Lua.",
+        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ Lua.",
+        "tech": [
+          "Lua"
+        ]
+      },
+      {
+        "id": "flower_shop",
+        "name": "flower_shop",
+        "date_archived": "2024-04-09",
+        "reason": "Project completed or paused. Technology interests shifted.",
+        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
+        "lessons_learned": "Explored build settings and foundations in HTML.",
+        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ HTML.",
+        "tech": [
+          "HTML"
+        ]
+      },
+      {
+        "id": "SJF",
+        "name": "SJF",
+        "date_archived": "2024-04-09",
+        "reason": "Project completed or paused. Technology interests shifted.",
+        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
+        "lessons_learned": "Explored build settings and foundations in C++.",
+        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ C++.",
+        "tech": [
+          "C++"
+        ]
+      },
+      {
+        "id": "RR",
+        "name": "RR",
+        "date_archived": "2024-04-09",
+        "reason": "Project completed or paused. Technology interests shifted.",
+        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
+        "lessons_learned": "Explored build settings and foundations in C++.",
+        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ C++.",
+        "tech": [
+          "C++"
+        ]
+      }
+    ]
+  }
+}

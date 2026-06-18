@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.028Z",
+  "data": {
+    "projects": [
+      {
+        "id": "review-lecturers",
+        "title": "ReviewLecturers_HUIT",
+        "status": "building",
+        "progress": 85,
+        "commits_count": 280,
+        "tech_stack": [
+          "Next.js 16",
+          "Node.js",
+          "express.js",
+          "TypeScript",
+          "TanStack Query",
+          "Shadcn UI",
+          "PostgreSQL",
+          "Prisma",
+          "n8n"
+        ],
+        "description": "An academic review platform helping HUIT students view and rate lecturers.",
+        "description_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
+        "demo_url": "https://reviewgiangvienhuit.vercel.app/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "milk-tea-shop",
+        "title": "Milk-tea Web Shop",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 150,
+        "tech_stack": [
+          "Node.js",
+          "express.js",
+          "Next.js",
+          "JavaScript",
+          "PostgreSQL",
+          "SePay",
+          "Netlify"
+        ],
+        "description": "E-commerce platform for a milk tea shop featuring online payment.",
+        "description_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
+        "demo_url": "https://htea-milk-tea.netlify.app/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "age-prediction",
+        "title": "Age Prediction App",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 150,
+        "tech_stack": [
+          "React",
+          "AI API",
+          "Async/Await"
+        ],
+        "description": "Real-time age and gender prediction application using AI.",
+        "description_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
+        "demo_url": "https://dudoantuoi.netlify.app/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "portfolio-3d",
+        "title": "3D Portfolio",
+        "status": "building",
+        "progress": 90,
+        "commits_count": 150,
+        "tech_stack": [
+          "React",
+          "Three.js",
+          "R3F",
+          "Zustand"
+        ],
+        "description": "Interactive 3D portfolio website with a playable character.",
+        "description_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
+        "demo_url": "https://roofolio.vercel.app/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "nicodolas",
+        "title": "nicodolas",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 20,
+        "tech_stack": [],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ziwei-doushu",
+        "title": "ziwei-doushu",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 16,
+        "tech_stack": [],
+        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Claw-OMX-9Router-AI",
+        "title": "Claw-OMX-9Router-AI",
+        "status": "researching",
+        "progress": 20,
+        "commits_count": 10,
+        "tech_stack": [],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "claw-code",
+        "title": "claw-code",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 613,
+        "tech_stack": [],
+        "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
+        "description_vi": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ai-smoke-detect",
+        "title": "ai-smoke-detect",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10563,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "frontend-milk-tea",
+        "title": "frontend-milk-tea",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 158,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "myroom",
+        "title": "myroom",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10038,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Bigdata",
+        "title": "Bigdata",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 97,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Demo-Cipher-O",
+        "title": "Demo-Cipher-O",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 33,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "PHP_WebBanHoa",
+        "title": "PHP_WebBanHoa",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 87,
+        "tech_stack": [
+          "Blade"
+        ],
+        "description": "Bán Ho",
+        "description_vi": "Bán Ho",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "FE-Smoke-AI-React",
+        "title": "FE-Smoke-AI-React",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 255,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Demo-Cipher",
+        "title": "Demo-Cipher",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 52,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "Nhom13",
+        "description_vi": "Nhom13",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "IoTKhoaBaoMat",
+        "title": "IoTKhoaBaoMat",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 1010,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "dongcuuanhoa",
+        "title": "dongcuuanhoa",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Watchshopmanager",
+        "title": "Watchshopmanager",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 11184,
+        "tech_stack": [
+          "C#"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ChatBot_NiFi",
+        "title": "ChatBot_NiFi",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "MobileWatchShop",
+        "title": "MobileWatchShop",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 46,
+        "tech_stack": [
+          "Dart"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Kmeans_AdvisoryMajor",
+        "title": "Kmeans_AdvisoryMajor",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
+        "description_vi": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "flowershop",
+        "title": "flowershop",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 84,
+        "tech_stack": [
+          "Handlebars"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Bookstoremanagement",
+        "title": "Bookstoremanagement",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 2540,
+        "tech_stack": [
+          "C#"
+        ],
+        "description": "Đồ án quản lý nhà sách C# winform",
+        "description_vi": "Đồ án quản lý nhà sách C# winform",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Valk_Hub",
+        "title": "Valk_Hub",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 82,
+        "tech_stack": [
+          "Lua"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "flower_shop",
+        "title": "flower_shop",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 297,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "SJF",
+        "title": "SJF",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 10,
+        "tech_stack": [
+          "C++"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "RR",
+        "title": "RR",
+        "status": "archived",
+        "progress": 100,
+        "commits_count": 10,
+        "tech_stack": [
+          "C++"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      }
+    ]
+  }
+}

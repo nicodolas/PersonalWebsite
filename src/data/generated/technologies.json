@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.066Z",
+  "data": {
+    "categories": [
+      {
+        "name": "Languages",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "C#",
+          "C++",
+          "HTML",
+          "CSS",
+          "SQL",
+          "Dart"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Tailwind CSS",
+          "Three.js",
+          "GSAP"
+        ]
+      },
+      {
+        "name": "Backend & ERP",
+        "items": [
+          "Node.js",
+          "Express.js",
+          "PostgreSQL",
+          "Prisma",
+          "Odoo"
+        ]
+      },
+      {
+        "name": "Automation & Tools",
+        "items": [
+          "n8n",
+          "Docker",
+          "Git/GitHub",
+          "GitHub Actions"
+        ]
+      }
+    ]
+  }
+}

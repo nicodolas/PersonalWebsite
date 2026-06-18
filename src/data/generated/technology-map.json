@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.061Z",
+  "data": {
+    "nodes": [
+      {
+        "id": "JavaScript",
+        "label": "JavaScript",
+        "type": "language",
+        "count": 5
+      },
+      {
+        "id": "TypeScript",
+        "label": "TypeScript",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "Python",
+        "label": "Python",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "C#",
+        "label": "C#",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "C++",
+        "label": "C++",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "Next.js",
+        "label": "Next.js",
+        "type": "framework",
+        "count": 2
+      },
+      {
+        "id": "Node.js",
+        "label": "Node.js",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "Express",
+        "label": "Express",
+        "type": "framework",
+        "count": 2
+      },
+      {
+        "id": "PostgreSQL",
+        "label": "PostgreSQL",
+        "type": "database",
+        "count": 2
+      },
+      {
+        "id": "React",
+        "label": "React",
+        "type": "framework",
+        "count": 2
+      },
+      {
+        "id": "Blade",
+        "label": "Blade",
+        "type": "language",
+        "count": 1
+      },
+      {
+        "id": "Dart",
+        "label": "Dart",
+        "type": "language",
+        "count": 1
+      },
+      {
+        "id": "Handlebars",
+        "label": "Handlebars",
+        "type": "language",
+        "count": 1
+      },
+      {
+        "id": "Lua",
+        "label": "Lua",
+        "type": "language",
+        "count": 1
+      },
+      {
+        "id": "TanStack Query",
+        "label": "TanStack Query",
+        "type": "framework",
+        "count": 1
+      },
+      {
+        "id": "Shadcn UI",
+        "label": "Shadcn UI",
+        "type": "framework",
+        "count": 1
+      },
+      {
+        "id": "Prisma",
+        "label": "Prisma",
+        "type": "database",
+        "count": 1
+      },
+      {
+        "id": "n8n",
+        "label": "n8n",
+        "type": "tool",
+        "count": 1
+      },
+      {
+        "id": "SePay",
+        "label": "SePay",
+        "type": "tool",
+        "count": 1
+      },
+      {
+        "id": "Netlify",
+        "label": "Netlify",
+        "type": "tool",
+        "count": 1
+      },
+      {
+        "id": "AI API",
+        "label": "AI API",
+        "type": "ai",
+        "count": 1
+      },
+      {
+        "id": "Three.js",
+        "label": "Three.js",
+        "type": "ui",
+        "count": 1
+      },
+      {
+        "id": "Zustand",
+        "label": "Zustand",
+        "type": "framework",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "source": "Next.js",
+        "target": "Node.js",
+        "weight": 2
+      },
+      {
+        "source": "Express",
+        "target": "Next.js",
+        "weight": 2
+      },
+      {
+        "source": "Next.js",
+        "target": "PostgreSQL",
+        "weight": 2
+      },
+      {
+        "source": "Express",
+        "target": "Node.js",
+        "weight": 2
+      },
+      {
+        "source": "Node.js",
+        "target": "PostgreSQL",
+        "weight": 2
+      },
+      {
+        "source": "Express",
+        "target": "PostgreSQL",
+        "weight": 2
+      },
+      {
+        "source": "Next.js",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "Next.js",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "Next.js",
+        "target": "Shadcn UI",
+        "weight": 1
+      },
+      {
+        "source": "Next.js",
+        "target": "Prisma",
+        "weight": 1
+      },
+      {
+        "source": "Next.js",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "Shadcn UI",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "Prisma",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "Shadcn UI",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "Prisma",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "TanStack Query",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "Shadcn UI",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "Prisma",
+        "target": "TypeScript",
+        "weight": 1
+      },
+      {
+        "source": "TypeScript",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "Shadcn UI",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "Prisma",
+        "target": "TanStack Query",
+        "weight": 1
+      },
+      {
+        "source": "TanStack Query",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "Shadcn UI",
+        "weight": 1
+      },
+      {
+        "source": "Prisma",
+        "target": "Shadcn UI",
+        "weight": 1
+      },
+      {
+        "source": "Shadcn UI",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "Prisma",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "Prisma",
+        "target": "n8n",
+        "weight": 1
+      },
+      {
+        "source": "JavaScript",
+        "target": "Node.js",
+        "weight": 1
+      },
+      {
+        "source": "Node.js",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "Netlify",
+        "target": "Node.js",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "JavaScript",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "Express",
+        "target": "Netlify",
+        "weight": 1
+      },
+      {
+        "source": "JavaScript",
+        "target": "Next.js",
+        "weight": 1
+      },
+      {
+        "source": "Next.js",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "Netlify",
+        "target": "Next.js",
+        "weight": 1
+      },
+      {
+        "source": "JavaScript",
+        "target": "PostgreSQL",
+        "weight": 1
+      },
+      {
+        "source": "JavaScript",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "JavaScript",
+        "target": "Netlify",
+        "weight": 1
+      },
+      {
+        "source": "PostgreSQL",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "Netlify",
+        "target": "PostgreSQL",
+        "weight": 1
+      },
+      {
+        "source": "Netlify",
+        "target": "SePay",
+        "weight": 1
+      },
+      {
+        "source": "AI API",
+        "target": "React",
+        "weight": 1
+      },
+      {
+        "source": "React",
+        "target": "Three.js",
+        "weight": 1
+      },
+      {
+        "source": "React",
+        "target": "Zustand",
+        "weight": 1
+      },
+      {
+        "source": "Three.js",
+        "target": "Zustand",
+        "weight": 1
+      }
+    ],
+    "insights": {
+      "connected_en": "Core cluster connects Node.js, Express, and Next.js for full-stack application rendering.",
+      "connected_vi": "Cụm cốt lõi kết hợp Node.js, Express và Next.js để dựng các ứng dụng Full-Stack.",
+      "emerging_en": "Model Context Protocol (MCP) and agentic workflows are rapidly rising in active exploration.",
+      "emerging_vi": "Giao thức Model Context Protocol (MCP) và quy trình tác nhân AI đang phát triển mạnh mẽ.",
+      "fading_en": "Legacy languages like C++ and Lua show decreasing frequency of commit activity.",
+      "fading_vi": "Các ngôn ngữ lập trình hệ thống như C++ và Lua đang phai nhạt dần trong lịch sử commits.",
+      "important_en": "Custom automated ETL workflows and AI integrations occupy highest priority.",
+      "important_vi": "Tích hợp AI Agents và xây dựng quy trình tự động hóa n8n đang chiếm ưu tiên cao nhất."
+    }
+  }
+}

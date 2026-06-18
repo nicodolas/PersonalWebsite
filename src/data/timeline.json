@@ -1,0 +1,112 @@
+{
+  "eras": [
+    {
+      "year": 2026,
+      "title": "Agentic AI & Advanced Systems Era",
+      "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+      "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
+      "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
+      "commits": 1234,
+      "technologies": [
+        "Next.js 16",
+        "Node.js",
+        "express.js",
+        "TypeScript",
+        "TanStack Query",
+        "Shadcn UI",
+        "PostgreSQL",
+        "Prisma",
+        "n8n"
+      ],
+      "repos": [
+        "nicodolas",
+        "ziwei-doushu",
+        "Claw-OMX-9Router-AI",
+        "claw-code",
+        "ReviewLecturers_HUIT"
+      ]
+    },
+    {
+      "year": 2025,
+      "title": "Full-Stack, IoT & AI Integration Era",
+      "title_vi": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+      "description": "Developing comprehensive web applications, integrating IoT security systems, and deploying machine learning/AI models.",
+      "description_vi": "Phát triển các ứng dụng web toàn diện, tích hợp hệ thống bảo mật IoT và triển khai các mô hình học máy/AI.",
+      "commits": 60457,
+      "technologies": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Blade",
+        "HTML",
+        "C#",
+        "Dart",
+        "Node.js",
+        "express.js",
+        "Next.js",
+        "PostgreSQL",
+        "SePay",
+        "Netlify",
+        "React",
+        "AI API",
+        "Async/Await",
+        "Three.js",
+        "R3F",
+        "Zustand"
+      ],
+      "repos": [
+        "ai-smoke-detect",
+        "frontend-milk-tea",
+        "myroom",
+        "Bigdata",
+        "PHP_WebBanHoa",
+        "FE-Smoke-AI-React",
+        "IoTKhoaBaoMat",
+        "dongcuuanhoa",
+        "Watchshopmanager",
+        "ChatBot_NiFi",
+        "MobileWatchShop",
+        "Kmeans_AdvisoryMajor",
+        "Bookstoremanagement",
+        "Milk-tea Web Shop",
+        "Age Prediction App",
+        "3D Portfolio"
+      ]
+    },
+    {
+      "year": 2024,
+      "title": "Web Engineering & Scripting Era",
+      "title_vi": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+      "description": "Transitioning to web environments, building front-end templates, and exploring game scripting languages.",
+      "description_vi": "Chuyển dịch sang môi trường web, xây dựng các giao diện mẫu và khám phá ngôn ngữ lập trình kịch bản game.",
+      "commits": 1049,
+      "technologies": [
+        "HTML",
+        "Handlebars",
+        "Lua"
+      ],
+      "repos": [
+        "Demo-Cipher-O",
+        "Demo-Cipher",
+        "flowershop",
+        "Valk_Hub",
+        "flower_shop"
+      ]
+    },
+    {
+      "year": 2023,
+      "title": "Foundation & Algorithms Era",
+      "title_vi": "Kỷ Nguyên Nền Tảng & Giải Thuật",
+      "description": "Getting started with core computer science concepts, operating systems, and algorithmic thinking.",
+      "description_vi": "Bắt đầu hành trình với các khái niệm cốt lõi của khoa học máy tính, hệ điều hành và tư duy giải thuật.",
+      "commits": 71,
+      "technologies": [
+        "C++"
+      ],
+      "repos": [
+        "SJF",
+        "RR"
+      ]
+    }
+  ]
+}

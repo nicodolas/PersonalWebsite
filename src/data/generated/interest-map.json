@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.063Z",
+  "data": {
+    "nodes": [
+      {
+        "id": "current-brain",
+        "label": "Agentic AI & Custom Automation Systems",
+        "type": "brain",
+        "score": 98
+      },
+      {
+        "id": "AI Agents & MCP",
+        "label": "AI Agents & MCP",
+        "type": "interest",
+        "score": 95
+      },
+      {
+        "id": "Next.js Full-Stack",
+        "label": "Next.js Full-Stack",
+        "type": "interest",
+        "score": 95
+      },
+      {
+        "id": "Workflow Automation",
+        "label": "Workflow Automation",
+        "type": "interest",
+        "score": 92
+      },
+      {
+        "id": "3D Graphics & Three.js",
+        "label": "3D Graphics & Three.js",
+        "type": "interest",
+        "score": 80
+      },
+      {
+        "id": "IoT & Embedded Security",
+        "label": "IoT & Embedded Security",
+        "type": "interest",
+        "score": 75
+      },
+      {
+        "id": "JavaScript",
+        "label": "JavaScript",
+        "type": "technology"
+      },
+      {
+        "id": "TypeScript",
+        "label": "TypeScript",
+        "type": "technology"
+      },
+      {
+        "id": "Python",
+        "label": "Python",
+        "type": "technology"
+      },
+      {
+        "id": "C#",
+        "label": "C#",
+        "type": "technology"
+      },
+      {
+        "id": "C++",
+        "label": "C++",
+        "type": "technology"
+      },
+      {
+        "id": "Next.js",
+        "label": "Next.js",
+        "type": "technology"
+      },
+      {
+        "id": "Node.js",
+        "label": "Node.js",
+        "type": "technology"
+      },
+      {
+        "id": "Express",
+        "label": "Express",
+        "type": "technology"
+      },
+      {
+        "id": "PostgreSQL",
+        "label": "PostgreSQL",
+        "type": "technology"
+      },
+      {
+        "id": "React",
+        "label": "React",
+        "type": "technology"
+      },
+      {
+        "id": "Blade",
+        "label": "Blade",
+        "type": "technology"
+      },
+      {
+        "id": "Dart",
+        "label": "Dart",
+        "type": "technology"
+      },
+      {
+        "id": "Handlebars",
+        "label": "Handlebars",
+        "type": "technology"
+      },
+      {
+        "id": "Lua",
+        "label": "Lua",
+        "type": "technology"
+      },
+      {
+        "id": "TanStack Query",
+        "label": "TanStack Query",
+        "type": "technology"
+      },
+      {
+        "id": "Shadcn UI",
+        "label": "Shadcn UI",
+        "type": "technology"
+      },
+      {
+        "id": "Prisma",
+        "label": "Prisma",
+        "type": "technology"
+      },
+      {
+        "id": "n8n",
+        "label": "n8n",
+        "type": "technology"
+      },
+      {
+        "id": "SePay",
+        "label": "SePay",
+        "type": "technology"
+      },
+      {
+        "id": "Netlify",
+        "label": "Netlify",
+        "type": "technology"
+      },
+      {
+        "id": "AI API",
+        "label": "AI API",
+        "type": "technology"
+      },
+      {
+        "id": "Three.js",
+        "label": "Three.js",
+        "type": "technology"
+      },
+      {
+        "id": "Zustand",
+        "label": "Zustand",
+        "type": "technology"
+      },
+      {
+        "id": "era-2026",
+        "label": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "type": "era",
+        "year": 2026
+      },
+      {
+        "id": "Next.js 16",
+        "label": "Next.js 16",
+        "type": "technology"
+      },
+      {
+        "id": "express.js",
+        "label": "express.js",
+        "type": "technology"
+      },
+      {
+        "id": "era-2025",
+        "label": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "type": "era",
+        "year": 2025
+      },
+      {
+        "id": "HTML",
+        "label": "HTML",
+        "type": "technology"
+      },
+      {
+        "id": "Async/Await",
+        "label": "Async/Await",
+        "type": "technology"
+      },
+      {
+        "id": "R3F",
+        "label": "R3F",
+        "type": "technology"
+      },
+      {
+        "id": "era-2024",
+        "label": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "type": "era",
+        "year": 2024
+      },
+      {
+        "id": "era-2023",
+        "label": "Kỷ Nguyên Nền Tảng & Giải Thuật",
+        "type": "era",
+        "year": 2023
+      },
+      {
+        "id": "achievement-First Repository",
+        "label": "Kho Lưu Trữ Đầu Tiên",
+        "type": "achievement",
+        "icon": "🎉"
+      },
+      {
+        "id": "achievement-Gemini Certified",
+        "label": "Gemini Certified",
+        "type": "achievement",
+        "icon": "🤖"
+      },
+      {
+        "id": "achievement-English CEFR (B2)",
+        "label": "English CEFR (B2)",
+        "type": "achievement",
+        "icon": "🎓"
+      },
+      {
+        "id": "achievement-1000 Commits Milestone",
+        "label": "Cột Mốc 1000 Commits",
+        "type": "achievement",
+        "icon": "🚀"
+      },
+      {
+        "id": "achievement-3D Graphics Integration",
+        "label": "Tích Hợp Đồ Họa 3D",
+        "type": "achievement",
+        "icon": "🔮"
+      },
+      {
+        "id": "achievement-Repository Collector",
+        "label": "Bộ Sưu Tập Đồ Đồ Đồ",
+        "type": "achievement",
+        "icon": "📦"
+      }
+    ],
+    "links": [
+      {
+        "source": "current-brain",
+        "target": "AI Agents & MCP",
+        "weight": 95
+      },
+      {
+        "source": "current-brain",
+        "target": "Next.js Full-Stack",
+        "weight": 95
+      },
+      {
+        "source": "current-brain",
+        "target": "Workflow Automation",
+        "weight": 92
+      },
+      {
+        "source": "current-brain",
+        "target": "3D Graphics & Three.js",
+        "weight": 80
+      },
+      {
+        "source": "current-brain",
+        "target": "IoT & Embedded Security",
+        "weight": 75
+      },
+      {
+        "source": "era-2026",
+        "target": "Next.js 16",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "Node.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "express.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "TypeScript",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "TanStack Query",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "Shadcn UI",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "PostgreSQL",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "Prisma",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "n8n",
+        "weight": 70
+      },
+      {
+        "source": "current-brain",
+        "target": "era-2026",
+        "weight": 100
+      },
+      {
+        "source": "era-2025",
+        "target": "JavaScript",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "TypeScript",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Python",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Blade",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "HTML",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "C#",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Dart",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Node.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "express.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Next.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "PostgreSQL",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "SePay",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Netlify",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "React",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "AI API",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Async/Await",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Three.js",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "R3F",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
+        "target": "Zustand",
+        "weight": 70
+      },
+      {
+        "source": "era-2024",
+        "target": "HTML",
+        "weight": 70
+      },
+      {
+        "source": "era-2024",
+        "target": "Handlebars",
+        "weight": 70
+      },
+      {
+        "source": "era-2024",
+        "target": "Lua",
+        "weight": 70
+      },
+      {
+        "source": "era-2023",
+        "target": "C++",
+        "weight": 70
+      },
+      {
+        "source": "era-2023",
+        "target": "achievement-First Repository",
+        "weight": 80
+      },
+      {
+        "source": "era-2024",
+        "target": "achievement-Gemini Certified",
+        "weight": 80
+      },
+      {
+        "source": "era-2025",
+        "target": "achievement-English CEFR (B2)",
+        "weight": 80
+      },
+      {
+        "source": "era-2025",
+        "target": "achievement-1000 Commits Milestone",
+        "weight": 80
+      },
+      {
+        "source": "era-2025",
+        "target": "achievement-3D Graphics Integration",
+        "weight": 80
+      },
+      {
+        "source": "achievement-3D Graphics Integration",
+        "target": "Three.js",
+        "weight": 85
+      },
+      {
+        "source": "era-2026",
+        "target": "achievement-Repository Collector",
+        "weight": 80
+      },
+      {
+        "source": "AI Agents & MCP",
+        "target": "Python",
+        "weight": 95
+      },
+      {
+        "source": "AI Agents & MCP",
+        "target": "AI API",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "JavaScript",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "TypeScript",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "Next.js",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "PostgreSQL",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "React",
+        "weight": 95
+      },
+      {
+        "source": "Next.js Full-Stack",
+        "target": "Prisma",
+        "weight": 95
+      },
+      {
+        "source": "Workflow Automation",
+        "target": "n8n",
+        "weight": 92
+      },
+      {
+        "source": "3D Graphics & Three.js",
+        "target": "Three.js",
+        "weight": 80
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "JavaScript",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "TypeScript",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "C#",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "C++",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "React",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "Lua",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "TanStack Query",
+        "weight": 75
+      },
+      {
+        "source": "IoT & Embedded Security",
+        "target": "Shadcn UI",
+        "weight": 75
+      }
+    ]
+  }
+}

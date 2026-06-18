@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.039Z",
+  "data": {
+    "releases": [
+      {
+        "version": "v2026.06",
+        "date": "2026-06-01",
+        "monthName": "June 2026",
+        "monthNameVi": "Tháng 6 năm 2026",
+        "notes": [
+          "+ Refactored personal website to Next.js 15 App Router",
+          "+ Created 11 custom dynamic analyzers for GitHub pipeline",
+          "+ Integrated OpenRouter with intelligent caching for AI summaries",
+          "+ Restored legacy SEO metadata and structured Person schema"
+        ]
+      },
+      {
+        "version": "v2026.05",
+        "date": "2026-05-01",
+        "monthName": "May 2026",
+        "monthNameVi": "Tháng 5 năm 2026",
+        "notes": [
+          "+ Researched Model Context Protocol (MCP) integrations",
+          "+ Explored n8n ETL pipelines with Google Drive APIs",
+          "+ Completed Watchshopmanager C# desktop system prototype"
+        ]
+      }
+    ]
+  }
+}

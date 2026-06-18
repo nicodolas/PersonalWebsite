@@ -1,0 +1,62 @@
+{
+  "achievements": [
+    {
+      "title": "First Repository",
+      "title_vi": "Kho Lưu Trữ Đầu Tiên",
+      "date": "2023-12-18",
+      "icon": "🎉",
+      "desc": "Created first repository (RR) on GitHub",
+      "desc_vi": "Khởi tạo repo đầu tiên (RR) trên GitHub"
+    },
+    {
+      "title": "Gemini Certified",
+      "title_vi": "Gemini Certified",
+      "date": "2024-08-15",
+      "icon": "🤖",
+      "desc": "Earned certification: Gemini Certified",
+      "desc_vi": "Đạt chứng nhận: Gemini Certified",
+      "url": "https://edu.google.accredible.com/d9f4c971-1c62-4515-a3f7-1f73fcda801d#acc.9K0M6HZ8"
+    },
+    {
+      "title": "English CEFR (B2)",
+      "title_vi": "English CEFR (B2)",
+      "date": "2025-06-01",
+      "icon": "🎓",
+      "desc": "Earned certification: English CEFR (B2)",
+      "desc_vi": "Đạt chứng nhận: English CEFR (B2)",
+      "url": "https://photos.app.goo.gl/bTJM8ja6j1SpD7Tf9 "
+    },
+    {
+      "title": "1000 Commits Milestone",
+      "title_vi": "Cột Mốc 1000 Commits",
+      "date": "2025-05-01",
+      "icon": "🚀",
+      "desc": "Pushed over 1,000 commits across repositories",
+      "desc_vi": "Đẩy hơn 1,000 commits trên toàn hệ thống"
+    },
+    {
+      "title": "3D Graphics Integration",
+      "title_vi": "Tích Hợp Đồ Họa 3D",
+      "date": "2025-10-12",
+      "icon": "🔮",
+      "desc": "Successfully integrated Three.js/R3F in a live web portfolio",
+      "desc_vi": "Tích hợp thành công Three.js/R3F vào portfolio web thực tế"
+    },
+    {
+      "title": "Stargazer Target",
+      "title_vi": "Điểm Sáng Vũ Trụ",
+      "date": "2026-06-18",
+      "icon": "⭐",
+      "desc": "Earned stars from the community (Total: 5)",
+      "desc_vi": "Đạt được ngôi sao từ cộng đồng (Tổng cộng: 5)"
+    },
+    {
+      "title": "Repository Collector",
+      "title_vi": "Bộ Sưu Tập Đồ Đồ Đồ",
+      "date": "2026-06-18",
+      "icon": "📦",
+      "desc": "Created more than 10 repositories on GitHub",
+      "desc_vi": "Xây dựng hơn 10 dự án mã nguồn trên GitHub"
+    }
+  ]
+}

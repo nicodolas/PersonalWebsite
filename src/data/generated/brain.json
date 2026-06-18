@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-18T11:00:13.022Z",
+  "data": {
+    "current_focus": "Agentic AI & Custom Automation Systems",
+    "current_focus_vi": "AI Tác Nhân & Hệ Thống Tự Động Hóa Tùy Biến",
+    "learning_rate": 98,
+    "active_hours": "10:00 AM (UTC)",
+    "research_topics": [
+      "AI-AGENTS",
+      "MCP",
+      "AUTOMATION",
+      "NEXTJS",
+      "IOT"
+    ],
+    "interests": [
+      {
+        "name": "AI Agents & MCP",
+        "score": 95,
+        "level": "proficient"
+      },
+      {
+        "name": "Next.js Full-Stack",
+        "score": 95,
+        "level": "mastered"
+      },
+      {
+        "name": "Workflow Automation",
+        "score": 92,
+        "level": "proficient"
+      },
+      {
+        "name": "3D Graphics & Three.js",
+        "score": 80,
+        "level": "learning"
+      },
+      {
+        "name": "IoT & Embedded Security",
+        "score": 75,
+        "level": "learning"
+      }
+    ],
+    "ai_curiosity_summary": "Exploring standard Model Context Protocol (MCP) integrations, custom workflow design with n8n, and interactive 3D frontend systems.",
+    "ai_curiosity_summary_vi": "Khám phá tích hợp chuẩn Model Context Protocol (MCP), tự động hóa quy trình nghiệp vụ với n8n, và thiết kế 3D frontend tương tác."
+  }
+}
