@@ -50,14 +50,14 @@ Configure these variables in your Cloudflare Pages dashboard:
 
 ---
 
-## 🤖 Continuous Deployment via GitHub Actions
+## 🤖 Continuous Deployment via Cloudflare Pages
 
-Deployments are coordinated by the [.github/workflows/deploy.yml](file:///D:/PersonalWebsite/.github/workflows/deploy.yml) workflow:
-- **Preview Deployments**: Runs on pull requests. Deploys to a temporary preview URL so you can inspect changes.
-- **Production Deployments**: Runs when commits are pushed or merged into the `main` branch. Updates the live `nekovibecoder.site` site.
+Deployments are handled natively by Cloudflare Pages:
+- **Preview Deployments**: Cloudflare Pages automatically builds and deploys preview links for every pull request branch.
+- **Production Deployments**: Cloudflare Pages automatically rebuilds and deploys to the live `nekovibecoder.site` site when changes are pushed or merged into the `main` branch.
 
-### 🛡️ Source Code Immutability Guard
-As a security precaution, all deployment workflows verify that no source code files have been modified by automatic runners. This is enforced by `ci-safety-check.js` before any auto-commits are executed. If any file outside the approved mutable data folders is modified, the deployment run will immediately fail to prevent accidental overrides of UI components or configs.
+### 🛡️ Continuous Integration & Safety
+GitHub Actions coordinates the validation pipeline (e.g. `validate-data.yml`, `build-check.yml`). The `ci-safety-check.js` script enforces that no automatic runners mutate application code.
 
 ---
 
