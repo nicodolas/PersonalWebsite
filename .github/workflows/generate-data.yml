@@ -86,4 +86,4 @@ jobs:
             --delete-branch \
             --subject "chore: auto-update github dynamic data ($(date -u +%Y-%m-%d))"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -84,4 +84,4 @@ jobs:
             --delete-branch \
             --subject "chore: weekly deep analysis and narrative update ($(date -u +%Y-%m-%d))"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
