@@ -10,7 +10,7 @@
 
 The portfolio is **fully data-driven**: all displayed content (projects, timeline, skills, achievements, etc.) is generated automatically from live GitHub data via a local data pipeline, then enriched with AI-generated summaries via OpenRouter/OpenAI.
 
-**Live URL:** https://personalwebsite-4eb.pages.dev  
+**Live URL:** https://www.nekovibecoder.site/  
 **GitHub:** https://github.com/nicodolas/PersonalWebsite
 
 ---
@@ -20,15 +20,15 @@ The portfolio is **fully data-driven**: all displayed content (projects, timelin
 | Layer | Technology |
 |-------|-----------|
 | Framework | Next.js 16.2.9 (App Router, `output: 'export'` — static site) |
-| Language | TypeScript 5, React 19 |
+| Language | TypeScript 5, React 19.2.4 |
 | Styling | Tailwind CSS v4 |
-| Animation | GSAP 3.15 + ScrollTrigger |
-| 3D rendering | Three.js (galaxy page only — loaded client-side via `dynamic({ ssr: false })`) |
-| Icons | Lucide React |
+| Animation | GSAP ^3.15.0 + `@gsap/react ^2.1.2` + ScrollTrigger |
+| 3D rendering | Three.js >=0.184.0 (galaxy page only — loaded client-side via `dynamic({ ssr: false })`) |
+| Icons | Lucide React ^1.21.0 |
 | Deployment | Cloudflare Pages |
 | Data pipeline | Node.js scripts (no framework) |
 | AI enrichment | OpenRouter API (google/gemini-2.5-flash default) |
-| Linting | ESLint 9, lint-staged, Husky |
+| Linting | ESLint 9, lint-staged ^15.5.2, Husky ^9.1.7 |
 
 **Key constraint:** `output: 'export'` means this is a **static export** — no server-side rendering, no API routes, no `getServerSideProps`. Everything runs client-side after the initial static HTML is served.
 
@@ -59,6 +59,7 @@ The portfolio is **fully data-driven**: all displayed content (projects, timelin
 | `BootSequence` | Full-screen terminal boot animation on first visit. Loaded with `dynamic({ ssr: false })` to prevent hydration mismatch. |
 | `Terminal` | Retro CLI with 15+ commands, XP system, theme switcher, guestbook, audio synthesizer. |
 | `GalaxyScene` | Three.js WebGL 3D galaxy scene for `/galaxy`. Loaded with `dynamic({ ssr: false })`. |
+| `IdentityCard` | Compact developer identity card — avatar, name, role, education, achievement badges, contact links, live repo/achievement stats. Pulls from `profile-backup.json`, `achievements.json`, and `repository-network.json`. |
 
 ---
 
@@ -79,4 +80,6 @@ The site supports Vietnamese + English. The convention is:
 | `public/neko-logo.svg` | 64px logo for general use |
 | `public/og-image.svg` | 1200×630 Open Graph image for social sharing |
 
-Default Next.js placeholder SVGs (globe, vercel, window, file, next) have been removed.
+## Auto-generated Routes
+
+`src/app/robots.ts` and `src/app/sitemap.ts` generate `/robots.txt` and `/sitemap.xml` at build time. These are static exports and do not require server-side rendering.

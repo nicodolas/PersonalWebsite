@@ -1,0 +1,67 @@
+{
+  "name": "Nguyen Van Hieu",
+  "name_vi": "Nguyễn Văn Hiếu",
+  "name_en": "Nguyen Van Hieu",
+  "role": "Developer",
+  "email": "nvanhieuk13@gmail.com",
+  "phone": " ",
+  "github": "https://github.com/nicodolas",
+  "education": {
+    "timeline": "2022 - 2026",
+    "school_vi": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "school_en": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+    "major_vi": "Công nghệ phần mềm",
+    "major_en": "Software Engineering",
+    "gpa": "3.51/4.0"
+  },
+  "certificates": [
+    {
+      "name": "Gemini Certified",
+      "url": "https://edu.google.accredible.com/d9f4c971-1c62-4515-a3f7-1f73fcda801d#acc.9K0M6HZ8"
+    },
+    {
+      "name": "English CEFR (B2)",
+      "url": "https://photos.app.goo.gl/bTJM8ja6j1SpD7Tf9"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "HTML5/CSS3",
+      "C#",
+      "Python",
+      "SQL"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "JWT",
+      "PHP (Laravel)"
+    ],
+    "frontend": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "database": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQL Server"
+    ],
+    "tools": [
+      "Git/GitHub",
+      "Docker",
+      "Postman"
+    ],
+    "others": [
+      "RAG Concepts",
+      "n8n",
+      "Apache NiFi",
+      "Workflows Automation",
+      "Data Structures & Algorithms"
+    ]
+  }
+}

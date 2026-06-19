@@ -8,8 +8,9 @@ Rules that apply to every file in this project.
 
 - All components are `"use client"` — this is a static export site, no Server Components used in practice
 - `containerRef` is always `useRef<HTMLDivElement>(null)` on the root div of each page
-- GSAP is always inside `useEffect`, wrapped in `gsap.context(callback, containerRef)`, cleanup via `ctx.revert()`
+- GSAP is always inside `useEffect` (or via `useGSAP` from `@gsap/react`), wrapped in `gsap.context(callback, containerRef)`, cleanup via `ctx.revert()`
 - Never import from `"gsap"` directly in page/component files — use `"@/lib/gsap-config"`
+- `@gsap/react` is installed — use `useGSAP` hook from `@gsap/react` as the preferred pattern for new components
 - Three.js (`three`) is used **only** in `src/components/GalaxyScene.tsx` — import directly from `"three"`, no wrapper needed
 - Three.js components must be loaded with `dynamic({ ssr: false })` — they use `window`, `canvas`, and `requestAnimationFrame` which are not available server-side
 
@@ -21,7 +22,8 @@ Rules that apply to every file in this project.
 - Manual curated data lives in `src/data/projects-backup.json` and `src/data/profile-backup.json`
 - Static personal data: `src/data/dna.json` (traits, favorite languages, etc.)
 - All generated files have the shape: `{ version: number, generatedAt: string, data: T }`
-- TypeScript types for all data shapes live in `src/types/data-schemas.d.ts`
+- TypeScript types for generated data shapes live in `src/types/data-schemas.d.ts`
+- TypeScript ambient module declarations for backup JSON files live in `src/types/json.d.ts` — add a new `declare module` block here if you add a new backup JSON import that TypeScript cannot resolve via path alias
 
 ---
 

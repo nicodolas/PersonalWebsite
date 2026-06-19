@@ -10,7 +10,7 @@ The portfolio content is 100% generated — not hardcoded. Here's how data flows
 GitHub API
     │
     ▼
-scripts/fetch-github-data.js
+src/scripts/fetch-raw-data.js
     │  → src/data/raw/github-profile.json
     │  → src/data/raw/github-repos.json
     │  → src/data/raw/github-events.json
@@ -26,7 +26,7 @@ src/data/generated/*.json      ← consumed by Next.js pages
 
 ## Step 1 — Fetch Raw Data
 
-**Script:** `scripts/fetch-github-data.js`
+**Script:** `src/scripts/fetch-raw-data.js`
 
 Calls GitHub API for user `nicodolas`:
 - `GET /users/nicodolas` → profile
@@ -94,7 +94,7 @@ If no AI key is set, analyzers fall back to heuristic/deterministic outputs — 
 
 ```bash
 # 1. Fetch latest GitHub data
-node scripts/fetch-github-data.js
+node src/scripts/fetch-raw-data.js
 
 # 2. Run all analyzers (generates src/data/generated/*.json)
 node src/scripts/run-analyzers.js
@@ -102,6 +102,15 @@ node src/scripts/run-analyzers.js
 # 3. Start dev server
 npm run dev
 ```
+
+## Pipeline Scripts Reference
+
+| Script | Purpose |
+|--------|---------|
+| `src/scripts/fetch-raw-data.js` | Fetches GitHub API data → `src/data/raw/` |
+| `src/scripts/run-analyzers.js` | Runs all 12 analyzers → `src/data/generated/` |
+| `src/scripts/validate-json.js` | Validates generated JSON structure |
+| `src/scripts/ci-safety-check.js` | Pre-push safety check run by CI to prevent bad data shipping |
 
 ---
 

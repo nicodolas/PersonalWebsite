@@ -17,11 +17,11 @@ Neko OS is a fully data-driven portfolio designed to look and feel like a retro 
 | Layer | Technology |
 |-------|-----------|
 | Framework | Next.js 16.2.9 (App Router, static export) |
-| Language | TypeScript 5, React 19 |
+| Language | TypeScript 5, React 19.2.4 |
 | Styling | Tailwind CSS v4 |
-| Animation | GSAP 3.15 + ScrollTrigger |
+| Animation | GSAP ^3.15.0 + `@gsap/react` + ScrollTrigger |
 | 3D rendering | Three.js (galaxy page — WebGL, client-side only) |
-| Icons | Lucide React |
+| Icons | Lucide React ^1.21.0 |
 | Deployment | Cloudflare Pages |
 | Data pipeline | Node.js scripts |
 | AI enrichment | OpenRouter API (google/gemini-2.5-flash) |
@@ -69,7 +69,7 @@ src/data/generated/*.json      ← consumed by Next.js pages
 
 ```bash
 # 1. Fetch latest GitHub data
-node scripts/fetch-github-data.js
+node src/scripts/fetch-raw-data.js
 
 # 2. Run all analyzers
 node src/scripts/run-analyzers.js
@@ -116,7 +116,7 @@ npm run build # static export to /out
 | Variable | Required | Purpose |
 |----------|----------|---------|
 | `GH_TOKEN` | Yes | GitHub PAT for data pipeline |
-| `OPENAI_API_KEY` | Optional | OpenRouter key for AI summaries |
+| `OPENROUTER_API_KEY` | Optional | OpenRouter key for AI summaries |
 | `NEXT_PUBLIC_SITE_URL` | Yes | Site URL for OG metadata |
 
 > Never commit `.env` — it is gitignored.
@@ -145,6 +145,7 @@ Always use a feature branch and PR — never push directly to `main`.
 4. **BootSequence** — must stay loaded with `dynamic({ ssr: false })`.
 5. **Generated data** — never manually edit `src/data/generated/*.json`.
 6. **Language** — static JSX strings are English only; data fields like `{field.title_vi}` stay untouched.
+7. **Type declarations** — if a backup JSON import fails type-check, add a module declaration to `src/types/json.d.ts`.
 
 See `docs/` for full documentation:
 
