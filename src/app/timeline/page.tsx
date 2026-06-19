@@ -69,53 +69,47 @@ export default function Timeline() {
 
         {/* Timeline body */}
         <div className="timeline-body relative flex flex-col items-center my-8">
-          {/* Vertical line path */}
-          <div className="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#00ff66]/20"></div>
+          {/* Vertical line — left-aligned on mobile, centered on desktop */}
+          <div className="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#00ff66]/20 -translate-x-1/2"></div>
 
           {/* Timeline Nodes */}
-          <div className="w-full space-y-12">
+          <div className="w-full space-y-10 md:space-y-12">
             {timelineData.data.eras.map((era, index) => {
               const isEven = index % 2 === 0;
               return (
                 <div
                   key={era.year}
-                  className={`timeline-item flex flex-col md:flex-row items-stretch w-full ${isEven ? "md:flex-row-reverse" : ""
-                    }`}
+                  className={`timeline-item relative flex items-start w-full md:items-stretch ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}
                 >
-                  {/* Left side spacing */}
-                  <div className="w-full md:w-1/2 px-4 md:px-8 flex flex-col items-start md:items-end justify-center text-left md:text-right">
-                    {isEven ? (
-                      <div className="flex flex-col items-start gap-1">
-                        <span className="text-3xl font-extrabold text-[#00ccff] tracking-widest">{era.year}</span>
-                        <h3 className="text-base font-bold text-slate-200">{era.title_vi}</h3>
-                        <p className="text-xs text-slate-400 font-mono italic">{era.title}</p>
-                      </div>
-                    ) : null}
-                  </div>
-
-                  {/* Node icon dot */}
-                  <div className="timeline-node-dot absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-[#00ff66] bg-[#05070a] z-10 shadow-lg border-glow-green">
+                  {/* ── Mobile layout: node dot + content stacked ── */}
+                  {/* Node dot — sits on the vertical line */}
+                  <div className="timeline-node-dot shrink-0 relative z-10 flex items-center justify-center w-8 h-8 rounded-full border-2 border-[#00ff66] bg-[#05070a] shadow-lg border-glow-green
+                    ml-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2">
                     <span className="text-xs font-bold text-[#00ff66]">{index + 1}</span>
                   </div>
 
-                  {/* Right side content */}
-                  <div className="w-full md:w-1/2 pl-12 pr-4 md:px-8 flex flex-col justify-center">
-                    {!isEven ? (
-                      <div className="flex flex-col items-start gap-1 mb-2">
-                        <span className="text-3xl font-extrabold text-[#00ccff] tracking-widest">{era.year}</span>
-                        <h3 className="text-base font-bold text-slate-200">{era.title_vi}</h3>
-                        <p className="text-xs text-slate-400 font-mono italic">{era.title}</p>
-                      </div>
-                    ) : null}
+                  {/* Content — full width on mobile, half on desktop */}
+                  <div className={`flex-1 pl-5 md:pl-0 md:w-1/2
+                    ${isEven
+                      ? "md:pr-12 md:flex md:flex-col md:items-end md:text-right"
+                      : "md:pl-12 md:flex md:flex-col md:items-start"
+                    }`}
+                  >
+                    {/* Era heading */}
+                    <div className={`flex flex-col gap-1 mb-3 ${isEven ? "md:items-end" : "md:items-start"}`}>
+                      <span className="text-2xl sm:text-3xl font-extrabold text-[#00ccff] tracking-widest">{era.year}</span>
+                      <h3 className="text-sm sm:text-base font-bold text-slate-200">{era.title_vi}</h3>
+                      <p className="text-xs text-slate-400 font-mono italic">{era.title}</p>
+                    </div>
 
                     {/* Detailed Card info */}
-                    <div className="bg-[#090d16]/80 border border-slate-800 hover:border-[#00ff66]/30 transition-all rounded-lg p-5 shadow-xl text-left">
+                    <div className={`bg-[#090d16]/80 border border-slate-800 hover:border-[#00ff66]/30 transition-all rounded-lg p-4 md:p-5 shadow-xl w-full ${isEven ? "md:text-left" : ""}`}>
                       <p className="text-xs md:text-sm text-slate-300 leading-relaxed mb-4">
                         {era.description_vi}
                       </p>
 
                       {/* Timeline Stats */}
-                      <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+                      <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
                         <div className="flex items-center gap-1">
                           <GitCommit size={14} className="text-[#ff5555]" />
                           <span>Commits: <strong className="text-slate-200">{era.commits}+</strong></span>
@@ -154,6 +148,9 @@ export default function Timeline() {
                       )}
                     </div>
                   </div>
+
+                  {/* Spacer half — desktop only, opposite side */}
+                  <div className="hidden md:block md:w-1/2" />
                 </div>
               );
             })}

@@ -281,7 +281,7 @@ export default function Home() {
             </div>
 
             {/* Quick Launch Terminal Callout */}
-            <div className="terminal-callout nexus-card bg-gradient-to-r from-[#090d16]/80 to-[#0c1624]/60 border border-[#00ccff]/25 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div className="terminal-callout nexus-card bg-gradient-to-r from-[#090d16]/80 to-[#0c1624]/60 border border-[#00ccff]/25 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
                 <h3 className="text-sm font-bold text-[#00ccff] font-mono">OS Terminal CLI</h3>
                 <p className="text-xs text-slate-400 font-mono mt-1">
