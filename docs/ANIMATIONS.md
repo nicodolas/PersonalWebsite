@@ -17,6 +17,18 @@ export { gsap, ScrollTrigger };
 
 **Rule:** Never import `gsap` or `ScrollTrigger` directly from `"gsap"` in page components — always use `"@/lib/gsap-config"`.
 
+### `@gsap/react`
+`@gsap/react ^2.1.2` is installed and provides the `useGSAP` hook — the preferred pattern for new components. It handles context scoping and cleanup automatically:
+```typescript
+import { useGSAP } from "@gsap/react";
+import { gsap } from "@/lib/gsap-config";
+
+useGSAP(() => {
+  gsap.from(".card", { opacity: 0, y: 30, stagger: 0.1 });
+}, { scope: containerRef });
+```
+This is equivalent to the manual `useEffect` + `gsap.context()` + `ctx.revert()` pattern — both are valid. Prefer `useGSAP` for new code.
+
 ### `src/lib/animations.ts`
 Exports 6 reusable animation presets:
 

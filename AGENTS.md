@@ -27,6 +27,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 3. **BootSequence** — loaded with `dynamic({ ssr: false })`. Do NOT remove this or hydration errors return.
 4. **Generated data** — `src/data/generated/*.json` is auto-generated. Never manually edit these files.
 5. **Language** — static JSX strings are English only. Data fields like `{field.title_vi}` are untouched.
+6. **JSON type errors** — if `Cannot find module '@/data/....json'` appears, add a `declare module` block to `src/types/json.d.ts`. Do NOT change `tsconfig.json` to fix this.
 
 ### After Making Changes
 
