@@ -518,6 +518,31 @@ export default function GalaxyScene({
             mount.removeEventListener("touchmove", onTouchMove);
             mount.removeEventListener("touchend", onTouchEnd);
             window.removeEventListener("resize", onResize);
+
+            // Dispose all scene geometries, materials, and textures to prevent GPU memory leaks.
+            // renderer.dispose() alone only releases the GL context — it does NOT free
+            // BufferGeometry index buffers, material uniforms, or CanvasTexture uploads.
+            scene.traverse((obj) => {
+                if ((obj as THREE.Mesh).isMesh || obj instanceof THREE.Line || obj instanceof THREE.Points || obj instanceof THREE.Sprite) {
+                    const mesh = obj as THREE.Mesh;
+                    mesh.geometry?.dispose();
+                    if (Array.isArray(mesh.material)) {
+                        mesh.material.forEach((m) => {
+                            // Dispose any textures referenced by the material
+                            Object.values(m).forEach((v) => {
+                                if (v instanceof THREE.Texture) v.dispose();
+                            });
+                            m.dispose();
+                        });
+                    } else if (mesh.material) {
+                        Object.values(mesh.material).forEach((v) => {
+                            if (v instanceof THREE.Texture) v.dispose();
+                        });
+                        (mesh.material as THREE.Material).dispose();
+                    }
+                }
+            });
+
             renderer.dispose();
             if (mount.contains(renderer.domElement)) {
                 mount.removeChild(renderer.domElement);
