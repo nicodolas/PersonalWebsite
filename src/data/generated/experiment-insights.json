@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.032Z",
+  "generatedAt": "2026-06-19T15:07:07.625Z",
   "data": {
-    "success_rate": 88.9,
+    "success_rate": 44.4,
     "failure_learnings": [
       "Built automated ETL data pipelines with n8n and Google Drive API",
       "Optimized database query performance with Prisma and Postgres",

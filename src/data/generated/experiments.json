@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.031Z",
+  "generatedAt": "2026-06-19T15:07:07.584Z",
   "data": {
     "experiments": [
       {
@@ -80,12 +80,50 @@
         "status": "success"
       },
       {
-        "id": "ziwei-doushu",
-        "name": "ziwei-doushu",
-        "problem": "Need to explore ziwei-doushu development.",
-        "problem_vi": "Nhu cầu thử nghiệm phát triển ziwei-doushu.",
-        "approach": "Creating a workspace using code.",
-        "approach_vi": "Khởi tạo không gian phát triển sử dụng mã nguồn.",
+        "id": "myroom",
+        "name": "myroom",
+        "problem": "Need to explore myroom development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển myroom.",
+        "approach": "Creating a workspace using JavaScript.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "Kmeans_AdvisoryMajor",
+        "name": "Kmeans_AdvisoryMajor",
+        "problem": "Need to explore Kmeans_AdvisoryMajor development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển Kmeans_AdvisoryMajor.",
+        "approach": "Creating a workspace using Python.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng Python.",
+        "outcome": "Repository created and pushed to GitHub.",
+        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
+        "lessons_learned": [
+          "Explored development environment setup",
+          "Practiced version control workflows"
+        ],
+        "lessons_learned_vi": [
+          "Tìm hiểu thiết lập môi trường phát triển",
+          "Thực hành quy trình quản lý phiên bản"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "ChatBot_NiFi",
+        "name": "ChatBot_NiFi",
+        "problem": "Need to explore ChatBot_NiFi development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển ChatBot_NiFi.",
+        "approach": "Creating a workspace using JavaScript.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
         "outcome": "Repository created and pushed to GitHub.",
         "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
         "lessons_learned": [
@@ -115,15 +153,15 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "success"
+        "status": "active"
       },
       {
-        "id": "myroom",
-        "name": "myroom",
-        "problem": "Need to explore myroom development.",
-        "problem_vi": "Nhu cầu thử nghiệm phát triển myroom.",
-        "approach": "Creating a workspace using JavaScript.",
-        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
+        "id": "ziwei-doushu",
+        "name": "ziwei-doushu",
+        "problem": "Need to explore ziwei-doushu development.",
+        "problem_vi": "Nhu cầu thử nghiệm phát triển ziwei-doushu.",
+        "approach": "Creating a workspace using code.",
+        "approach_vi": "Khởi tạo không gian phát triển sử dụng mã nguồn.",
         "outcome": "Repository created and pushed to GitHub.",
         "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
         "lessons_learned": [
@@ -134,45 +172,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "success"
-      },
-      {
-        "id": "ChatBot_NiFi",
-        "name": "ChatBot_NiFi",
-        "problem": "Need to explore ChatBot_NiFi development.",
-        "problem_vi": "Nhu cầu thử nghiệm phát triển ChatBot_NiFi.",
-        "approach": "Creating a workspace using JavaScript.",
-        "approach_vi": "Khởi tạo không gian phát triển sử dụng JavaScript.",
-        "outcome": "Repository created and pushed to GitHub.",
-        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
-        "lessons_learned": [
-          "Explored development environment setup",
-          "Practiced version control workflows"
-        ],
-        "lessons_learned_vi": [
-          "Tìm hiểu thiết lập môi trường phát triển",
-          "Thực hành quy trình quản lý phiên bản"
-        ],
-        "status": "success"
-      },
-      {
-        "id": "Kmeans_AdvisoryMajor",
-        "name": "Kmeans_AdvisoryMajor",
-        "problem": "Need to explore Kmeans_AdvisoryMajor development.",
-        "problem_vi": "Nhu cầu thử nghiệm phát triển Kmeans_AdvisoryMajor.",
-        "approach": "Creating a workspace using Python.",
-        "approach_vi": "Khởi tạo không gian phát triển sử dụng Python.",
-        "outcome": "Repository created and pushed to GitHub.",
-        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
-        "lessons_learned": [
-          "Explored development environment setup",
-          "Practiced version control workflows"
-        ],
-        "lessons_learned_vi": [
-          "Tìm hiểu thiết lập môi trường phát triển",
-          "Thực hành quy trình quản lý phiên bản"
-        ],
-        "status": "success"
+        "status": "active"
       }
     ]
   }

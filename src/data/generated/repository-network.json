@@ -1,32 +1,277 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.064Z",
+  "generatedAt": "2026-06-19T15:07:07.687Z",
   "data": {
     "nodes": [
       {
-        "id": "nicodolas",
-        "name": "nicodolas",
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
         "description_vi": "Chưa có mô tả.",
-        "group": "Unknown",
+        "group": "TypeScript",
         "size": 5,
-        "tech": [],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "ziwei-doushu",
-        "name": "ziwei-doushu",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "group": "Unknown",
-        "size": 5,
-        "tech": [],
+        "tech": [
+          "TypeScript"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
       {
         "id": "Claw-OMX-9Router-AI",
         "name": "Claw-OMX-9Router-AI",
-        "description_vi": "Chưa có mô tả.",
+        "description_vi": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Watchshopmanager",
+        "name": "Watchshopmanager",
+        "description_vi": "C# WinForms application for managing a watch shop — inventory, sales records, and customer management.",
+        "group": "C#",
+        "size": 5,
+        "tech": [
+          "C#"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Valk_Hub",
+        "name": "Valk_Hub",
+        "description_vi": "Lua-based utility hub — a collection of scripts and tools for game automation and system utilities.",
+        "group": "Lua",
+        "size": 5,
+        "tech": [
+          "Lua"
+        ],
+        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "SJF",
+        "name": "SJF",
+        "description_vi": "C++ implementation of the Shortest Job First (SJF) CPU scheduling algorithm with simulation output.",
+        "group": "C++",
+        "size": 6,
+        "tech": [
+          "C++"
+        ],
+        "era": "Kỷ Nguyên Nền Tảng & Giải Thuật",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "RR",
+        "name": "RR",
+        "description_vi": "C++ implementation of the Round Robin (RR) CPU scheduling algorithm with configurable time quantum.",
+        "group": "C++",
+        "size": 6,
+        "tech": [
+          "C++"
+        ],
+        "era": "Kỷ Nguyên Nền Tảng & Giải Thuật",
+        "achievements": [
+          "Kho Lưu Trữ Đầu Tiên"
+        ],
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Unknown",
+        "size": 5,
+        "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "myroom",
+        "name": "myroom",
+        "description_vi": "Interactive personal room visualization project — JavaScript-based 3D room scene with customizable furniture layout.",
+        "group": "JavaScript",
+        "size": 6,
+        "tech": [
+          "JavaScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "MobileWatchShop",
+        "name": "MobileWatchShop",
+        "description_vi": "Cross-platform mobile app for a watch shop — built with Flutter/Dart for Android and iOS.",
+        "group": "Dart",
+        "size": 5,
+        "tech": [
+          "Dart"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Kmeans_AdvisoryMajor",
+        "name": "Kmeans_AdvisoryMajor",
+        "description_vi": "Python academic advisory tool using K-Means clustering to recommend suitable university majors for students.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "IoTKhoaBaoMat",
+        "name": "IoTKhoaBaoMat",
+        "description_vi": "IoT-based smart security lock system — HTML/JS interface for remote door control and access logging.",
+        "group": "HTML",
+        "size": 5,
+        "tech": [
+          "HTML"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "frontend-milk-tea",
+        "name": "frontend-milk-tea",
+        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "flower_shop",
+        "name": "flower_shop",
+        "description_vi": "HTML/CSS/JS static flower shop landing page with product gallery and contact form.",
+        "group": "HTML",
+        "size": 6,
+        "tech": [
+          "HTML"
+        ],
+        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "flowershop",
+        "name": "flowershop",
+        "description_vi": "Node.js/Handlebars flower shop web application with product listing, cart functionality, and order processing.",
+        "group": "Handlebars",
+        "size": 6,
+        "tech": [
+          "Handlebars"
+        ],
+        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "FE-Smoke-AI-React",
+        "name": "FE-Smoke-AI-React",
+        "description_vi": "React-based frontend for the AI smoke detection system — real-time dashboard with alert notifications.",
+        "group": "JavaScript",
+        "size": 5,
+        "tech": [
+          "JavaScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "dongcuuanhoa",
+        "name": "dongcuuanhoa",
+        "description_vi": "E-commerce website for a flower shop — online catalog with cart and order management built in HTML/CSS/JS.",
+        "group": "HTML",
+        "size": 5,
+        "tech": [
+          "HTML"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Demo-Cipher-O",
+        "name": "Demo-Cipher-O",
+        "description_vi": "Cryptography demonstration project — visualizes classic cipher algorithms (Caesar, Vigenère, RSA) step by step.",
+        "group": "HTML",
+        "size": 5,
+        "tech": [
+          "HTML"
+        ],
+        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Demo-Cipher",
+        "name": "Demo-Cipher",
+        "description_vi": "Group project implementing classic and modern cipher algorithms with an interactive HTML/JS interface.",
+        "group": "HTML",
+        "size": 5,
+        "tech": [
+          "HTML"
+        ],
+        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "ChatBot_NiFi",
+        "name": "ChatBot_NiFi",
+        "description_vi": "NiFi-powered chatbot prototype — event-driven message routing with a JavaScript frontend interface.",
+        "group": "JavaScript",
+        "size": 5,
+        "tech": [
+          "JavaScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Bookstoremanagement",
+        "name": "Bookstoremanagement",
+        "description_vi": "C# WinForms bookstore management system — handles inventory, sales, suppliers, and reporting.",
+        "group": "C#",
+        "size": 5,
+        "tech": [
+          "C#"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Bigdata",
+        "name": "Bigdata",
+        "description_vi": "Big Data processing and analytics experiments using Python, Pandas, and data visualization libraries.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "ai-smoke-detect",
+        "name": "ai-smoke-detect",
+        "description_vi": "Real-time smoke detection system using AI/ML models with a React frontend for live camera feed analysis.",
+        "group": "JavaScript",
+        "size": 5,
+        "tech": [
+          "JavaScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "ziwei-doushu",
+        "name": "ziwei-doushu",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "group": "Unknown",
         "size": 5,
         "tech": [],
@@ -44,66 +289,6 @@
         "currentBrainConnection": false
       },
       {
-        "id": "ai-smoke-detect",
-        "name": "ai-smoke-detect",
-        "description_vi": "Chưa có mô tả.",
-        "group": "JavaScript",
-        "size": 5,
-        "tech": [
-          "JavaScript"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "frontend-milk-tea",
-        "name": "frontend-milk-tea",
-        "description_vi": "Chưa có mô tả.",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "myroom",
-        "name": "myroom",
-        "description_vi": "Chưa có mô tả.",
-        "group": "JavaScript",
-        "size": 6,
-        "tech": [
-          "JavaScript"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Bigdata",
-        "name": "Bigdata",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Python",
-        "size": 5,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Demo-Cipher-O",
-        "name": "Demo-Cipher-O",
-        "description_vi": "Chưa có mô tả.",
-        "group": "HTML",
-        "size": 5,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
-        "currentBrainConnection": false
-      },
-      {
         "id": "PHP_WebBanHoa",
         "name": "PHP_WebBanHoa",
         "description_vi": "Bán Ho",
@@ -113,177 +298,6 @@
           "Blade"
         ],
         "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "FE-Smoke-AI-React",
-        "name": "FE-Smoke-AI-React",
-        "description_vi": "Chưa có mô tả.",
-        "group": "JavaScript",
-        "size": 5,
-        "tech": [
-          "JavaScript"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Demo-Cipher",
-        "name": "Demo-Cipher",
-        "description_vi": "Nhom13",
-        "group": "HTML",
-        "size": 5,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "IoTKhoaBaoMat",
-        "name": "IoTKhoaBaoMat",
-        "description_vi": "Chưa có mô tả.",
-        "group": "HTML",
-        "size": 5,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "dongcuuanhoa",
-        "name": "dongcuuanhoa",
-        "description_vi": "Chưa có mô tả.",
-        "group": "HTML",
-        "size": 5,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Watchshopmanager",
-        "name": "Watchshopmanager",
-        "description_vi": "Chưa có mô tả.",
-        "group": "C#",
-        "size": 5,
-        "tech": [
-          "C#"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "ChatBot_NiFi",
-        "name": "ChatBot_NiFi",
-        "description_vi": "Chưa có mô tả.",
-        "group": "JavaScript",
-        "size": 5,
-        "tech": [
-          "JavaScript"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "MobileWatchShop",
-        "name": "MobileWatchShop",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Dart",
-        "size": 5,
-        "tech": [
-          "Dart"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Kmeans_AdvisoryMajor",
-        "name": "Kmeans_AdvisoryMajor",
-        "description_vi": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
-        "group": "Python",
-        "size": 5,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "flowershop",
-        "name": "flowershop",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Handlebars",
-        "size": 6,
-        "tech": [
-          "Handlebars"
-        ],
-        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Bookstoremanagement",
-        "name": "Bookstoremanagement",
-        "description_vi": "Đồ án quản lý nhà sách C# winform",
-        "group": "C#",
-        "size": 5,
-        "tech": [
-          "C#"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "Valk_Hub",
-        "name": "Valk_Hub",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Lua",
-        "size": 5,
-        "tech": [
-          "Lua"
-        ],
-        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "flower_shop",
-        "name": "flower_shop",
-        "description_vi": "Chưa có mô tả.",
-        "group": "HTML",
-        "size": 6,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên Kỹ Nghệ Web & Scripting",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "SJF",
-        "name": "SJF",
-        "description_vi": "Chưa có mô tả.",
-        "group": "C++",
-        "size": 6,
-        "tech": [
-          "C++"
-        ],
-        "era": "Kỷ Nguyên Nền Tảng & Giải Thuật",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "RR",
-        "name": "RR",
-        "description_vi": "Chưa có mô tả.",
-        "group": "C++",
-        "size": 6,
-        "tech": [
-          "C++"
-        ],
-        "era": "Kỷ Nguyên Nền Tảng & Giải Thuật",
-        "achievements": [
-          "Kho Lưu Trữ Đầu Tiên"
-        ],
         "currentBrainConnection": false
       },
       {
@@ -354,58 +368,23 @@
     ],
     "links": [
       {
-        "source": "ai-smoke-detect",
-        "target": "myroom",
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
         "weight": 1
       },
       {
-        "source": "ai-smoke-detect",
-        "target": "FE-Smoke-AI-React",
-        "weight": 1
-      },
-      {
-        "source": "ai-smoke-detect",
-        "target": "ChatBot_NiFi",
-        "weight": 1
-      },
-      {
-        "source": "ai-smoke-detect",
-        "target": "milk-tea-shop",
-        "weight": 1
-      },
-      {
-        "source": "frontend-milk-tea",
+        "source": "PersonalWebsite",
         "target": "review-lecturers",
         "weight": 1
       },
       {
-        "source": "myroom",
-        "target": "FE-Smoke-AI-React",
-        "weight": 1
-      },
-      {
-        "source": "myroom",
-        "target": "ChatBot_NiFi",
-        "weight": 1
-      },
-      {
-        "source": "myroom",
-        "target": "milk-tea-shop",
-        "weight": 1
-      },
-      {
-        "source": "Bigdata",
+        "source": "Claw-OMX-9Router-AI",
         "target": "Kmeans_AdvisoryMajor",
         "weight": 1
       },
       {
-        "source": "FE-Smoke-AI-React",
-        "target": "ChatBot_NiFi",
-        "weight": 1
-      },
-      {
-        "source": "FE-Smoke-AI-React",
-        "target": "milk-tea-shop",
+        "source": "Claw-OMX-9Router-AI",
+        "target": "Bigdata",
         "weight": 1
       },
       {
@@ -414,13 +393,68 @@
         "weight": 1
       },
       {
+        "source": "SJF",
+        "target": "RR",
+        "weight": 1
+      },
+      {
+        "source": "myroom",
+        "target": "FE-Smoke-AI-React",
+        "weight": 1
+      },
+      {
+        "source": "myroom",
+        "target": "ChatBot_NiFi",
+        "weight": 1
+      },
+      {
+        "source": "myroom",
+        "target": "ai-smoke-detect",
+        "weight": 1
+      },
+      {
+        "source": "myroom",
+        "target": "milk-tea-shop",
+        "weight": 1
+      },
+      {
+        "source": "Kmeans_AdvisoryMajor",
+        "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "frontend-milk-tea",
+        "target": "review-lecturers",
+        "weight": 1
+      },
+      {
+        "source": "FE-Smoke-AI-React",
+        "target": "ChatBot_NiFi",
+        "weight": 1
+      },
+      {
+        "source": "FE-Smoke-AI-React",
+        "target": "ai-smoke-detect",
+        "weight": 1
+      },
+      {
+        "source": "FE-Smoke-AI-React",
+        "target": "milk-tea-shop",
+        "weight": 1
+      },
+      {
+        "source": "ChatBot_NiFi",
+        "target": "ai-smoke-detect",
+        "weight": 1
+      },
+      {
         "source": "ChatBot_NiFi",
         "target": "milk-tea-shop",
         "weight": 1
       },
       {
-        "source": "SJF",
-        "target": "RR",
+        "source": "ai-smoke-detect",
+        "target": "milk-tea-shop",
         "weight": 1
       },
       {
