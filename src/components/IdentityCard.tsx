@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, GraduationCap, MapPin, Star, Zap, Code2, Trophy } from "lucide-react";
+import { Mail, GraduationCap, MapPin, Zap, Code2, Trophy } from "lucide-react";
 import achievementsData from "@/data/generated/achievements.json";
 import repositoryNetworkData from "@/data/generated/repository-network.json";
 import profileData from "@/data/profile-backup.json";
@@ -8,12 +8,6 @@ import profileData from "@/data/profile-backup.json";
 const achievements = achievementsData.data;
 const repoNetwork = repositoryNetworkData.data;
 const profile = profileData;
-
-// Total stars across all repos
-const totalStars = repoNetwork.nodes.reduce(
-    (sum: number, n: { stars?: number }) => sum + (n.stars || 0),
-    0
-);
 
 // 3 most recent achievements as badges
 const featuredAchievements = achievements.achievements.slice(0, 3);
@@ -88,10 +82,6 @@ export default function IdentityCard() {
                             <Code2 size={10} className="text-[#00ff66]" />
                             {repoNetwork.nodes.length} Repos
                         </span>
-                        <span className="flex items-center gap-1">
-                            <Star size={10} className="text-[#ffb86c]" />
-                            {totalStars} Stars
-                        </span>
                     </div>
 
                     {/* Achievement badges */}
@@ -99,7 +89,7 @@ export default function IdentityCard() {
                         <div className="flex flex-wrap gap-1.5 mt-0.5">
                             {featuredAchievements.map((a) => (
                                 <span
-                                    key={a.id}
+                                    key={a.title}
                                     title={a.title_vi || a.title}
                                     className="flex items-center gap-1 text-[9px] font-mono font-bold px-2 py-0.5 rounded border border-[#ffb86c]/25 bg-[#ffb86c]/5 text-[#ffb86c]/80"
                                 >
@@ -175,7 +165,7 @@ export default function IdentityCard() {
                         {[
                             "Code như thở · Build như sống",
                             `Full-Stack · AI Automation · 3D Web`,
-                            `${repoNetwork.nodes.length} Repositories · ${totalStars} Stars · ${achievements.achievements.length} Achievements`,
+                            `${repoNetwork.nodes.length} Repositories · ${achievements.achievements.length} Achievements`,
                             `${profile.education.school_en} · GPA ${profile.education.gpa}`,
                             "Next.js · Node.js · GSAP · Three.js · PostgreSQL",
                             "Neko OS v4 · nicodolas",
