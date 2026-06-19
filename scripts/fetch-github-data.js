@@ -104,7 +104,7 @@ async function main() {
       profile: {
         login: GITHUB_USERNAME,
         name: "Nguyen Van Hieu",
-        bio: "Web Developer",
+        bio: "Developer",
         public_repos: 4,
         followers: 10,
         following: 10

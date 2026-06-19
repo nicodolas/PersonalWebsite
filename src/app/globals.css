@@ -111,13 +111,6 @@ body {
   border-color: rgba(0, 204, 255, 0.4);
 }
 
-/* Custom layout elements */
-.system-prompt::before {
-  content: "visitor@neko:~$ ";
-  color: var(--terminal-green);
-  font-weight: bold;
-}
-
 /* Glowing cursor */
 .blinking-cursor {
   display: inline-block;

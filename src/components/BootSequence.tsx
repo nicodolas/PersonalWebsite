@@ -31,37 +31,45 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
   const skipRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    let completed = false; // guard: onComplete chỉ được gọi 1 lần
+    const timerIds: ReturnType<typeof setTimeout>[] = [];
+
     const ctx = gsap.context(() => {
-      // Fade in skip button
       gsap.fromTo(
         skipRef.current,
         { opacity: 0, y: 10 },
         { opacity: 1, y: 0, duration: 1, delay: 0.5 }
       );
-
-      // Sequentially print lines
-      let delay = 0.1;
-      bootLines.forEach((line, index) => {
-        setTimeout(() => {
-          const time = new Date().toLocaleTimeString();
-          setLogs((prev) => [...prev, { text: line, time }]);
-          // Scroll to bottom
-          if (containerRef.current) {
-            containerRef.current.scrollTop = containerRef.current.scrollHeight;
-          }
-
-          // Trigger completion on last line after a small delay
-          if (index === bootLines.length - 1) {
-            gsap.delayedCall(1.2, onComplete);
-          }
-        }, delay * 1000);
-
-        // Add random slight delay to make it look realistic
-        delay += 0.15 + Math.random() * 0.25;
-      });
     }, containerRef);
 
-    return () => ctx.revert();
+    // setTimeout nằm ngoài gsap.context nên phải track và cancel thủ công
+    let delay = 0.1;
+    bootLines.forEach((line, index) => {
+      const id = setTimeout(() => {
+        const time = new Date().toLocaleTimeString();
+        setLogs((prev) => [...prev, { text: line, time }]);
+        if (containerRef.current) {
+          containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        }
+        if (index === bootLines.length - 1) {
+          const finishId = setTimeout(() => {
+            if (!completed) {
+              completed = true;
+              onComplete();
+            }
+          }, 1200);
+          timerIds.push(finishId);
+        }
+      }, delay * 1000);
+
+      timerIds.push(id);
+      delay += 0.15 + Math.random() * 0.25;
+    });
+
+    return () => {
+      ctx.revert();
+      timerIds.forEach(clearTimeout);
+    };
   }, [onComplete]);
 
   return (

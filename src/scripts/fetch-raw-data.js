@@ -98,7 +98,7 @@ async function main() {
     const profilePath = path.join(rawDir, "github-profile.json");
     if (!fs.existsSync(profilePath)) {
       console.log("[Pipeline] Writing fallback raw templates...");
-      fs.writeFileSync(profilePath, JSON.stringify({ login: GITHUB_USERNAME, name: "Nguyen Van Hieu", bio: "Web Developer" }, null, 2), "utf8");
+      fs.writeFileSync(profilePath, JSON.stringify({ login: GITHUB_USERNAME, name: "Nguyen Van Hieu", bio: "Developer" }, null, 2), "utf8");
       fs.writeFileSync(path.join(rawDir, "github-repos.json"), JSON.stringify([], null, 2), "utf8");
       fs.writeFileSync(path.join(rawDir, "github-events.json"), JSON.stringify([], null, 2), "utf8");
     }

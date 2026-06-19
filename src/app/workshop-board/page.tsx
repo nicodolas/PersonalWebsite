@@ -68,12 +68,12 @@ export default function WorkshopBoard() {
           </p>
         </div>
 
-        {/* Board grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start mt-4">
+        {/* Board grid — scroll ngang trên mobile, 3 cột trên desktop */}
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 items-start mt-4">
           {columns.map((col, idx) => (
             <div
               key={idx}
-              className={`board-column flex flex-col bg-[#090d16]/70 border rounded-lg p-4 min-h-[600px] shadow-lg ${col.color}`}
+              className={`board-column flex flex-col bg-[#090d16]/70 border rounded-lg p-4 shadow-lg w-full ${col.color}`}
             >
               {/* Header */}
               <div className="flex flex-col gap-1 border-b border-slate-800 pb-3 mb-4">
@@ -82,7 +82,7 @@ export default function WorkshopBoard() {
               </div>
 
               {/* Items */}
-              <div className="space-y-3 flex-grow overflow-y-auto max-h-[700px] pr-1">
+              <div className="space-y-3 flex-grow overflow-y-auto max-h-[400px] lg:max-h-[700px] pr-1">
                 {col.items.length === 0 ? (
                   <div className="text-center text-xs text-slate-600 py-12">
                     No items in this state.
