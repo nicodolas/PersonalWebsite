@@ -33,42 +33,89 @@ interface Node {
 }
 
 // Client-side synthesizer helper using Web Audio API
-let globalAudioCtx: AudioContext | null = null;
+let zzfxCtx: AudioContext | null = null;
 
-const playBeep = (freq: number, duration: number, type: OscillatorType = "sine", volume = 0.03) => {
+// zzFX — Zuper Zmall Zound Zynth (inline, no package)
+// https://github.com/KilledByAPixel/ZzFX
+const zzfxPlay = (...z: number[]) => {
   try {
     const savedSound = localStorage.getItem("neko_sound_enabled");
     if (savedSound === "false") return;
-
-    const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-    if (!AudioContextClass) return;
-    
-    if (!globalAudioCtx) {
-      globalAudioCtx = new AudioContextClass();
+    const AC = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (!AC) return;
+    if (!zzfxCtx) zzfxCtx = new AC();
+    if (zzfxCtx.state === "suspended") zzfxCtx.resume();
+    const [
+      volume = 1, randomness = .05, frequency = 220, attack = 0, sustain = 0,
+      release = .1, shape = 0, shapeCurve = 1, slide = 0, deltaSlide = 0,
+      pitchJump = 0, pitchJumpTime = 0, repeatTime = 0, noise = 0,
+      modulation = 0, bitCrush = 0, delay = 0, sustainVolume = 1, decay = 0, tremolo = 0
+    ] = z;
+    const sr = zzfxCtx.sampleRate;
+    let freq2 = frequency * (1 + randomness * 2 * Math.random() - randomness);
+    let sl = slide * (500 * Math.PI * Math.PI * 2 / sr / sr);
+    const startSl = sl;
+    let d = 0, e = 1;
+    const len = sr * (attack + sustain + release + decay) | 0;
+    const bm = sr * repeatTime | 0;
+    const pjx = sr * pitchJumpTime | 0;
+    const dm = sr * delay | 0;
+    const buf = zzfxCtx.createBuffer(1, len + dm, sr);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < len + dm; i++) {
+      if (bm && !(i % bm)) { freq2 = frequency; sl = startSl; }
+      if (pjx && i === pjx) freq2 += pitchJump;
+      sl += deltaSlide; freq2 += sl;
+      d = Math.sin(d + freq2 * 2 * Math.PI / sr);
+      const s = i < len ? (
+        i < sr * attack ? i / sr / attack :
+          i < sr * (attack + sustain) ? 1 :
+            i < sr * (attack + sustain + release) ? 1 - (i - sr * (attack + sustain)) / sr / release :
+              (i - (sr * (attack + sustain + release + decay))) > 0 ? 0 :
+                -(i - sr * (attack + sustain + release + decay)) / sr / decay * sustainVolume
+      ) : 0;
+      const sample = volume * s * (
+        shape === 0 ? d :
+          shape === 1 ? (d < 0 ? -1 : 1) :
+            shape === 2 ? Math.abs(d) * 2 - 1 :
+              shape === 3 ? d ** 3 :
+                shape === 4 ? Math.min(Math.max(d * 9, -1), 1) :
+                  Math.sin(d * Math.PI)
+      );
+      data[i] = noise ? sample * (1 - noise) + (Math.random() * 2 - 1) * noise : sample;
+      if (dm && i >= len) data[i] += (data[i - dm] || 0) * delay * Math.sin(i * modulation * 2 * Math.PI / sr);
+      if (bitCrush > 0) { const bc = 2 ** (bitCrush * 16 | 0); data[i] = Math.round(data[i] * bc) / bc; }
+      if (tremolo) data[i] *= 1 + tremolo * Math.sin(e += freq2 * shapeCurve * 2 * Math.PI / sr);
     }
-    
-    if (globalAudioCtx.state === "suspended") {
-      globalAudioCtx.resume();
-    }
+    const src = zzfxCtx.createBufferSource();
+    src.buffer = buf;
+    src.connect(zzfxCtx.destination);
+    src.start();
+  } catch { /* autoplay blocked */ }
+};
 
-    const ctx = globalAudioCtx;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    
-    osc.type = type;
-    osc.frequency.setValueAtTime(freq, ctx.currentTime);
-    
-    gain.gain.setValueAtTime(volume, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + duration);
-    
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    
-    osc.start();
-    osc.stop(ctx.currentTime + duration);
-  } catch {
-    // Autoplay blocked
-  }
+// Preset sounds
+const soundType = () => zzfxPlay(.2, .02, 1100 + Math.random() * 300, 0, 0, .04, 0, 1, 0, 0, 0, 0, 0, 0, 0, .08);
+const soundEnter = () => zzfxPlay(.35, .01, 660, 0, .01, .12, 1, 1.5, -2);
+const soundError = () => zzfxPlay(.3, .02, 180, 0, .01, .15, 4, .5, -6, 0, 0, 0, 0, .2);
+const soundTab = () => zzfxPlay(.15, .01, 1800, 0, 0, .06, 0, 1);
+const soundStartup = () => {
+  zzfxPlay(.3, 0, 523, 0, .01, .12, 5, 1);
+  setTimeout(() => zzfxPlay(.3, 0, 659, 0, .01, .12, 5, 1), 100);
+  setTimeout(() => zzfxPlay(.4, 0, 784, 0, .01, .2, 5, 1), 200);
+};
+const soundLevelUp = () => {
+  zzfxPlay(.4, 0, 523, 0, .01, .1, 5, 1);
+  setTimeout(() => zzfxPlay(.4, 0, 659, 0, .01, .1, 5, 1), 80);
+  setTimeout(() => zzfxPlay(.5, 0, 784, 0, .01, .25, 5, 1), 160);
+};
+const soundTheme = () => {
+  zzfxPlay(.25, 0, 440, 0, .01, .08, 0, 1);
+  setTimeout(() => zzfxPlay(.25, 0, 554, 0, .01, .1, 0, 1), 80);
+};
+const soundOn = () => {
+  zzfxPlay(.3, 0, 880, 0, .01, .1, 5, 1);
+  setTimeout(() => zzfxPlay(.3, 0, 1200, 0, .01, .15, 5, 1), 100);
 };
 
 export default function Terminal() {
@@ -81,7 +128,7 @@ export default function Terminal() {
   ]);
   const [cmdHistory, setCmdHistory] = useState<string[]>([]);
   const [historyIdx, setHistoryIdx] = useState(-1);
-  
+
   // New States
   const [theme, setTheme] = useState<"default" | "matrix" | "amber" | "cyber" | "dracula">("default");
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -117,11 +164,7 @@ export default function Terminal() {
     }, 0);
 
     // Play startup tune
-    setTimeout(() => {
-      playBeep(440, 0.08, "sine", 0.04);
-      setTimeout(() => playBeep(554.37, 0.08, "sine", 0.04), 80);
-      setTimeout(() => playBeep(659.25, 0.15, "sine", 0.04), 160);
-    }, 400);
+    setTimeout(() => soundStartup(), 400);
   }, []);
 
   // Scroll to bottom whenever history updates
@@ -143,11 +186,9 @@ export default function Terminal() {
     const newLvl = Math.floor(newXp / 100) + 1;
     if (newLvl > prevLvl) {
       setTimeout(() => {
-        playBeep(523.25, 0.1, "sine", 0.08); // C5
-        setTimeout(() => playBeep(659.25, 0.1, "sine", 0.08), 80); // E5
-        setTimeout(() => playBeep(783.99, 0.2, "sine", 0.08), 160); // G5
+        soundLevelUp();
       }, 150);
-      
+
       setHistory((prev) => [
         ...prev,
         { text: `✨ LEVEL UP! You are now Explorer Level ${newLvl}! (+${amount} XP)`, type: "system" }
@@ -167,8 +208,9 @@ export default function Terminal() {
 
       // Add input line
       setHistory((prev) => [...prev, { text: trimmedInput, type: "input" }]);
-      
+
       // Execute command
+      soundEnter();
       executeCommand(trimmedInput);
       setInput("");
     } else if (e.key === "ArrowUp") {
@@ -193,13 +235,17 @@ export default function Terminal() {
       e.preventDefault();
       const currentInput = input.trim().toLowerCase();
       if (!currentInput) return;
-      
+
       const commands = ["help", "whoami", "timeline", "workshop-board", "experiment-log", "graveyard", "skill-tree", "galaxy", "brain", "changelog", "achievements", "nexus", "clear", "theme", "sound", "guestbook", "xp"];
       const match = commands.find(c => c.startsWith(currentInput));
       if (match) {
         setInput(match);
-        playBeep(900, 0.05, "sine", 0.01);
+        soundTab();
       }
+    } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+      soundType();
+    } else if (e.key === "Backspace") {
+      soundType();
     }
   };
 
@@ -397,8 +443,7 @@ export default function Terminal() {
         if (soundArg === "on") {
           setSoundEnabled(true);
           localStorage.setItem("neko_sound_enabled", "true");
-          playBeep(880, 0.1, "sine", 0.05);
-          setTimeout(() => playBeep(1200, 0.15, "sine", 0.05), 100);
+          soundOn();
           outputs = [{ text: "System sound effects ENABLED.", type: "system" }];
         } else if (soundArg === "off") {
           setSoundEnabled(false);
@@ -417,8 +462,7 @@ export default function Terminal() {
         if (["default", "matrix", "amber", "cyber", "dracula"].includes(selectedTheme)) {
           setTheme(selectedTheme as "default" | "matrix" | "amber" | "cyber" | "dracula");
           localStorage.setItem("neko_terminal_theme", selectedTheme);
-          playBeep(587.33, 0.08, "triangle"); // D5
-          setTimeout(() => playBeep(659.25, 0.12, "triangle"), 80); // E5
+          soundTheme();
           outputs = [{ text: `Theme changed to: ${selectedTheme.toUpperCase()}`, type: "system" }];
         } else {
           outputs = [
@@ -438,7 +482,7 @@ export default function Terminal() {
         const xpForNext = 100 - (xp % 100);
         const barLength = Math.floor((xp % 100) / 10);
         const progressBar = "█".repeat(barLength) + "░".repeat(10 - barLength);
-        
+
         outputs = [
           { text: "=== HỆ THỐNG TRẢI NGHIỆM (EXPLORER STATUS) ===", type: "heading" },
           { text: `Cấp độ khám phá: Level ${currentLvl}`, type: "output" },
@@ -452,13 +496,13 @@ export default function Terminal() {
       case "guestbook":
         const guestName = parts[1];
         const guestMessage = parts.slice(2).join(" ");
-        
+
         // Retrieve existing guestbook from local storage
         let guestbookList: { name: string; message: string; date: string }[] = [];
         try {
           const savedGB = localStorage.getItem("neko_guestbook");
           if (savedGB) guestbookList = JSON.parse(savedGB);
-        } catch {}
+        } catch { }
 
         if (guestName && guestMessage) {
           // Write message
@@ -471,10 +515,9 @@ export default function Terminal() {
           // Limit to 20 entries
           const trimmedGB = guestbookList.slice(0, 20);
           localStorage.setItem("neko_guestbook", JSON.stringify(trimmedGB));
-          
-          playBeep(523.25, 0.1, "sine");
-          setTimeout(() => playBeep(659.25, 0.15, "sine"), 80);
-          
+
+          soundEnter();
+
           outputs = [
             { text: "Guestbook message successfully registered in local browser storage!", type: "system" },
             { text: `${guestName} >> ${guestMessage}`, type: "output" }
@@ -486,7 +529,7 @@ export default function Terminal() {
             { text: "Sử dụng: guestbook [tên_bạn] [lời_nhắn_của_bạn]", type: "system" },
             { text: "", type: "output" }
           ];
-          
+
           if (guestbookList.length === 0) {
             outputs.push({ text: "Sổ lưu bút hiện tại trống. Hãy để lại lời nhắn đầu tiên!", type: "output" });
           } else {
@@ -502,7 +545,7 @@ export default function Terminal() {
         return;
 
       default:
-        playBeep(220, 0.25, "sawtooth", 0.05); // Error tone
+        soundError();
         outputs = [
           { text: `Neko.OS: command not found: '${command}'. Type 'help' to see list of valid commands.`, type: "error" }
         ];
@@ -584,7 +627,7 @@ export default function Terminal() {
   };
 
   return (
-    <div 
+    <div
       onClick={focusInput}
       className={`flex-grow flex flex-col p-4 min-h-[500px] shadow-2xl relative select-text overflow-hidden rounded-lg border transition-all duration-300 ${getContainerStyle()}`}
     >
@@ -605,8 +648,8 @@ export default function Terminal() {
           }
 
           return (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`${colorClass} leading-relaxed whitespace-pre-wrap`}
             >
               {line.text}
@@ -627,16 +670,15 @@ export default function Terminal() {
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
-            // Play physical keypress tick sound
-            playBeep(600 + Math.random() * 200, 0.015, "triangle", 0.015);
+            // Play physical keypress tick sound — handled in onKeyDown
           }}
           onKeyDown={handleKeyDown}
-          className={`flex-grow bg-transparent outline-none font-mono caret-transparent select-text ${getPromptColor()}`}
+          className={`flex-grow bg-transparent outline-none font-mono select-text ${getPromptColor()}`}
+          style={{ caretColor: "inherit" }}
           maxLength={100}
           autoComplete="off"
           autoFocus
         />
-        <span className="blinking-cursor shrink-0"></span>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ class OpenRouterProvider extends AIProvider {
           "Authorization": `Bearer ${this.apiKey}`,
           "Content-Type": "application/json",
           "HTTP-Referer": "https://nekovibecoder.site",
-          "X-OpenRouter-Title": "Neko Workshop"
+          "X-OpenRouter-Title": "Neko Nexus"
         },
         body: JSON.stringify({
           model: this.model,

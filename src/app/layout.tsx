@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,54 +9,94 @@ const geistMono = Geist_Mono({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://personalwebsite-4eb.pages.dev";
 
+const title = "Nguyễn Văn Hiếu | Human";
+
+// Bio được viết như một "AI-readable bio card" — đoạn này Google AI Overview
+// và các LLM (ChatGPT, Perplexity) sẽ đọc và trích dẫn khi ai search về bạn.
+const description =
+  "Nguyễn Văn Hiếu (nicodolas) — lập trình viên tâm huyết với châm ngôn \"Code như thở, build như sống\". " +
+  "Cựu sinh viên Khoá 13 ngành Công nghệ Thông tin, Đại học Công Thương TP.HCM (HUIT). " +
+  "Full-Stack Developer chuyên Next.js, Node.js, AI automation và agentic workflows. " +
+  "Người tin rằng mỗi dòng code là một lần đặt cược vào tương lai.";
+
 export const metadata: Metadata = {
-  title: "Nguyễn Văn Hiếu | Web Developer",
-  description: "Portfolio of Nguyen Van Hieu (nicodolas/nicoleon) - A Web Developer specializing in MERN stack, performance optimization and scalable web applications. See my projects and CV.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | Neko OS",
+  },
+  description,
   keywords: [
-    "nekovibecoder",
-    "Nguyen Van Hieu",
     "Nguyễn Văn Hiếu",
+    "Nguyen Van Hieu",
+    "nguyễn văn hiếu huit",
+    "nguyễn văn hiếu hufi",
+    "nguyễn văn hiếu công thương",
     "nicodolas",
     "nicoleon",
+    "nekovibecoder",
+    "Full-Stack Developer",
     "Web Developer",
     "Software Engineer",
-    "MERN Stack",
+    "Next.js",
+    "Node.js",
+    "JavaScript",
+    "PostgreSQL",
+    "GSAP",
+    "AI automation",
+    "Agentic Workflows",
     "Portfolio",
-    "CV",
-    "Vietnam"
+    "HUIT",
+    "HUFI",
+    "Đại học Công Thương TP.HCM",
+    "Đại học Công nghiệp Thực phẩm",
+    "Công nghệ Thông tin",
+    "Vietnam",
+    "Neko OS",
   ],
-  authors: [{ name: "Nguyen Van Hieu" }],
+  authors: [{ name: "Nguyễn Văn Hiếu", url: "https://github.com/nicodolas" }],
+  creator: "Nguyễn Văn Hiếu",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: `${siteUrl}/`,
+    canonical: "/",
   },
   openGraph: {
     type: "website",
-    url: `${siteUrl}/`,
-    title: "Nguyễn Văn Hiếu | Web Developer",
-    description: "Portfolio of Nguyen Van Hieu - Turning caffeine into clean code. Check out my projects!",
+    url: siteUrl,
+    siteName: "Neko OS",
+    title,
+    description,
+    locale: "vi_VN",
     images: [
       {
-        url: `${siteUrl}/assets/avatar.png`,
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Nguyen Van Hieu Avatar",
+        alt: "Neko OS — Nguyễn Văn Hiếu Developer Portfolio",
+        type: "image/svg+xml",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nguyễn Văn Hiếu | Web Developer",
-    description: "Portfolio of Nguyen Van Hieu - Turning caffeine into clean code. Check out my projects!",
-    images: [`${siteUrl}/assets/avatar.png`],
+    title,
+    description,
+    images: ["/og-image.svg"],
+    creator: "@nicodolas",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#00ff66",
   width: "device-width",
   initialScale: 1,
 };
@@ -71,34 +106,93 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nguyen Van Hieu",
-    "alternateName": ["Nguyễn Văn Hiếu", "nekovibecoder", "nicodolas", "nicoleon"],
-    "url": `${siteUrl}/`,
-    "image": `${siteUrl}/assets/avatar.png`,
-    "jobTitle": "Web Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance"
+  const jsonLd = [
+    // --- Person schema ---
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Nguyễn Văn Hiếu",
+      alternateName: ["Nguyen Van Hieu", "nekovibecoder", "nicodolas", "nicoleon"],
+      url: siteUrl,
+      image: `${siteUrl}/og-image.svg`,
+      jobTitle: "Full-Stack Developer",
+      // Câu châm ngôn — AI Overview / Knowledge Panel sẽ pick up field này
+      description:
+        "Lập trình viên tâm huyết với châm ngôn \"Code như thở, build như sống\". " +
+        "Cựu sinh viên Khoá 13 ngành Công nghệ Thông tin, Đại học Công Thương TP.HCM (HUIT). " +
+        "Người tin rằng mỗi dòng code là một lần đặt cược vào tương lai.",
+      knowsAbout: [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Next.js",
+        "React",
+        "PostgreSQL",
+        "Express.js",
+        "GSAP",
+        "AI Automation",
+        "Agentic Workflows",
+      ],
+      worksFor: {
+        "@type": "Organization",
+        name: "Freelance",
+      },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Trường Đại học Công Thương TP.HCM (HUIT)",
+        alternateName: [
+          "Ho Chi Minh City University of Industry and Trade",
+          "HUIT",
+          "Đại học Công Thương",
+          "Trường Đại học Công nghiệp Thực phẩm TP.HCM",
+          "HUFI",
+        ],
+        url: "https://huit.edu.vn",
+      },
+      sameAs: [
+        "https://github.com/nicodolas",
+        "https://www.linkedin.com/in/nguyenvanhieu-nicodolas",
+      ],
     },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Ho Chi Minh City University of Industry and Trade"
+    // --- WebSite schema — enables Sitelinks search box & AI site summary ---
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Neko OS — Portfolio của Nguyễn Văn Hiếu",
+      description:
+        "Portfolio tương tác theo phong cách retro terminal OS của Nguyễn Văn Hiếu (nicodolas). " +
+        "Lập trình viên tâm huyết với châm ngôn: \"Code như thở, build như sống\".",
+      author: { "@id": `${siteUrl}/#person` },
+      inLanguage: ["vi", "en"],
     },
-    "sameAs": [
-      "https://github.com/nicodolas",
-      "https://www.linkedin.com/in/nguyenvanhieu-nicodolas"
-    ]
-  };
+    // --- Speakable — hint cho Google Assistant / AI đọc to đoạn này ---
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: siteUrl,
+      name: title,
+      speakable: {
+        "@type": "SpeakableSpecification",
+        // Trỏ vào CSS selector của SEO bio block trong page.tsx
+        cssSelector: ["#seo-bio-tagline", "#seo-bio-intro"],
+      },
+      about: { "@id": `${siteUrl}/#person` },
+    },
+  ];
 
   return (
     <html
       lang="vi"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        {/* Preload handled automatically by next/font — no manual preload needed */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -108,4 +202,3 @@ export default function RootLayout({
     </html>
   );
 }
-

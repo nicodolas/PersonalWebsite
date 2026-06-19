@@ -40,12 +40,12 @@ export function staggerCards(
     _trigger: string | Element
 ): void {
     // Set initial hidden state immediately to prevent FOUC
-    gsap.set(targets, { autoAlpha: 0, y: 40 });
+    gsap.set(targets, { opacity: 0, y: 40 });
 
     ScrollTrigger.batch(targets, {
         onEnter: (elements) =>
             gsap.to(elements, {
-                autoAlpha: 1,
+                opacity: 1,
                 y: 0,
                 duration: 0.6,
                 stagger: 0.08,
