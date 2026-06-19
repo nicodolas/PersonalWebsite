@@ -62,7 +62,7 @@ jobs:
           BRANCH="data/weekly-$(date -u +%Y%m%d-%H%M%S)"
           git checkout -b "$BRANCH"
 
-          git commit -m "chore: weekly deep analysis and narrative update [skip ci]"
+          git commit -m "chore: weekly deep analysis and narrative update"
 
           # Push branch to origin using the workflow token
           git push origin "$BRANCH"

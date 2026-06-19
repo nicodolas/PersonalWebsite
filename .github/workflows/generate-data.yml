@@ -64,7 +64,7 @@ jobs:
           BRANCH="data/auto-update-$(date -u +%Y%m%d-%H%M%S)"
           git checkout -b "$BRANCH"
 
-          git commit -m "chore: auto-update github dynamic data [skip ci]"
+          git commit -m "chore: auto-update github dynamic data"
 
           # Push branch to origin using the workflow token
           git push origin "$BRANCH"
