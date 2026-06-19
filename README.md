@@ -2,7 +2,7 @@
 
 > A retro terminal OS-themed developer portfolio for [Nguyễn Văn Hiếu](https://github.com/nicodolas).
 
-**Live:** https://personalwebsite-4eb.pages.dev
+**Live:** https://www.nekovibecoder.site/
 
 ---
 
