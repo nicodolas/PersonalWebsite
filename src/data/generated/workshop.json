@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.028Z",
+  "generatedAt": "2026-06-19T14:45:10.035Z",
   "data": {
     "projects": [
       {
@@ -83,14 +83,308 @@
         "forks": 0
       },
       {
+        "id": "PersonalWebsite",
+        "title": "PersonalWebsite",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 67,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Claw-OMX-9Router-AI",
+        "title": "Claw-OMX-9Router-AI",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 550,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
+        "description_vi": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Watchshopmanager",
+        "title": "Watchshopmanager",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 11184,
+        "tech_stack": [
+          "C#"
+        ],
+        "description": "C# WinForms application for managing a watch shop — inventory, sales records, and customer management.",
+        "description_vi": "C# WinForms application for managing a watch shop — inventory, sales records, and customer management.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Valk_Hub",
+        "title": "Valk_Hub",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 82,
+        "tech_stack": [
+          "Lua"
+        ],
+        "description": "Lua-based utility hub — a collection of scripts and tools for game automation and system utilities.",
+        "description_vi": "Lua-based utility hub — a collection of scripts and tools for game automation and system utilities.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "SJF",
+        "title": "SJF",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "C++"
+        ],
+        "description": "C++ implementation of the Shortest Job First (SJF) CPU scheduling algorithm with simulation output.",
+        "description_vi": "C++ implementation of the Shortest Job First (SJF) CPU scheduling algorithm with simulation output.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "RR",
+        "title": "RR",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "C++"
+        ],
+        "description": "C++ implementation of the Round Robin (RR) CPU scheduling algorithm with configurable time quantum.",
+        "description_vi": "C++ implementation of the Round Robin (RR) CPU scheduling algorithm with configurable time quantum.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
         "id": "nicodolas",
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 20,
+        "commits_count": 22,
         "tech_stack": [],
-        "description": "No description available.",
-        "description_vi": "No description available.",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "myroom",
+        "title": "myroom",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10038,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "Interactive personal room visualization project — JavaScript-based 3D room scene with customizable furniture layout.",
+        "description_vi": "Interactive personal room visualization project — JavaScript-based 3D room scene with customizable furniture layout.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "MobileWatchShop",
+        "title": "MobileWatchShop",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 46,
+        "tech_stack": [
+          "Dart"
+        ],
+        "description": "Cross-platform mobile app for a watch shop — built with Flutter/Dart for Android and iOS.",
+        "description_vi": "Cross-platform mobile app for a watch shop — built with Flutter/Dart for Android and iOS.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Kmeans_AdvisoryMajor",
+        "title": "Kmeans_AdvisoryMajor",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "Python academic advisory tool using K-Means clustering to recommend suitable university majors for students.",
+        "description_vi": "Python academic advisory tool using K-Means clustering to recommend suitable university majors for students.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "IoTKhoaBaoMat",
+        "title": "IoTKhoaBaoMat",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 1010,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "IoT-based smart security lock system — HTML/JS interface for remote door control and access logging.",
+        "description_vi": "IoT-based smart security lock system — HTML/JS interface for remote door control and access logging.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "frontend-milk-tea",
+        "title": "frontend-milk-tea",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 158,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "flower_shop",
+        "title": "flower_shop",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 297,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "HTML/CSS/JS static flower shop landing page with product gallery and contact form.",
+        "description_vi": "HTML/CSS/JS static flower shop landing page with product gallery and contact form.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "flowershop",
+        "title": "flowershop",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 84,
+        "tech_stack": [
+          "Handlebars"
+        ],
+        "description": "Node.js/Handlebars flower shop web application with product listing, cart functionality, and order processing.",
+        "description_vi": "Node.js/Handlebars flower shop web application with product listing, cart functionality, and order processing.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "FE-Smoke-AI-React",
+        "title": "FE-Smoke-AI-React",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 255,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "React-based frontend for the AI smoke detection system — real-time dashboard with alert notifications.",
+        "description_vi": "React-based frontend for the AI smoke detection system — real-time dashboard with alert notifications.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "dongcuuanhoa",
+        "title": "dongcuuanhoa",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "E-commerce website for a flower shop — online catalog with cart and order management built in HTML/CSS/JS.",
+        "description_vi": "E-commerce website for a flower shop — online catalog with cart and order management built in HTML/CSS/JS.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Demo-Cipher-O",
+        "title": "Demo-Cipher-O",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 33,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "Cryptography demonstration project — visualizes classic cipher algorithms (Caesar, Vigenère, RSA) step by step.",
+        "description_vi": "Cryptography demonstration project — visualizes classic cipher algorithms (Caesar, Vigenère, RSA) step by step.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Demo-Cipher",
+        "title": "Demo-Cipher",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 52,
+        "tech_stack": [
+          "HTML"
+        ],
+        "description": "Group project implementing classic and modern cipher algorithms with an interactive HTML/JS interface.",
+        "description_vi": "Group project implementing classic and modern cipher algorithms with an interactive HTML/JS interface.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ChatBot_NiFi",
+        "title": "ChatBot_NiFi",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "NiFi-powered chatbot prototype — event-driven message routing with a JavaScript frontend interface.",
+        "description_vi": "NiFi-powered chatbot prototype — event-driven message routing with a JavaScript frontend interface.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Bookstoremanagement",
+        "title": "Bookstoremanagement",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 2540,
+        "tech_stack": [
+          "C#"
+        ],
+        "description": "C# WinForms bookstore management system — handles inventory, sales, suppliers, and reporting.",
+        "description_vi": "C# WinForms bookstore management system — handles inventory, sales, suppliers, and reporting.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "Bigdata",
+        "title": "Bigdata",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 97,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "Big Data processing and analytics experiments using Python, Pandas, and data visualization libraries.",
+        "description_vi": "Big Data processing and analytics experiments using Python, Pandas, and data visualization libraries.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ai-smoke-detect",
+        "title": "ai-smoke-detect",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 10563,
+        "tech_stack": [
+          "JavaScript"
+        ],
+        "description": "Real-time smoke detection system using AI/ML models with a React frontend for live camera feed analysis.",
+        "description_vi": "Real-time smoke detection system using AI/ML models with a React frontend for live camera feed analysis.",
         "stars": 0,
         "forks": 0
       },
@@ -107,18 +401,6 @@
         "forks": 0
       },
       {
-        "id": "Claw-OMX-9Router-AI",
-        "title": "Claw-OMX-9Router-AI",
-        "status": "researching",
-        "progress": 20,
-        "commits_count": 10,
-        "tech_stack": [],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
         "id": "claw-code",
         "title": "claw-code",
         "status": "building",
@@ -127,76 +409,6 @@
         "tech_stack": [],
         "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
         "description_vi": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "ai-smoke-detect",
-        "title": "ai-smoke-detect",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 10563,
-        "tech_stack": [
-          "JavaScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "frontend-milk-tea",
-        "title": "frontend-milk-tea",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 158,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "myroom",
-        "title": "myroom",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 10038,
-        "tech_stack": [
-          "JavaScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Bigdata",
-        "title": "Bigdata",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 97,
-        "tech_stack": [
-          "Python"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Demo-Cipher-O",
-        "title": "Demo-Cipher-O",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 33,
-        "tech_stack": [
-          "HTML"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
         "stars": 0,
         "forks": 0
       },
@@ -211,202 +423,6 @@
         ],
         "description": "Bán Ho",
         "description_vi": "Bán Ho",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "FE-Smoke-AI-React",
-        "title": "FE-Smoke-AI-React",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 255,
-        "tech_stack": [
-          "JavaScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Demo-Cipher",
-        "title": "Demo-Cipher",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 52,
-        "tech_stack": [
-          "HTML"
-        ],
-        "description": "Nhom13",
-        "description_vi": "Nhom13",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "IoTKhoaBaoMat",
-        "title": "IoTKhoaBaoMat",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 1010,
-        "tech_stack": [
-          "HTML"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "dongcuuanhoa",
-        "title": "dongcuuanhoa",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 10,
-        "tech_stack": [
-          "HTML"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Watchshopmanager",
-        "title": "Watchshopmanager",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 11184,
-        "tech_stack": [
-          "C#"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "ChatBot_NiFi",
-        "title": "ChatBot_NiFi",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 10,
-        "tech_stack": [
-          "JavaScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "MobileWatchShop",
-        "title": "MobileWatchShop",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 46,
-        "tech_stack": [
-          "Dart"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Kmeans_AdvisoryMajor",
-        "title": "Kmeans_AdvisoryMajor",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 10,
-        "tech_stack": [
-          "Python"
-        ],
-        "description": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
-        "description_vi": "Áp dụng thuật toán gom cụm kmeans để tư vấn sinh viên chọn chuyên ngành phù hợp ",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "flowershop",
-        "title": "flowershop",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 84,
-        "tech_stack": [
-          "Handlebars"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Bookstoremanagement",
-        "title": "Bookstoremanagement",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 2540,
-        "tech_stack": [
-          "C#"
-        ],
-        "description": "Đồ án quản lý nhà sách C# winform",
-        "description_vi": "Đồ án quản lý nhà sách C# winform",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Valk_Hub",
-        "title": "Valk_Hub",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 82,
-        "tech_stack": [
-          "Lua"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "flower_shop",
-        "title": "flower_shop",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 297,
-        "tech_stack": [
-          "HTML"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "SJF",
-        "title": "SJF",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 10,
-        "tech_stack": [
-          "C++"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "RR",
-        "title": "RR",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 10,
-        "tech_stack": [
-          "C++"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
         "stars": 0,
         "forks": 0
       }

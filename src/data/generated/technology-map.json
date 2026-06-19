@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.061Z",
+  "generatedAt": "2026-06-19T14:45:10.946Z",
   "data": {
     "nodes": [
       {
@@ -13,13 +13,13 @@
         "id": "TypeScript",
         "label": "TypeScript",
         "type": "language",
-        "count": 2
+        "count": 3
       },
       {
         "id": "Python",
         "label": "Python",
         "type": "language",
-        "count": 2
+        "count": 3
       },
       {
         "id": "C#",
@@ -64,8 +64,8 @@
         "count": 2
       },
       {
-        "id": "Blade",
-        "label": "Blade",
+        "id": "Lua",
+        "label": "Lua",
         "type": "language",
         "count": 1
       },
@@ -82,8 +82,8 @@
         "count": 1
       },
       {
-        "id": "Lua",
-        "label": "Lua",
+        "id": "Blade",
+        "label": "Blade",
         "type": "language",
         "count": 1
       },

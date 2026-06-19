@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.020Z",
+  "generatedAt": "2026-06-19T14:45:09.662Z",
   "data": {
     "eras": [
       {
@@ -9,12 +9,13 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 1234,
+        "commits": 2286,
         "technologies": [
+          "TypeScript",
+          "Python",
           "Next.js 16",
           "Node.js",
           "express.js",
-          "TypeScript",
           "TanStack Query",
           "Shadcn UI",
           "PostgreSQL",
@@ -22,9 +23,10 @@
           "n8n"
         ],
         "repos": [
+          "PersonalWebsite",
+          "Claw-OMX-9Router-AI",
           "nicodolas",
           "ziwei-doushu",
-          "Claw-OMX-9Router-AI",
           "claw-code",
           "ReviewLecturers_HUIT"
         ]
@@ -37,13 +39,13 @@
         "description_vi": "Phát triển các ứng dụng web toàn diện, tích hợp hệ thống bảo mật IoT và triển khai các mô hình học máy/AI.",
         "commits": 60457,
         "technologies": [
-          "JavaScript",
-          "TypeScript",
-          "Python",
-          "Blade",
-          "HTML",
           "C#",
+          "JavaScript",
           "Dart",
+          "Python",
+          "HTML",
+          "TypeScript",
+          "Blade",
           "Node.js",
           "express.js",
           "Next.js",
@@ -58,19 +60,19 @@
           "Zustand"
         ],
         "repos": [
-          "ai-smoke-detect",
-          "frontend-milk-tea",
-          "myroom",
-          "Bigdata",
-          "PHP_WebBanHoa",
-          "FE-Smoke-AI-React",
-          "IoTKhoaBaoMat",
-          "dongcuuanhoa",
           "Watchshopmanager",
-          "ChatBot_NiFi",
+          "myroom",
           "MobileWatchShop",
           "Kmeans_AdvisoryMajor",
+          "IoTKhoaBaoMat",
+          "frontend-milk-tea",
+          "FE-Smoke-AI-React",
+          "dongcuuanhoa",
+          "ChatBot_NiFi",
           "Bookstoremanagement",
+          "Bigdata",
+          "ai-smoke-detect",
+          "PHP_WebBanHoa",
           "Milk-tea Web Shop",
           "Age Prediction App",
           "3D Portfolio"
@@ -84,16 +86,16 @@
         "description_vi": "Chuyển dịch sang môi trường web, xây dựng các giao diện mẫu và khám phá ngôn ngữ lập trình kịch bản game.",
         "commits": 1049,
         "technologies": [
+          "Lua",
           "HTML",
-          "Handlebars",
-          "Lua"
+          "Handlebars"
         ],
         "repos": [
-          "Demo-Cipher-O",
-          "Demo-Cipher",
-          "flowershop",
           "Valk_Hub",
-          "flower_shop"
+          "flower_shop",
+          "flowershop",
+          "Demo-Cipher-O",
+          "Demo-Cipher"
         ]
       },
       {
