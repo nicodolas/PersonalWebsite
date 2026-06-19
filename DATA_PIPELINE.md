@@ -10,7 +10,7 @@ The pipeline executes in three main phases:
 
 ```
 [ Phase 1: Fetching ]
-  - Checks GITHUB_TOKEN
+  - Checks GH_TOKEN
   - Queries REST/GraphQL APIs
   - Saves responses to src/data/raw/
 
@@ -32,7 +32,7 @@ The data fetching script is located at [fetch-raw-data.js](file:///D:/PersonalWe
 
 ### Responsibilities
 1. **GitHub Auth & Rate Limit Handling**:
-   - Queries GitHub APIs using `GITHUB_TOKEN` environment variable.
+   - Queries GitHub APIs using `GH_TOKEN` environment variable.
    - If no token is provided, it falls back to unauthenticated public requests (subject to lower rate limits).
    - Gracefully handles 403/401 auth failures by using a self-healing local mock backup.
 2. **Data Gathered**:
@@ -103,7 +103,7 @@ Managed by [ci-safety-check.js](file:///D:/PersonalWebsite/src/scripts/ci-safety
 To fetch data and run all analyzers locally:
 ```bash
 # Set environment variables
-$env:GITHUB_TOKEN="your-github-token"
+$env:GH_TOKEN="your-github-token"
 $env:OPENROUTER_API_KEY="your-openrouter-key"
 
 # Run the fetcher

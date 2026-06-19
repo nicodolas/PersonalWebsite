@@ -27,7 +27,7 @@ jobs:
 
       - name: Fetch GitHub Raw Data
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: node src/scripts/fetch-raw-data.js
 
       - name: Run Analyzers Pipeline

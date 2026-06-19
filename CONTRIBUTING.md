@@ -27,11 +27,11 @@ Make sure you have the following installed:
 3. **Configure Environment Variables**:
    Create a `.env` file in the root of the project:
    ```ini
-   GITHUB_TOKEN=your_github_personal_access_token
+   GH_TOKEN=your_github_personal_access_token
    OPENROUTER_API_KEY=your_openrouter_api_key
    OPENROUTER_MODEL=google/gemini-2.5-flash
    ```
-   *Note: A GitHub PAT (Personal Access Token) with public read access is sufficient. If you don't configure `GITHUB_TOKEN`, the rate limit will fall back to 60 calls per hour.*
+   *Note: A GitHub PAT (Personal Access Token) with public read access is sufficient. If you don't configure `GH_TOKEN`, the rate limit will fall back to 60 calls per hour.*
 
 4. **Run Dev Server**:
    ```bash

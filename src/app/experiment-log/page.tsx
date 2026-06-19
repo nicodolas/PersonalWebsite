@@ -3,7 +3,8 @@
 import React, { useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import experimentsData from "@/data/generated/experiments.json";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap-config";
+import { glowPulse } from "@/lib/animations";
 import { FlaskConical, CircleDot } from "lucide-react";
 
 interface Experiment {
@@ -25,14 +26,25 @@ export default function ExperimentLog() {
   const experiments = (experimentsData.data.experiments || []) as Experiment[];
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const ctx = gsap.context(() => {
-      gsap.from(".experiment-card", {
-        opacity: 0,
-        x: -30,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out"
+      const cards = containerRef.current!.querySelectorAll(".experiment-card");
+      cards.forEach((card) => {
+        gsap.from(card, {
+          x: -40,
+          autoAlpha: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            once: true,
+          },
+        });
       });
+
+      glowPulse(".status-badge");
     }, containerRef);
 
     return () => ctx.revert();
@@ -44,18 +56,18 @@ export default function ExperimentLog() {
         {/* Header */}
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold text-[#00ff66] border-b border-[#00ff66]/20 pb-2 flex items-center gap-2">
-            <FlaskConical size={24} /> Nhật Ký Thí Nghiệm (Experiment Logbook)
+            <FlaskConical size={24} /> Experiment Logbook
           </h1>
           <p className="text-xs text-slate-400">
-            Hồ sơ chi tiết về các dự án dưới dạng báo cáo thí nghiệm khoa học máy tính.
+            Detailed project profiles formatted as computer science experiment reports.
           </p>
         </div>
 
         {/* Experiment cards list */}
         <div className="space-y-6 mt-4">
           {experiments.map((exp, idx) => (
-            <div 
-              key={exp.id} 
+            <div
+              key={exp.id}
               className="experiment-card bg-[#090d16]/80 border border-slate-800 hover:border-[#00ccff]/30 transition-all rounded-lg p-6 shadow-xl flex flex-col gap-4"
             >
               {/* Card Title Header */}
@@ -66,14 +78,13 @@ export default function ExperimentLog() {
                   </span>
                   <h2 className="text-lg font-bold text-slate-200 glow-blue">{exp.name}</h2>
                 </div>
-                
-                <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded ${
-                  exp.status === "success" 
-                    ? "bg-[#00ff66]/10 text-[#00ff66] border border-[#00ff66]/20" 
-                    : exp.status === "active"
+
+                <span className={`status-badge text-[10px] uppercase font-bold px-2 py-0.5 rounded ${exp.status === "success"
+                  ? "bg-[#00ff66]/10 text-[#00ff66] border border-[#00ff66]/20"
+                  : exp.status === "active"
                     ? "bg-[#00ccff]/10 text-[#00ccff] border border-[#00ccff]/20"
                     : "bg-[#ff5555]/10 text-[#ff5555] border border-[#ff5555]/20"
-                }`}>
+                  }`}>
                   STATUS: {exp.status}
                 </span>
               </div>
@@ -108,7 +119,7 @@ export default function ExperimentLog() {
               {/* Lessons Learned */}
               {exp.lessons_learned_vi && exp.lessons_learned_vi.length > 0 && (
                 <div className="flex flex-col gap-1.5 mt-2 border-t border-slate-800/60 pt-3">
-                  <span className="text-[10px] uppercase font-bold text-slate-500">Bài học kinh nghiệm:</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-500">Lessons Learned:</span>
                   <div className="space-y-1 mt-1">
                     {exp.lessons_learned_vi.map((lesson, lIdx) => (
                       <div key={lIdx} className="flex items-start gap-2 text-xs text-slate-300">

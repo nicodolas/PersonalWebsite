@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import skillTreeData from "@/data/generated/skill-tree.json";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap-config";
+import { fadeInUp } from "@/lib/animations";
 import { Award, Code, Shield, Wrench, Cpu, Lock, CheckCircle2, Circle, Sparkles } from "lucide-react";
 
 // Icon mapping based on category ID
@@ -35,11 +36,11 @@ const playBeep = (freq: number, duration: number, type: OscillatorType = "sine",
 
     const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (!AudioContextClass) return;
-    
+
     if (!globalAudioCtx) {
       globalAudioCtx = new AudioContextClass();
     }
-    
+
     if (globalAudioCtx.state === "suspended") {
       globalAudioCtx.resume();
     }
@@ -47,16 +48,16 @@ const playBeep = (freq: number, duration: number, type: OscillatorType = "sine",
     const ctx = globalAudioCtx;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
-    
+
     osc.type = type;
     osc.frequency.setValueAtTime(freq, ctx.currentTime);
-    
+
     gain.gain.setValueAtTime(volume, ctx.currentTime);
     gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + duration);
-    
+
     osc.connect(gain);
     gain.connect(ctx.destination);
-    
+
     osc.start();
     osc.stop(ctx.currentTime + duration);
   } catch {
@@ -66,7 +67,8 @@ const playBeep = (freq: number, duration: number, type: OscillatorType = "sine",
 
 export default function SkillTree() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+  const xpBarRef = useRef<HTMLDivElement>(null);
+
   // Game state
   const [xp, setXp] = useState(0);
   const [unlockedSkills, setUnlockedSkills] = useState<string[]>([]);
@@ -82,29 +84,38 @@ export default function SkillTree() {
       if (savedUnlocks) {
         try {
           setUnlockedSkills(JSON.parse(savedUnlocks));
-        } catch {}
+        } catch { }
       }
     }, 0);
 
     const ctx = gsap.context(() => {
-      gsap.from(".skill-category", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out"
-      });
+      fadeInUp(".skill-category", containerRef.current!, 0.15);
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
+
+  // Level computation (100 XP per Level)
+  const currentLvl = Math.floor(xp / 100) + 1;
+  const xpInCurrentLvl = xp % 100;
+
+  useEffect(() => {
+    if (!xpBarRef.current || !containerRef.current) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(xpBarRef.current!,
+        { width: "0%" },
+        { width: `${xpInCurrentLvl}%`, duration: 1.2, ease: "power2.out" }
+      );
+    }, containerRef);
+    return () => ctx.revert();
+  }, [xpInCurrentLvl]);
 
   const handleUnlockSkill = (skillId: string, skillLabel: string) => {
     const unlockCost = 50;
 
     if (xp < unlockCost) {
       playBeep(220, 0.25, "sawtooth", 0.05); // Error sound
-      setNotification(`⚠️ Không đủ XP! Bạn cần ${unlockCost} XP để mở khóa. Hãy gõ thêm lệnh tại Terminal.`);
+      setNotification(`⚠️ Not enough XP! You need ${unlockCost} XP to unlock. Earn more XP in the Terminal.`);
       setTimeout(() => setNotification(null), 4000);
       return;
     }
@@ -112,10 +123,10 @@ export default function SkillTree() {
     // Deduct XP and add skill to unlocked list
     const newXp = xp - unlockCost;
     const newUnlocks = [...unlockedSkills, skillId];
-    
+
     setXp(newXp);
     setUnlockedSkills(newUnlocks);
-    
+
     localStorage.setItem("neko_user_xp", newXp.toString());
     localStorage.setItem("neko_unlocked_skills", JSON.stringify(newUnlocks));
 
@@ -134,18 +145,14 @@ export default function SkillTree() {
     setTimeout(() => playBeep(783.99, 0.12, "sine", 0.06), 140); // G5
     setTimeout(() => playBeep(1046.50, 0.2, "sine", 0.06), 210); // C6
 
-    setNotification(`🎉 Mở khóa thành công: "${skillLabel}" (-${unlockCost} XP)`);
+    setNotification(`🎉 Unlocked: "${skillLabel}" (-${unlockCost} XP)`);
     setTimeout(() => setNotification(null), 4500);
   };
-
-  // Level computation (100 XP per Level)
-  const currentLvl = Math.floor(xp / 100) + 1;
-  const xpInCurrentLvl = xp % 100;
 
   return (
     <LayoutWrapper>
       <div ref={containerRef} className="flex flex-col gap-6 py-4 select-none">
-        
+
         {/* Floating Notification */}
         {notification && (
           <div className="fixed bottom-6 right-6 bg-[#090d16] border border-[#00ff66]/30 px-5 py-3 rounded-lg text-xs font-mono text-[#00ff66] shadow-[0_0_20px_rgba(0,255,102,0.15)] z-50 flex items-center gap-2 animate-bounce">
@@ -158,13 +165,13 @@ export default function SkillTree() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#090d16]/40 border border-slate-850 p-5 rounded-lg">
           <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-bold text-[#00ff66] flex items-center gap-2">
-              <Award size={24} /> Cây Kỹ Năng Nhập Vai (Skill Tree)
+              <Award size={24} /> Skill Tree
             </h1>
             <p className="text-xs text-slate-400">
-              Khám phá và chi tiêu XP thu thập được từ Terminal để kích hoạt các khối kỹ năng.
+              Explore and spend XP earned from the Terminal to activate skill blocks.
             </p>
           </div>
-          
+
           {/* Gamified Header Stats */}
           <div className="flex flex-col gap-1.5 w-full md:w-64 bg-[#05080e] border border-slate-800 p-3.5 rounded font-mono">
             <div className="flex justify-between items-center text-xs">
@@ -173,13 +180,13 @@ export default function SkillTree() {
             </div>
             {/* Progress Bar */}
             <div className="w-full bg-slate-950 h-2.5 rounded-full overflow-hidden border border-slate-850">
-              <div 
-                className="bg-gradient-to-r from-[#00ccff] to-[#00ff66] h-full rounded-full transition-all duration-500"
-                style={{ width: `${xpInCurrentLvl}%` }}
+              <div
+                ref={xpBarRef}
+                className="bg-gradient-to-r from-[#00ccff] to-[#00ff66] h-full rounded-full"
               ></div>
             </div>
             <div className="flex justify-between items-center text-[10px] text-slate-500">
-              <span>{xp} XP tích lũy</span>
+              <span>{xp} XP earned</span>
               <span>{xpInCurrentLvl}/100 XP</span>
             </div>
           </div>
@@ -192,7 +199,7 @@ export default function SkillTree() {
             const Icon = meta.icon;
 
             return (
-              <div 
+              <div
                 key={cat.id}
                 className={`skill-category bg-[#090d16]/70 border border-slate-800 rounded-lg p-6 shadow-xl flex flex-col gap-4 transition-all hover:border-slate-700 ${meta.glow}`}
               >
@@ -202,14 +209,13 @@ export default function SkillTree() {
                     <Icon className={`${meta.color} shrink-0`} size={20} />
                     <h2 className="text-sm font-bold text-slate-200 uppercase tracking-widest">{cat.label_vi}</h2>
                   </div>
-                  <span className={`text-[10px] uppercase font-mono px-2 py-0.5 rounded ${
-                    cat.status === "mastered" 
-                      ? "bg-[#00ff66]/10 text-[#00ff66] border border-[#00ff66]/20" 
-                      : cat.status === "unlocked"
+                  <span className={`text-[10px] uppercase font-mono px-2 py-0.5 rounded ${cat.status === "mastered"
+                    ? "bg-[#00ff66]/10 text-[#00ff66] border border-[#00ff66]/20"
+                    : cat.status === "unlocked"
                       ? "bg-[#00ccff]/10 text-[#00ccff] border border-[#00ccff]/20"
                       : "bg-slate-800 text-slate-400"
-                  }`}>
-                    {cat.status === "mastered" ? "LÀNH NGHỀ" : cat.status === "unlocked" ? "ĐÃ MỞ" : "KHOÁ"}
+                    }`}>
+                    {cat.status === "mastered" ? "MASTERED" : cat.status === "unlocked" ? "UNLOCKED" : "LOCKED"}
                   </span>
                 </div>
 
@@ -222,23 +228,22 @@ export default function SkillTree() {
                     const isDynamicUnlocked = unlockedSkills.includes(skill.id);
 
                     return (
-                      <div 
+                      <div
                         id={`skill-node-${skill.id}`}
                         key={skill.id}
                         onClick={() => isLocked && handleUnlockSkill(skill.id, skill.label_vi)}
-                        className={`border transition-all rounded p-3 flex flex-col gap-2 relative group ${
-                          isLocked 
-                            ? "bg-[#05080f]/50 border-slate-900 opacity-60 hover:opacity-100 hover:border-[#ff5555]/30 cursor-pointer" 
-                            : isMastered
+                        className={`border transition-all rounded p-3 flex flex-col gap-2 relative group ${isLocked
+                          ? "bg-[#05080f]/50 border-slate-900 opacity-60 hover:opacity-100 hover:border-[#ff5555]/30 cursor-pointer"
+                          : isMastered
                             ? "bg-[#071512]/50 border-[#00ff66]/20 hover:border-[#00ff66]/40"
                             : "bg-[#0b1322] border-slate-800 hover:border-[#00ccff]/30"
-                        }`}
+                          }`}
                       >
                         {/* Hover Overlay for locked nodes */}
                         {isLocked && (
                           <div className="absolute inset-0 bg-black/60 rounded flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                             <span className="text-[10px] text-[#ffb86c] font-mono font-bold flex items-center gap-1">
-                              🔑 NHẤP ĐỂ MỞ (TỐN 50 XP)
+                              🔑 CLICK TO UNLOCK (50 XP)
                             </span>
                           </div>
                         )}
@@ -251,7 +256,7 @@ export default function SkillTree() {
                           <div className="flex items-center gap-1.5 font-mono text-[10px]">
                             {isLocked ? (
                               <span className="text-[#ff5555] flex items-center gap-1">
-                                <Lock size={10} /> ĐÃ KHOÁ
+                                <Lock size={10} /> LOCKED
                               </span>
                             ) : isMastered ? (
                               <span className="text-[#00ff66] flex items-center gap-1 font-bold">
@@ -259,11 +264,11 @@ export default function SkillTree() {
                               </span>
                             ) : isDynamicUnlocked ? (
                               <span className="text-[#00ff66] flex items-center gap-1 font-bold">
-                                <Sparkles size={10} className="animate-spin" /> ĐÃ MỞ (XP)
+                                <Sparkles size={10} className="animate-spin" /> UNLOCKED (XP)
                               </span>
                             ) : (
                               <span className="text-[#00ccff] flex items-center gap-1">
-                                <Circle size={10} className="fill-[#00ccff]/20 animate-pulse" /> ĐANG HỌC
+                                <Circle size={10} className="fill-[#00ccff]/20 animate-pulse" /> IN PROGRESS
                               </span>
                             )}
                           </div>
@@ -277,15 +282,14 @@ export default function SkillTree() {
                             else if (!isLocked && i < 3) filled = true; // Unlocked defaults to level 3/5
 
                             return (
-                              <span 
-                                key={i} 
-                                className={`w-full h-1.5 rounded-sm ${
-                                  filled 
-                                    ? isMastered 
-                                      ? "bg-[#00ff66] shadow-[0_0_5px_rgba(0,255,102,0.8)]" 
-                                      : "bg-[#00ccff] shadow-[0_0_5px_rgba(0,204,255,0.8)]"
-                                    : "bg-slate-950 border border-slate-900"
-                                }`}
+                              <span
+                                key={i}
+                                className={`w-full h-1.5 rounded-sm ${filled
+                                  ? isMastered
+                                    ? "bg-[#00ff66] shadow-[0_0_5px_rgba(0,255,102,0.8)]"
+                                    : "bg-[#00ccff] shadow-[0_0_5px_rgba(0,204,255,0.8)]"
+                                  : "bg-slate-950 border border-slate-900"
+                                  }`}
                               ></span>
                             );
                           })}
