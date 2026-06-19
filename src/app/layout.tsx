@@ -192,14 +192,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.svg" />
-        {/* Preload Geist Mono fonts để giảm layout shift (CLS) */}
-        <link
-          rel="preload"
-          href="/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* Preload handled automatically by next/font — no manual preload needed */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

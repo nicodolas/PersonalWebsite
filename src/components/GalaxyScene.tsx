@@ -30,6 +30,7 @@ interface GalaxySceneProps {
     links: { source: string; target: string }[];
     onSelectNode: (node: Node | null) => void;
     selectedId: string | null;
+    onToggleOrbit?: (isOrbiting: boolean) => void;
 }
 
 function getGroupColor(group: string): THREE.Color {
@@ -66,6 +67,7 @@ export default function GalaxyScene({
     links,
     onSelectNode,
     selectedId,
+    onToggleOrbit,
 }: GalaxySceneProps) {
     const mountRef = useRef<HTMLDivElement>(null);
     const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
@@ -101,7 +103,10 @@ export default function GalaxyScene({
 
     // Listen for orbit toggle from parent button and keyboard Space
     useEffect(() => {
-        const handleToggle = () => { isOrbitingRef.current = !isOrbitingRef.current; };
+        const handleToggle = () => {
+            isOrbitingRef.current = !isOrbitingRef.current;
+            onToggleOrbit?.(isOrbitingRef.current);
+        };
         const handleKey = (e: KeyboardEvent) => { if (e.code === "Space") handleToggle(); };
         window.addEventListener("galaxy:toggleOrbit" as keyof WindowEventMap, handleToggle);
         window.addEventListener("keydown", handleKey);
@@ -109,6 +114,7 @@ export default function GalaxyScene({
             window.removeEventListener("galaxy:toggleOrbit" as keyof WindowEventMap, handleToggle);
             window.removeEventListener("keydown", handleKey);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const makeLabelSprite = useCallback((text: string, color: string): THREE.Sprite => {
@@ -236,24 +242,24 @@ export default function GalaxyScene({
         planets.forEach((planet, i) => {
             const r = Math.max(0.08, (planet.size || 5) * 0.028);
 
-            // Orbit path
-            const orbitCurve = new THREE.EllipseCurve(
-                0, 0,
-                planet.orbitRadius, planet.orbitRadius * Math.abs(Math.cos(planet.inclination)),
-                0, Math.PI * 2, false, 0
-            );
-            const orbitPoints = orbitCurve.getPoints(128).map(pt => {
-                const cosA = Math.cos(planet.tiltAxis);
-                const sinA = Math.sin(planet.tiltAxis);
-                const cosI = Math.cos(planet.inclination);
-                const sinI = Math.sin(planet.inclination);
-                const lx = pt.x, ly = pt.y;
-                return new THREE.Vector3(
+            // Orbit path — sample using the same trig as the animation loop
+            // so the drawn path matches the planet's actual trajectory exactly
+            const orbitPoints: THREE.Vector3[] = [];
+            const cosI = Math.cos(planet.inclination);
+            const sinI = Math.sin(planet.inclination);
+            const cosA = Math.cos(planet.tiltAxis);
+            const sinA = Math.sin(planet.tiltAxis);
+            const steps = 128;
+            for (let s = 0; s <= steps; s++) {
+                const t = (s / steps) * Math.PI * 2;
+                const lx = planet.orbitRadius * Math.cos(t);
+                const ly = planet.orbitRadius * Math.sin(t);
+                orbitPoints.push(new THREE.Vector3(
                     lx * cosA - ly * sinA * cosI,
                     ly * sinI,
                     lx * sinA + ly * cosA * cosI
-                );
-            });
+                ));
+            }
             const orbitGeom = new THREE.BufferGeometry().setFromPoints(orbitPoints);
             const orbitMat = new THREE.LineBasicMaterial({
                 color: planet.color,
@@ -451,7 +457,7 @@ export default function GalaxyScene({
                 anglesRef.current = anglesRef.current.map((a, i) => a + planets[i].orbitSpeed * dt);
             }
 
-            // Update planet positions
+            // Update planet positions — same trig as orbit path generation
             planets.forEach((planet, i) => {
                 const theta = anglesRef.current[i];
                 const cosT = Math.cos(theta), sinT = Math.sin(theta);

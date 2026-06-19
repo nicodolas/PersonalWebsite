@@ -133,3 +133,8 @@ body {
   from, to { background-color: transparent }
   50% { background-color: var(--terminal-green) }
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

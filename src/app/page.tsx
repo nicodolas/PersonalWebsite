@@ -66,7 +66,7 @@ export default function Home() {
       }, dashboardRef);
       return () => ctx.revert();
     }
-  }, [isBooted, activeTab]);
+  }, [isBooted, activeTab, clusters.length, repoNetwork.nodes.length, repoNetwork.links.length]);
 
   const handleBootComplete = () => {
     sessionStorage.setItem("neko_booted", "true");

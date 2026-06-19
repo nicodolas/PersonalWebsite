@@ -76,8 +76,8 @@ export default function Galaxy() {
               window.dispatchEvent(new CustomEvent("galaxy:toggleOrbit"));
             }}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs font-mono font-bold transition-all ${isOrbiting
-                ? "bg-[#00ff66]/10 border-[#00ff66]/40 text-[#00ff66] hover:bg-[#00ff66]/20"
-                : "bg-[#ff5555]/10 border-[#ff5555]/40 text-[#ff5555] hover:bg-[#ff5555]/20"
+              ? "bg-[#00ff66]/10 border-[#00ff66]/40 text-[#00ff66] hover:bg-[#00ff66]/20"
+              : "bg-[#ff5555]/10 border-[#ff5555]/40 text-[#ff5555] hover:bg-[#ff5555]/20"
               }`}
           >
             <Orbit size={14} className={isOrbiting ? "animate-spin-slow" : ""} />
@@ -97,6 +97,7 @@ export default function Galaxy() {
               links={links}
               onSelectNode={(n) => setSelectedNode(n)}
               selectedId={selectedNode?.id ?? null}
+              onToggleOrbit={(orbiting) => setIsOrbiting(orbiting)}
             />
 
             {/* Legend */}
