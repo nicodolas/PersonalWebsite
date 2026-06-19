@@ -3,7 +3,8 @@
 import React, { useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import workshopData from "@/data/generated/workshop.json";
-import gsap from "gsap";
+import { gsap, ScrollTrigger } from "@/lib/gsap-config";
+import { staggerCards } from "@/lib/animations";
 import { Folder, GitFork, Star, Monitor, PlayCircle } from "lucide-react";
 
 interface Node {
@@ -33,25 +34,25 @@ export default function WorkshopBoard() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Fade in columns
-      gsap.from(".board-column", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power2.out"
-      });
+      // Stagger-reveal board columns
+      staggerCards(".board-column", containerRef.current!);
 
-      // Hover card effect handled by CSS
+      // Workshop card stagger reveal via ScrollTrigger batch
+      gsap.set(".workshop-card", { autoAlpha: 0, y: 40 });
+      ScrollTrigger.batch(".workshop-card", {
+        onEnter: (els) => gsap.to(els, { autoAlpha: 1, y: 0, stagger: 0.08, duration: 0.5 }),
+        start: "top 88%",
+        once: true,
+      });
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   const columns = [
-    { title: "🧪 RESEARCH", desc: "Nghiên cứu & Ý tưởng công nghệ mới", items: research, color: "text-[#bd93f9] border-[#bd93f9]/30" },
-    { title: "⚙️ BUILDING", desc: "Dự án đang phát triển tích cực", items: building, color: "text-[#00ff66] border-[#00ff66]/30" },
-    { title: "📦 ARCHIVED", desc: "Dự án cũ / Ý tưởng đã lưu trữ", items: archived, color: "text-[#ff5555] border-[#ff5555]/30" }
+    { title: "🧪 RESEARCH", desc: "Research & New Technology Ideas", items: research, color: "text-[#bd93f9] border-[#bd93f9]/30" },
+    { title: "⚙️ BUILDING", desc: "Actively Developed Projects", items: building, color: "text-[#00ff66] border-[#00ff66]/30" },
+    { title: "📦 ARCHIVED", desc: "Old Projects / Archived Ideas", items: archived, color: "text-[#ff5555] border-[#ff5555]/30" }
   ];
 
   return (
@@ -60,18 +61,18 @@ export default function WorkshopBoard() {
         {/* Header */}
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold text-[#00ff66] border-b border-[#00ff66]/20 pb-2 flex items-center gap-2">
-            <Monitor size={24} /> Bảng Công Việc Phòng Thí Nghiệm (Workshop Board)
+            <Monitor size={24} /> Workshop Board
           </h1>
           <p className="text-xs text-slate-400">
-            Giả lập Kanban phân loại tiến trình nghiên cứu phát triển các dự án của Neko.
+            Kanban simulation categorizing project research and development progress.
           </p>
         </div>
 
         {/* Board grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start mt-4">
           {columns.map((col, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`board-column flex flex-col bg-[#090d16]/70 border rounded-lg p-4 min-h-[600px] shadow-lg ${col.color}`}
             >
               {/* Header */}
@@ -84,13 +85,13 @@ export default function WorkshopBoard() {
               <div className="space-y-3 flex-grow overflow-y-auto max-h-[700px] pr-1">
                 {col.items.length === 0 ? (
                   <div className="text-center text-xs text-slate-600 py-12">
-                    Không có thực thể nào ở trạng thái này.
+                    No items in this state.
                   </div>
                 ) : (
                   col.items.map((item) => (
-                    <div 
-                      key={item.id} 
-                      className="bg-[#0b1322] border border-slate-800 hover:border-[#00ff66]/30 transition-all rounded p-4 flex flex-col gap-2 shadow hover:translate-y-[-2px]"
+                    <div
+                      key={item.id}
+                      className="workshop-card bg-[#0b1322] border border-slate-800 hover:border-[#00ff66]/30 transition-all rounded p-4 flex flex-col gap-2 shadow hover:translate-y-[-2px]"
                     >
                       {/* Title & icons */}
                       <div className="flex justify-between items-start">
@@ -109,8 +110,8 @@ export default function WorkshopBoard() {
                       {item.tech_stack && item.tech_stack.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-1">
                           {item.tech_stack.slice(0, 3).map((t) => (
-                            <span 
-                              key={t} 
+                            <span
+                              key={t}
                               className="text-[9px] bg-slate-800/80 text-slate-300 px-1.5 py-0.5 rounded font-mono"
                             >
                               {t}
@@ -133,10 +134,10 @@ export default function WorkshopBoard() {
                         </div>
 
                         {item.github_url && (
-                          <a 
-                            href={item.github_url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                          <a
+                            href={item.github_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-[#00ff66] hover:underline flex items-center gap-0.5"
                           >
                             <PlayCircle size={10} />

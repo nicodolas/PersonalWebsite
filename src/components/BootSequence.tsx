@@ -26,7 +26,7 @@ const bootLines = [
 ];
 
 export default function BootSequence({ onComplete }: BootSequenceProps) {
-  const [logs, setLogs] = useState<string[]>([]);
+  const [logs, setLogs] = useState<Array<{ text: string; time: string }>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const skipRef = useRef<HTMLButtonElement>(null);
 
@@ -43,18 +43,19 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
       let delay = 0.1;
       bootLines.forEach((line, index) => {
         setTimeout(() => {
-          setLogs((prev) => [...prev, line]);
+          const time = new Date().toLocaleTimeString();
+          setLogs((prev) => [...prev, { text: line, time }]);
           // Scroll to bottom
           if (containerRef.current) {
             containerRef.current.scrollTop = containerRef.current.scrollHeight;
           }
-          
+
           // Trigger completion on last line after a small delay
           if (index === bootLines.length - 1) {
             gsap.delayedCall(1.2, onComplete);
           }
         }, delay * 1000);
-        
+
         // Add random slight delay to make it look realistic
         delay += 0.15 + Math.random() * 0.25;
       });
@@ -64,12 +65,12 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
   }, [onComplete]);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="fixed inset-0 z-50 bg-[#05070a] text-[#00ff66] font-mono p-6 md:p-12 overflow-y-auto select-none crt-screen"
     >
       <div className="scanline-effect"></div>
-      
+
       {/* Top Header bar */}
       <div className="flex justify-between items-center border-b border-[#00ff66]/30 pb-3 mb-6">
         <span className="text-xs uppercase tracking-widest font-bold glow-green">
@@ -89,16 +90,16 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
         {logs.map((log, index) => (
           <div key={index} className="flex items-start">
             <span className="text-[#00ccff] mr-3 shrink-0 select-none">
-              [{new Date().toLocaleTimeString()}]
+              [{log.time}]
             </span>
-            <span className="leading-relaxed whitespace-pre-wrap">{log}</span>
+            <span className="leading-relaxed whitespace-pre-wrap">{log.text}</span>
           </div>
         ))}
-        
+
         {logs.length < bootLines.length && (
           <div className="flex items-center text-sm md:text-base mt-2">
-            <span className="text-[#00ccff] mr-3 shrink-0">
-              [{new Date().toLocaleTimeString()}]
+            <span className="text-[#00ccff] mr-3 shrink-0" suppressHydrationWarning>
+              [{logs.length > 0 ? logs[logs.length - 1].time : ""}]
             </span>
             <span className="text-[#00ff66] opacity-75">Loading system modules...</span>
             <span className="blinking-cursor"></span>

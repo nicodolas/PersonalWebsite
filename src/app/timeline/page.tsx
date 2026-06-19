@@ -3,29 +3,52 @@
 import React, { useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import timelineData from "@/data/generated/timeline.json";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap-config";
+import { glowPulse } from "@/lib/animations";
 import { GitCommit, Calendar, Code, ChevronRight } from "lucide-react";
 
 export default function Timeline() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate title
-      gsap.from(".timeline-title", { opacity: 0, y: -20, duration: 0.8, ease: "power2.out" });
-      
-      // Animate timeline path
-      gsap.from(".timeline-line", { scaleY: 0, transformOrigin: "top", duration: 1.5, ease: "power3.inOut" });
+    if (!containerRef.current) return;
 
-      // Animate timeline nodes
-      gsap.from(".timeline-item", {
-        opacity: 0,
-        x: (index) => (index % 2 === 0 ? -40 : 40),
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        delay: 0.3
+    const ctx = gsap.context(() => {
+      // Animate each timeline item individually with alternating x direction
+      const items = containerRef.current!.querySelectorAll(".timeline-item");
+      items.forEach((item, index) => {
+        gsap.from(item, {
+          autoAlpha: 0,
+          x: index % 2 === 0 ? -60 : 60,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            once: true,
+          },
+        });
       });
+
+      // Scrub-driven timeline line draw (no `once` — conflicts with scrub per Req 2.5)
+      gsap.fromTo(
+        ".timeline-line",
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          transformOrigin: "top center",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".timeline-body",
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 0.5,
+          },
+        }
+      );
+
+      // Glow pulse on timeline node dots
+      glowPulse(".timeline-node-dot");
     }, containerRef);
 
     return () => ctx.revert();
@@ -35,17 +58,17 @@ export default function Timeline() {
     <LayoutWrapper>
       <div ref={containerRef} className="flex flex-col gap-6 py-4 select-none">
         {/* Title */}
-        <div className="timeline-title flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold text-[#00ff66] border-b border-[#00ff66]/20 pb-2 flex items-center gap-2">
-            <Calendar size={24} /> Dòng Thời Gian Kỷ Nguyên (Developer Eras)
+            <Calendar size={24} /> Developer Eras Timeline
           </h1>
           <p className="text-xs text-slate-400">
-            Hành trình phát triển kỹ năng và tích lũy công nghệ được cập nhật tự động từ lịch sử GitHub.
+            Skill progression and technology accumulation automatically updated from GitHub history.
           </p>
         </div>
 
         {/* Timeline body */}
-        <div className="relative flex flex-col items-center my-8">
+        <div className="timeline-body relative flex flex-col items-center my-8">
           {/* Vertical line path */}
           <div className="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#00ff66]/20"></div>
 
@@ -54,11 +77,10 @@ export default function Timeline() {
             {timelineData.data.eras.map((era, index) => {
               const isEven = index % 2 === 0;
               return (
-                <div 
-                  key={era.year} 
-                  className={`timeline-item flex flex-col md:flex-row items-stretch w-full ${
-                    isEven ? "md:flex-row-reverse" : ""
-                  }`}
+                <div
+                  key={era.year}
+                  className={`timeline-item flex flex-col md:flex-row items-stretch w-full ${isEven ? "md:flex-row-reverse" : ""
+                    }`}
                 >
                   {/* Left side spacing */}
                   <div className="w-full md:w-1/2 px-4 md:px-8 flex flex-col items-start md:items-end justify-center text-left md:text-right">
@@ -72,7 +94,7 @@ export default function Timeline() {
                   </div>
 
                   {/* Node icon dot */}
-                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-[#00ff66] bg-[#05070a] z-10 shadow-lg border-glow-green">
+                  <div className="timeline-node-dot absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full border-2 border-[#00ff66] bg-[#05070a] z-10 shadow-lg border-glow-green">
                     <span className="text-xs font-bold text-[#00ff66]">{index + 1}</span>
                   </div>
 
@@ -107,7 +129,7 @@ export default function Timeline() {
                       {/* Tech badges */}
                       <div className="flex flex-wrap gap-1.5 mt-3">
                         {era.technologies.map((tech) => (
-                          <span 
+                          <span
                             key={tech}
                             className="bg-[#00ff66]/5 text-[#00ff66] border border-[#00ff66]/10 px-2 py-0.5 rounded text-[10px] uppercase font-bold"
                           >
@@ -119,7 +141,7 @@ export default function Timeline() {
                       {/* Associated Repos List */}
                       {era.repos.length > 0 && (
                         <div className="mt-4 pt-3 border-t border-slate-800/60">
-                          <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Dự án cốt lõi:</span>
+                          <span className="text-[10px] uppercase font-bold text-slate-500 block mb-1">Core Projects:</span>
                           <div className="space-y-1">
                             {era.repos.slice(0, 4).map(repo => (
                               <div key={repo} className="flex items-center gap-1 text-xs text-slate-400">

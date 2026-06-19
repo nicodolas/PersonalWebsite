@@ -62,5 +62,5 @@ Ties everything together.
 ## 🔒 Secret Configuration Requirement
 
 The workflows require two secrets to be set in the GitHub repository settings:
-1. `GITHUB_TOKEN` (Automatically provided by GitHub runner context; used for API requests).
+1. `GH_TOKEN` (Automatically provided by GitHub runner context; used for API requests).
 2. `OPENROUTER_API_KEY`: Custom secret containing the API key for OpenRouter models.

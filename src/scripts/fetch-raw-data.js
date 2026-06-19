@@ -23,15 +23,15 @@ function loadEnv() {
 loadEnv();
 
 const GITHUB_USERNAME = "nicodolas";
-let GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+let GH_TOKEN = process.env.GH_TOKEN;
 
 // Prefix check for token
-if (GITHUB_TOKEN) {
-  const trimmed = GITHUB_TOKEN.trim();
+if (GH_TOKEN) {
+  const trimmed = GH_TOKEN.trim();
   if (trimmed.startsWith("ghp_") || trimmed.startsWith("github_pat_")) {
-    GITHUB_TOKEN = trimmed;
+    GH_TOKEN = trimmed;
   } else {
-    GITHUB_TOKEN = null;
+    GH_TOKEN = null;
   }
 }
 
@@ -39,13 +39,13 @@ async function githubFetch(url) {
   const headers = {
     "User-Agent": "Neko-Workshop-Data-Pipeline",
   };
-  if (GITHUB_TOKEN) {
-    headers["Authorization"] = `token ${GITHUB_TOKEN}`;
+  if (GH_TOKEN) {
+    headers["Authorization"] = `token ${GH_TOKEN}`;
   }
 
   let response = await fetch(url, { headers });
-  if (response.status === 401 && GITHUB_TOKEN) {
-    console.warn(`[Pipeline] GITHUB_TOKEN unauthorized (401) for URL: ${url}. Retrying unauthenticated...`);
+  if (response.status === 401 && GH_TOKEN) {
+    console.warn(`[Pipeline] GH_TOKEN unauthorized (401) for URL: ${url}. Retrying unauthenticated...`);
     const cleanHeaders = { "User-Agent": "Neko-Workshop-Data-Pipeline" };
     response = await fetch(url, { headers: cleanHeaders });
   }

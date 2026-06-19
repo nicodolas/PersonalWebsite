@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import galaxyData from "@/data/generated/galaxy.json";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap-config";
+import { floatLoop } from "@/lib/animations";
 import { Star, GitFork, Link2, Sparkles, Orbit } from "lucide-react";
 
 const galaxy = galaxyData.data;
@@ -36,9 +37,30 @@ const STARS = Array.from({ length: 45 }).map((_, i) => ({
   speed: 1.5 + (i % 3) * 0.8
 }));
 
+// Helper: animate an SVG line drawing on (hover enter)
+function animateEdgeIn(lineEl: SVGLineElement): void {
+  const length =
+    lineEl.getTotalLength?.() ??
+    Math.hypot(
+      parseFloat(lineEl.getAttribute("x2") ?? "0") - parseFloat(lineEl.getAttribute("x1") ?? "0"),
+      parseFloat(lineEl.getAttribute("y2") ?? "0") - parseFloat(lineEl.getAttribute("y1") ?? "0")
+    );
+  gsap.fromTo(
+    lineEl,
+    { strokeDasharray: length, strokeDashoffset: length },
+    { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }
+  );
+}
+
+// Helper: animate an SVG line drawing off (hover leave)
+function animateEdgeOut(lineEl: SVGLineElement): void {
+  const length = parseFloat(lineEl.style.strokeDasharray || "0");
+  gsap.to(lineEl, { strokeDashoffset: length, duration: 0.3, ease: "power1.in" });
+}
+
 export default function Galaxy() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   // Track hovered node for dynamic relationships highlighting
   const [hoveredNode, setHoveredNode] = useState<PositionNode | null>(null);
 
@@ -59,9 +81,9 @@ export default function Galaxy() {
     return sortedNodes.map((node, index) => {
       // Phyllotaxis Golden Spiral
       const theta = index * 137.5 * (Math.PI / 180); // Golden angle
-      
+
       // Compute radius with sqrt spacing and spread multiplier to prevent collisions
-      const r = 50 + Math.sqrt(index) * 31; 
+      const r = 50 + Math.sqrt(index) * 31;
 
       const x = cx + r * Math.cos(theta);
       const y = cy + r * Math.sin(theta);
@@ -79,40 +101,79 @@ export default function Galaxy() {
     return nodes.length > 0 ? nodes[0] : null;
   });
 
+  // Main GSAP entrance animations, wrapped in matchMedia for reduced-motion support
   useEffect(() => {
-    // GSAP cosmic entrance animations
+    if (!containerRef.current) return;
+
     const ctx = gsap.context(() => {
-      gsap.from(".galaxy-node", {
-        scale: 0,
-        opacity: 0,
-        duration: 1.4,
-        stagger: 0.04,
-        ease: "elastic.out(1, 0.75)"
-      });
-      gsap.from(".galaxy-edge", {
-        opacity: 0,
-        duration: 1.8,
-        stagger: 0.01,
-        ease: "power1.out"
-      });
-      
-      // Star twinkling ambient animation
-      gsap.to(".twinkle-star", {
-        opacity: 0.1,
-        duration: "random(1.5, 3.5)",
-        repeat: -1,
-        yoyo: true,
-        stagger: 0.05,
-        ease: "sine.inOut"
+      const mm = gsap.matchMedia();
+
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.from(".galaxy-node", {
+          scale: 0,
+          opacity: 0,
+          duration: 1.4,
+          stagger: 0.04,
+          ease: "elastic.out(1, 0.75)"
+        });
+        gsap.from(".galaxy-edge", {
+          opacity: 0,
+          duration: 1.8,
+          stagger: 0.01,
+          ease: "power1.out"
+        });
+
+        // Float loop for galaxy nodes
+        floatLoop(".galaxy-node", 6);
+        // Override the stagger from the floatLoop default with a tighter per-element stagger
+        gsap.to(".galaxy-node", {
+          y: 6,
+          duration: 2.5,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          stagger: { each: 0.15, from: "random" },
+          overwrite: "auto",
+        });
+
+        // Star twinkling ambient animation
+        gsap.to(".twinkle-star", {
+          opacity: 0.1,
+          duration: "random(1.5, 3.5)",
+          repeat: -1,
+          yoyo: true,
+          stagger: 0.05,
+          ease: "sine.inOut"
+        });
+
+        // Pulse orbits gently
+        gsap.to(".orbit-guide", {
+          strokeOpacity: 0.15,
+          duration: 4,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut"
+        });
       });
 
-      // Pulse orbits gently
-      gsap.to(".orbit-guide", {
-        strokeOpacity: 0.15,
-        duration: 4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
+      mm.add("(prefers-reduced-motion: reduce)", () => {
+        gsap.set(".galaxy-node", { y: 0, opacity: 1 });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Galaxy detail panel slide-in on mount
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from(".galaxy-detail-panel", {
+        autoAlpha: 0,
+        x: 40,
+        duration: 0.4,
+        ease: "power2.out"
       });
     }, containerRef);
 
@@ -122,10 +183,10 @@ export default function Galaxy() {
   // Map group to color theme
   const getNodeColor = (group: string) => {
     const g = group.toLowerCase();
-    if (g.includes("react") || g.includes("next") || g.includes("frontend")) return "#00ccff"; // Cyan Blue
-    if (g.includes("node") || g.includes("express") || g.includes("backend")) return "#ff5555"; // Hot Red
-    if (g.includes("n8n") || g.includes("docker") || g.includes("automation")) return "#bd93f9"; // Purple
-    return "#00ff66"; // Emerald Green
+    if (g.includes("react") || g.includes("next") || g.includes("frontend")) return "#00ccff";
+    if (g.includes("node") || g.includes("express") || g.includes("backend")) return "#ff5555";
+    if (g.includes("n8n") || g.includes("docker") || g.includes("automation")) return "#bd93f9";
+    return "#00ff66";
   };
 
   // Map group to 3D sphere radial gradient
@@ -151,7 +212,6 @@ export default function Galaxy() {
     const sourceNode = nodes.find(n => n.id === link.source);
     const targetNode = nodes.find(n => n.id === link.target);
     if (sourceNode && targetNode) {
-      // Determine if this link is currently highlighted
       let isHighlighted = false;
       let isDimmed = false;
 
@@ -186,61 +246,46 @@ export default function Galaxy() {
   return (
     <LayoutWrapper>
       <div ref={containerRef} className="flex flex-col gap-6 py-4 select-none">
-        
+
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-[#00ff66]/10 pb-4">
           <div className="flex flex-col gap-1.5">
             <h1 className="text-2xl font-bold text-[#00ff66] flex items-center gap-2">
-              <Orbit className="animate-spin-slow text-[#00ff66]" size={24} /> Tinh Vân Dự Án (Project Galaxy Map)
+              <Orbit className="animate-spin-slow text-[#00ff66]" size={24} /> Project Galaxy Map
             </h1>
             <p className="text-xs text-slate-400">
-              Mô phỏng vũ trụ tương tác của các dự án phần mềm. Rê chuột vào hành tinh để quét hệ thống liên kết.
+              Interactive simulation of software projects. Hover over a planet to scan its connection network.
             </p>
           </div>
         </div>
 
         {/* Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-2 items-stretch">
-          
+
           {/* Cosmic SVG Map Canvas */}
           <div className="lg:col-span-2 bg-[#05080e] border border-slate-850 rounded-xl p-4 flex items-center justify-center relative min-h-[480px] overflow-hidden shadow-inner">
-            
-            {/* Ambient Background Grid and Cosmic Nebula Effect */}
+
+            {/* Ambient Background Grid */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
             <svg viewBox="0 0 600 450" className="w-full h-full max-h-[500px] z-10 relative">
               <defs>
-                {/* SVG Drop Shadow / Neon Glow Filters */}
                 <filter id="glow-blue" x="-30%" y="-30%" width="160%" height="160%">
                   <feGaussianBlur stdDeviation="3.5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
                 <filter id="glow-red" x="-30%" y="-30%" width="160%" height="160%">
                   <feGaussianBlur stdDeviation="3.5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
                 <filter id="glow-purple" x="-30%" y="-30%" width="160%" height="160%">
                   <feGaussianBlur stdDeviation="3.5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
                 <filter id="glow-green" x="-30%" y="-30%" width="160%" height="160%">
                   <feGaussianBlur stdDeviation="3.5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
-
-                {/* 3D Sphere Spherical Radial Gradients */}
                 <radialGradient id="sphere-blue" cx="30%" cy="30%" r="70%">
                   <stop offset="0%" stopColor="#e0f7ff" />
                   <stop offset="35%" stopColor="#00ccff" />
@@ -265,8 +310,6 @@ export default function Galaxy() {
                   <stop offset="85%" stopColor="#00993d" />
                   <stop offset="100%" stopColor="#003d19" />
                 </radialGradient>
-
-                {/* Cosmic central sun core gradient */}
                 <radialGradient id="sun-core" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stopColor="#ffffff" />
                   <stop offset="50%" stopColor="#00ff66" />
@@ -276,7 +319,7 @@ export default function Galaxy() {
 
               {/* Twinkling Space Star Field */}
               {STARS.map((star, i) => (
-                <circle 
+                <circle
                   key={i}
                   cx={star.cx}
                   cy={star.cy}
@@ -292,10 +335,11 @@ export default function Galaxy() {
               <circle cx="300" cy="225" r="135" fill="none" stroke="#00ccff" strokeWidth="0.4" strokeDasharray="3, 12" className="orbit-guide" strokeOpacity="0.06" />
               <circle cx="300" cy="225" r="195" fill="none" stroke="#bd93f9" strokeWidth="0.4" strokeDasharray="3, 12" className="orbit-guide" strokeOpacity="0.06" />
 
-              {/* Edge Links */}
+              {/* Edge Links — with data-id for draw-on-hover targeting */}
               {activeLinks.map(link => link && (
-                <line 
+                <line
                   key={link.id}
+                  data-id={link.id}
                   x1={link.x1}
                   y1={link.y1}
                   x2={link.x2}
@@ -316,36 +360,58 @@ export default function Galaxy() {
               {nodes.map((node, idx) => {
                 const isSelected = selectedNode?.id === node.id;
                 const isHovered = hoveredNode?.id === node.id;
-                
-                // Determine layout opacity based on active hover filters
+
                 let nodeOpacity = "0.75";
                 if (isSelected || isHovered) {
                   nodeOpacity = "1.0";
                 } else if (hoveredNode) {
-                  // Dim non-connected nodes when something else is hovered
-                  const isConnected = activeLinks.some(l => 
-                    l && (l.sourceId === node.id && l.targetId === hoveredNode.id || 
-                          l.targetId === node.id && l.sourceId === hoveredNode.id)
+                  const isConnected = activeLinks.some(l =>
+                    l && (l.sourceId === node.id && l.targetId === hoveredNode.id ||
+                      l.targetId === node.id && l.sourceId === hoveredNode.id)
                   );
                   nodeOpacity = isConnected ? "0.9" : "0.15";
                 }
 
-                // Adjust label position dynamically to alternate above and below the node (prevents overlaps)
                 const isLabelBelow = idx % 2 === 0;
                 const labelOffsetY = isLabelBelow ? node.size + 11 : -node.size - 4;
                 const labelColor = isSelected ? "#00ff66" : isHovered ? "#ffffff" : "#cbd5e1";
 
                 return (
-                  <g 
-                    key={node.id} 
+                  <g
+                    key={node.id}
                     className="galaxy-node cursor-pointer group"
                     onClick={() => setSelectedNode(node)}
-                    onMouseEnter={() => setHoveredNode(node)}
-                    onMouseLeave={() => setHoveredNode(null)}
+                    onMouseEnter={(e) => {
+                      setHoveredNode(node);
+                      // Animate connected edges in
+                      const svgEl = (e.currentTarget as SVGGElement).closest("svg");
+                      if (svgEl) {
+                        activeLinks.forEach(link => {
+                          if (!link) return;
+                          if (link.sourceId === node.id || link.targetId === node.id) {
+                            const lineEl = svgEl.querySelector<SVGLineElement>(`line[data-id="${link.id}"]`);
+                            if (lineEl) animateEdgeIn(lineEl);
+                          }
+                        });
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      setHoveredNode(null);
+                      // Animate connected edges out
+                      const svgEl = (e.currentTarget as SVGGElement).closest("svg");
+                      if (svgEl) {
+                        activeLinks.forEach(link => {
+                          if (!link) return;
+                          if (link.sourceId === node.id || link.targetId === node.id) {
+                            const lineEl = svgEl.querySelector<SVGLineElement>(`line[data-id="${link.id}"]`);
+                            if (lineEl) animateEdgeOut(lineEl);
+                          }
+                        });
+                      }
+                    }}
                   >
-                    {/* Pulsing ring around active/selected node */}
                     {(isSelected || isHovered) && (
-                      <circle 
+                      <circle
                         cx={node.x}
                         cy={node.y}
                         r={node.size + 4.5}
@@ -356,9 +422,7 @@ export default function Galaxy() {
                         className="animate-spin-slow"
                       />
                     )}
-
-                    {/* Planet Sphere Circle with 3D gradient and selective neon glow */}
-                    <circle 
+                    <circle
                       cx={node.x}
                       cy={node.y}
                       r={node.size + 1.5}
@@ -367,9 +431,7 @@ export default function Galaxy() {
                       opacity={nodeOpacity}
                       className="transition-all duration-300 transform group-hover:scale-110 origin-center"
                     />
-
-                    {/* Text Label with clean backdrop for high readability */}
-                    <text 
+                    <text
                       x={node.x}
                       y={node.y + labelOffsetY}
                       textAnchor="middle"
@@ -395,8 +457,8 @@ export default function Galaxy() {
           </div>
 
           {/* Planet Specification Scanner Panel */}
-          <div className="bg-[#090d16]/75 border border-slate-850 rounded-xl p-5 flex flex-col justify-between shadow-2xl relative overflow-hidden backdrop-blur-md">
-            
+          <div className="galaxy-detail-panel bg-[#090d16]/75 border border-slate-850 rounded-xl p-5 flex flex-col justify-between shadow-2xl relative overflow-hidden backdrop-blur-md">
+
             {/* Top Scanning Line Animation decoration */}
             <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#00ccff]/30 animate-pulse"></div>
 
@@ -411,30 +473,30 @@ export default function Galaxy() {
                     <span className="text-[8px] font-mono text-slate-500 uppercase">SECTOR: {selectedNode.group.substring(0, 10)}</span>
                   </div>
                   <h2 className="text-lg font-bold text-slate-100 glow-blue font-mono tracking-tight mt-1">{selectedNode.id}</h2>
-                  <span 
+                  <span
                     className="text-[9px] px-2 py-0.5 mt-1 rounded border border-slate-800 bg-slate-950/80 w-fit font-bold font-mono uppercase tracking-wider"
                     style={{ color: getNodeColor(selectedNode.group), borderColor: `${getNodeColor(selectedNode.group)}15` }}
                   >
-                    Hệ sinh thái: {selectedNode.group}
+                    Ecosystem: {selectedNode.group}
                   </span>
                 </div>
 
                 {/* Description Box */}
                 <div className="flex flex-col gap-1.5 text-xs bg-slate-950/40 border border-slate-900/60 p-3 rounded-lg">
-                  <span className="text-[9px] font-mono uppercase font-bold text-slate-500">Mô tả hành tinh:</span>
+                  <span className="text-[9px] font-mono uppercase font-bold text-slate-500">Planet description:</span>
                   <p className="text-slate-300 leading-relaxed font-mono italic text-[11px]">
-                    &ldquo;{selectedNode.description_vi || selectedNode.description || "Hành tinh đang trong quá trình khảo sát. Không có dữ liệu mô tả."}&rdquo;
+                    &ldquo;{selectedNode.description_vi || selectedNode.description || "Planet under investigation. No description data available."}&rdquo;
                   </p>
                 </div>
 
                 {/* Tech elements */}
                 {selectedNode.tech && selectedNode.tech.length > 0 && (
                   <div className="flex flex-col gap-1.5 text-xs">
-                    <span className="text-[9px] font-mono uppercase font-bold text-slate-500">Nguyên tố cấu thành (Tech stack):</span>
+                    <span className="text-[9px] font-mono uppercase font-bold text-slate-500">Tech Stack:</span>
                     <div className="flex flex-wrap gap-1.5 mt-0.5">
                       {selectedNode.tech.map(t => (
-                        <span 
-                          key={t} 
+                        <span
+                          key={t}
                           className="bg-slate-950 text-slate-300 border border-slate-850 px-2 py-0.5 rounded text-[9px] font-mono hover:border-slate-700 transition-colors"
                         >
                           {t}
@@ -458,19 +520,19 @@ export default function Galaxy() {
               </div>
             ) : (
               <div className="text-center text-xs text-slate-500 py-16 font-mono">
-                🚀 QUÉT TÌNH VÂN...<br />Chọn một hành tinh trên bản đồ để hiển thị thông số chi tiết.
+                🚀 SCANNING GALAXY...<br />Select a planet on the map to display detailed specifications.
               </div>
             )}
 
             {/* GitHub Redirect Link Button */}
             {selectedNode?.githubUrl && (
-              <a 
+              <a
                 href={selectedNode.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 flex items-center justify-center gap-2 w-full py-2.5 bg-[#00ff66]/10 hover:bg-[#00ff66] text-[#00ff66] hover:text-slate-950 border border-[#00ff66]/30 hover:border-[#00ff66] rounded-lg text-xs font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(0,255,102,0.05)] hover:shadow-[0_0_15px_rgba(0,255,102,0.25)]"
               >
-                <Link2 size={14} /> KÍCH HOẠT ĐƯỜNG DẪN GITHUB &gt;&gt;
+                <Link2 size={14} /> OPEN GITHUB LINK &gt;&gt;
               </a>
             )}
           </div>
