@@ -65,11 +65,16 @@ mm.add("(prefers-reduced-motion: reduce)", () => { gsap.set(targets, { autoAlpha
 
 ## Galaxy Page — Special Case
 
-The Galaxy page (`src/app/galaxy/page.tsx`) uses a **custom `requestAnimationFrame` orbit loop** — NOT GSAP tweens — to animate planet positions. This is because planets need live `x/y` coordinates to update SVG edge `<line>` positions simultaneously.
+The Galaxy page (`src/app/galaxy/page.tsx`) uses a **Three.js WebGL scene** rendered inside `src/components/GalaxyScene.tsx`. The component is loaded with `dynamic({ ssr: false })` to prevent SSR issues.
 
-- `orbitAnglesRef` tracks current angle per planet
-- `livePositions` state drives both planet `<circle>` and edge `<line>` coordinates
-- `isOrbiting` state controls freeze/resume via a header button
+- Real 3D scene with `THREE.WebGLRenderer`, `PerspectiveCamera`, `MeshStandardMaterial` planets
+- `requestAnimationFrame` loop inside `GalaxyScene` handles planet orbits + camera auto-rotation
+- Drag rotates camera (`theta`/`phi` spherical coords), scroll zooms (`radius`)
+- `isOrbitingRef` controls freeze/resume; toggled via `window.dispatchEvent(new CustomEvent("galaxy:toggleOrbit"))`
+- Raycaster handles planet click/tap selection
+- Labels are `THREE.Sprite` with `CanvasTexture` text
+- 2500-point star field with `THREE.Points`, colored per star type
+- Connection lines between nodes update positions every frame via `BufferAttribute`
 
 ---
 

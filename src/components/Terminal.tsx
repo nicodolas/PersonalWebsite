@@ -35,7 +35,7 @@ interface Node {
 // Client-side synthesizer helper using Web Audio API
 let globalAudioCtx: AudioContext | null = null;
 
-const playBeep = (freq: number, duration: number, type: OscillatorType = "sine", volume = 0.03) => {
+const playBeep = (freq: number, duration: number, type: OscillatorType = "sine", volume = 1) => {
   try {
     const savedSound = localStorage.getItem("neko_sound_enabled");
     if (savedSound === "false") return;

@@ -20,6 +20,7 @@ Neko OS is a fully data-driven portfolio designed to look and feel like a retro 
 | Language | TypeScript 5, React 19 |
 | Styling | Tailwind CSS v4 |
 | Animation | GSAP 3.15 + ScrollTrigger |
+| 3D rendering | Three.js (galaxy page — WebGL, client-side only) |
 | Icons | Lucide React |
 | Deployment | Cloudflare Pages |
 | Data pipeline | Node.js scripts |
@@ -36,7 +37,7 @@ Neko OS is a fully data-driven portfolio designed to look and feel like a retro 
 |-------|-------------|
 | `/` | Home / Nexus — stat cards, knowledge clusters, terminal callout |
 | `/timeline` | Developer Eras Timeline |
-| `/galaxy` | Project Galaxy Map — orbital SVG with planet nodes |
+| `/galaxy` | Project Galaxy Map — real-time 3D WebGL scene (Three.js) with orbiting planet nodes |
 | `/skill-tree` | Gamified skill tree with XP system |
 | `/achievements` | Achievement cards with shimmer reveal |
 | `/brain` | Thought streams, interest matrix, orbiting brain SVG |
@@ -140,9 +141,10 @@ Always use a feature branch and PR — never push directly to `main`.
 
 1. **Static export** — no Server Components, no API routes.
 2. **GSAP imports** — always use `@/lib/gsap-config`, never `"gsap"` directly.
-3. **BootSequence** — must stay loaded with `dynamic({ ssr: false })`.
-4. **Generated data** — never manually edit `src/data/generated/*.json`.
-5. **Language** — static JSX strings are English only; data fields like `{field.title_vi}` stay untouched.
+3. **Three.js** — only used in `src/components/GalaxyScene.tsx`, loaded via `dynamic({ ssr: false })`. Import directly from `"three"`.
+4. **BootSequence** — must stay loaded with `dynamic({ ssr: false })`.
+5. **Generated data** — never manually edit `src/data/generated/*.json`.
+6. **Language** — static JSX strings are English only; data fields like `{field.title_vi}` stay untouched.
 
 See `docs/` for full documentation:
 

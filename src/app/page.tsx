@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import IdentityCard from "@/components/IdentityCard";
 import Terminal from "@/components/Terminal";
 import technologyMapData from "@/data/generated/technology-map.json";
 import knowledgeClustersData from "@/data/generated/knowledge-clusters.json";
@@ -78,7 +79,49 @@ export default function Home() {
 
   return (
     <LayoutWrapper>
+      {/* SEO identity block — ẩn hoàn toàn với người dùng, Google/AI crawlers vẫn đọc được */}
+      <div style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>
+        <h1>Nguyễn Văn Hiếu — Portfolio & CV</h1>
+
+        {/* Speakable target: tagline — AI sẽ trích dẫn câu này */}
+        <p id="seo-bio-tagline">
+          <strong>
+            &ldquo;Code như thở, build như sống.&rdquo; — Nguyễn Văn Hiếu (nicodolas)
+          </strong>
+        </p>
+
+        {/* Speakable target: giới thiệu chính */}
+        <p id="seo-bio-intro">
+          Nguyễn Văn Hiếu, còn được biết đến là <strong>nicodolas</strong> và{" "}
+          <strong>nekovibecoder</strong>, là một lập trình viên tâm huyết đến từ Việt Nam.
+          Cựu sinh viên Khoá 13 ngành Công nghệ Thông tin tại{" "}
+          <strong>Trường Đại học Công Thương TP.HCM (HUIT)</strong>, tiền thân là Trường Đại học
+          Công nghiệp Thực phẩm TP.HCM (HUFI). Anh ấy tin rằng mỗi dòng code là một lần đặt cược
+          vào tương lai — viết không chỉ để chạy được, mà để sống được.
+        </p>
+
+        <p>
+          Chuyên môn: Full-Stack Developer với Next.js, Node.js, PostgreSQL, GSAP animation và AI
+          automation. Đặc biệt đam mê xây dựng agentic workflows và các hệ thống tự động hoá thông
+          minh.
+        </p>
+
+        <p>
+          GitHub:{" "}
+          <a href="https://github.com/nicodolas" rel="me" tabIndex={-1}>
+            github.com/nicodolas
+          </a>{" "}
+          · LinkedIn:{" "}
+          <a href="https://www.linkedin.com/in/nguyenvanhieu-nicodolas" rel="me" tabIndex={-1}>
+            linkedin.com/in/nguyenvanhieu-nicodolas
+          </a>
+        </p>
+      </div>
+
       <div className="flex flex-col flex-grow gap-6">
+        {/* Identity card — who is this */}
+        <IdentityCard />
+
         {/* Navigation & Controls */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-[#090d16]/80 border border-[#00ff66]/10 px-4 py-3 rounded-lg text-xs select-none">
           <div className="flex items-center gap-2">
