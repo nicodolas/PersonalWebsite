@@ -1,66 +1,66 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.024Z",
+  "generatedAt": "2026-06-19T15:14:06.450Z",
   "data": {
     "trends": [
       {
         "language": "JavaScript",
         "repos_count": 5,
-        "percentage": 11.6,
+        "percentage": 11.1,
         "trend": "rising"
       },
       {
         "language": "HTML",
         "repos_count": 5,
-        "percentage": 11.6,
+        "percentage": 11.1,
         "trend": "declining"
       },
       {
         "language": "TypeScript",
-        "repos_count": 2,
-        "percentage": 4.7,
+        "repos_count": 3,
+        "percentage": 6.7,
         "trend": "rising"
       },
       {
         "language": "Python",
-        "repos_count": 2,
-        "percentage": 4.7,
+        "repos_count": 3,
+        "percentage": 6.7,
         "trend": "rising"
       },
       {
         "language": "C#",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "rising"
       },
       {
         "language": "C++",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "declining"
       },
       {
         "language": "Node.js",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "rising"
       },
       {
         "language": "express.js",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "rising"
       },
       {
         "language": "PostgreSQL",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "rising"
       },
       {
         "language": "React",
         "repos_count": 2,
-        "percentage": 4.7,
+        "percentage": 4.4,
         "trend": "rising"
       }
     ]
