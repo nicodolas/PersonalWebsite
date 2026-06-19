@@ -23,6 +23,7 @@ The portfolio is **fully data-driven**: all displayed content (projects, timelin
 | Language | TypeScript 5, React 19 |
 | Styling | Tailwind CSS v4 |
 | Animation | GSAP 3.15 + ScrollTrigger |
+| 3D rendering | Three.js (galaxy page only — loaded client-side via `dynamic({ ssr: false })`) |
 | Icons | Lucide React |
 | Deployment | Cloudflare Pages |
 | Data pipeline | Node.js scripts (no framework) |
@@ -39,7 +40,7 @@ The portfolio is **fully data-driven**: all displayed content (projects, timelin
 |-------|-----------|-------------|
 | `/` | `src/app/page.tsx` | Home/Nexus — stat cards, knowledge clusters, terminal callout |
 | `/timeline` | `src/app/timeline/page.tsx` | Developer Eras Timeline — alternating slide-in with scrub line |
-| `/galaxy` | `src/app/galaxy/page.tsx` | Project Galaxy Map — orbital SVG with planet nodes |
+| `/galaxy` | `src/app/galaxy/page.tsx` | Project Galaxy Map — real-time 3D Three.js scene with orbiting planet nodes |
 | `/skill-tree` | `src/app/skill-tree/page.tsx` | Gamified skill tree with XP system |
 | `/achievements` | `src/app/achievements/page.tsx` | Achievement cards with shimmer reveal |
 | `/brain` | `src/app/brain/page.tsx` | Thought streams, interest matrix, orbiting brain SVG |
@@ -57,6 +58,7 @@ The portfolio is **fully data-driven**: all displayed content (projects, timelin
 | `LayoutWrapper` | Sticky header with nav, time clock, CPU simulator, footer. Wraps all pages. |
 | `BootSequence` | Full-screen terminal boot animation on first visit. Loaded with `dynamic({ ssr: false })` to prevent hydration mismatch. |
 | `Terminal` | Retro CLI with 15+ commands, XP system, theme switcher, guestbook, audio synthesizer. |
+| `GalaxyScene` | Three.js WebGL 3D galaxy scene for `/galaxy`. Loaded with `dynamic({ ssr: false })`. |
 
 ---
 

@@ -10,6 +10,8 @@ Rules that apply to every file in this project.
 - `containerRef` is always `useRef<HTMLDivElement>(null)` on the root div of each page
 - GSAP is always inside `useEffect`, wrapped in `gsap.context(callback, containerRef)`, cleanup via `ctx.revert()`
 - Never import from `"gsap"` directly in page/component files — use `"@/lib/gsap-config"`
+- Three.js (`three`) is used **only** in `src/components/GalaxyScene.tsx` — import directly from `"three"`, no wrapper needed
+- Three.js components must be loaded with `dynamic({ ssr: false })` — they use `window`, `canvas`, and `requestAnimationFrame` which are not available server-side
 
 ---
 
@@ -79,3 +81,14 @@ Rules that apply to every file in this project.
 - `.next/` — build artifacts
 - `out/` — static export output
 - `node_modules/` — package installs
+
+---
+
+## Three.js / WebGL
+
+- Three.js is scoped to `src/components/GalaxyScene.tsx` only — do not add it to other pages without good reason
+- Always dispose renderer and remove canvas on unmount: `renderer.dispose()` + `mount.removeChild(renderer.domElement)`
+- Use `renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))` to cap resolution on high-DPI screens
+- All mouse/touch/wheel event listeners added inside `useEffect` must be cleaned up in the return function
+- Raycaster click vs drag: track `isDraggingRef` — only fire `onSelectNode` if drag distance was small
+- Orbit toggle communicates via `window.dispatchEvent(new CustomEvent("galaxy:toggleOrbit"))` — no prop drilling needed
