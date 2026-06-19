@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.063Z",
+  "generatedAt": "2026-06-19T14:06:03.914Z",
   "data": {
     "nodes": [
       {
@@ -90,8 +90,8 @@
         "type": "technology"
       },
       {
-        "id": "Blade",
-        "label": "Blade",
+        "id": "Lua",
+        "label": "Lua",
         "type": "technology"
       },
       {
@@ -105,8 +105,8 @@
         "type": "technology"
       },
       {
-        "id": "Lua",
-        "label": "Lua",
+        "id": "Blade",
+        "label": "Blade",
         "type": "technology"
       },
       {
@@ -268,6 +268,16 @@
       },
       {
         "source": "era-2026",
+        "target": "TypeScript",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "Python",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
         "target": "Next.js 16",
         "weight": 70
       },
@@ -279,11 +289,6 @@
       {
         "source": "era-2026",
         "target": "express.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "TypeScript",
         "weight": 70
       },
       {
@@ -318,12 +323,17 @@
       },
       {
         "source": "era-2025",
+        "target": "C#",
+        "weight": 70
+      },
+      {
+        "source": "era-2025",
         "target": "JavaScript",
         "weight": 70
       },
       {
         "source": "era-2025",
-        "target": "TypeScript",
+        "target": "Dart",
         "weight": 70
       },
       {
@@ -333,22 +343,17 @@
       },
       {
         "source": "era-2025",
-        "target": "Blade",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
         "target": "HTML",
         "weight": 70
       },
       {
         "source": "era-2025",
-        "target": "C#",
+        "target": "TypeScript",
         "weight": 70
       },
       {
         "source": "era-2025",
-        "target": "Dart",
+        "target": "Blade",
         "weight": 70
       },
       {
@@ -413,17 +418,17 @@
       },
       {
         "source": "era-2024",
+        "target": "Lua",
+        "weight": 70
+      },
+      {
+        "source": "era-2024",
         "target": "HTML",
         "weight": 70
       },
       {
         "source": "era-2024",
         "target": "Handlebars",
-        "weight": 70
-      },
-      {
-        "source": "era-2024",
-        "target": "Lua",
         "weight": 70
       },
       {

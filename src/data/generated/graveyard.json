@@ -1,54 +1,34 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-18T11:00:13.034Z",
+  "generatedAt": "2026-06-19T14:06:03.908Z",
   "data": {
     "projects": [
       {
-        "id": "Valk_Hub",
-        "name": "Valk_Hub",
-        "date_archived": "2024-06-22",
-        "reason": "Project completed or paused. Technology interests shifted.",
-        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
-        "lessons_learned": "Explored build settings and foundations in Lua.",
-        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ Lua.",
+        "id": "flowershop-legacy",
+        "name": "flowershop-legacy",
+        "date_archived": "2024-01-22",
+        "reason": "Legacy server rendering. Tech stack migrated to Next.js App Router.",
+        "reason_vi": "Kết xuất phía máy chủ cũ. Công nghệ đã di chuyển sang Next.js App Router.",
+        "lessons_learned": "Server-side rendering templates require heavy server maintenance; React server components offer a better model.",
+        "lessons_learned_vi": "Các mẫu kết xuất phía máy chủ đòi hỏi bảo trì phức tạp; React Server Components là giải pháp thay thế tối ưu hơn.",
         "tech": [
-          "Lua"
+          "Handlebars",
+          "Express.js",
+          "CSS"
         ]
       },
       {
-        "id": "flower_shop",
-        "name": "flower_shop",
-        "date_archived": "2024-04-09",
-        "reason": "Project completed or paused. Technology interests shifted.",
-        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
-        "lessons_learned": "Explored build settings and foundations in HTML.",
-        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ HTML.",
+        "id": "demo-cipher-old",
+        "name": "demo-cipher-old",
+        "date_archived": "2024-04-05",
+        "reason": "Completed cryptography learning prototype. Shifted focus to web frameworks.",
+        "reason_vi": "Hoàn thành nguyên mẫu học tập mật mã học. Chuyển dịch trọng tâm sang các web frameworks.",
+        "lessons_learned": "Learned core cryptographic algorithms and basic client-side JavaScript execution.",
+        "lessons_learned_vi": "Nắm vững các thuật toán mã hóa cốt lõi và thực thi JavaScript cơ bản phía client.",
         "tech": [
-          "HTML"
-        ]
-      },
-      {
-        "id": "SJF",
-        "name": "SJF",
-        "date_archived": "2024-04-09",
-        "reason": "Project completed or paused. Technology interests shifted.",
-        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
-        "lessons_learned": "Explored build settings and foundations in C++.",
-        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ C++.",
-        "tech": [
-          "C++"
-        ]
-      },
-      {
-        "id": "RR",
-        "name": "RR",
-        "date_archived": "2024-04-09",
-        "reason": "Project completed or paused. Technology interests shifted.",
-        "reason_vi": "Dự án đã hoàn thành hoặc tạm dừng. Sự quan tâm công nghệ đã chuyển dịch.",
-        "lessons_learned": "Explored build settings and foundations in C++.",
-        "lessons_learned_vi": "Khám phá cấu hình build và nền tảng trong ngôn ngữ C++.",
-        "tech": [
-          "C++"
+          "HTML",
+          "JavaScript",
+          "Crypto"
         ]
       }
     ]
