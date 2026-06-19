@@ -42,21 +42,21 @@ export const metadata: Metadata = {
     type: "website",
     url: `${siteUrl}/`,
     title: "Nguyễn Văn Hiếu | Web Developer",
-    description: "Portfolio of Nguyen Van Hieu - Turning caffeine into clean code. Check out my projects!",
+    description: "Portfolio of Nguyen Van Hieu — Full-Stack Developer specializing in Next.js, AI automation, and cinematic web experiences.",
     images: [
       {
-        url: `${siteUrl}/assets/avatar.png`,
+        url: `${siteUrl}/og-image.svg`,
         width: 1200,
         height: 630,
-        alt: "Nguyen Van Hieu Avatar",
+        alt: "Neko OS — Nguyen Van Hieu Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nguyễn Văn Hiếu | Web Developer",
-    description: "Portfolio of Nguyen Van Hieu - Turning caffeine into clean code. Check out my projects!",
-    images: [`${siteUrl}/assets/avatar.png`],
+    description: "Portfolio of Nguyen Van Hieu — Full-Stack Developer specializing in Next.js, AI automation, and cinematic web experiences.",
+    images: [`${siteUrl}/og-image.svg`],
   },
 };
 
@@ -99,6 +99,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
