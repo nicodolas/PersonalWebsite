@@ -25,6 +25,9 @@ interface PositionNode extends Node {
   x: number;
   y: number;
   angle: number;
+  orbitRadius: number;  // distance from NEKO_CORE center
+  orbitSpeed: number;   // degrees per second
+  orbitPhase: number;   // initial angle offset in radians
 }
 
 // Generate stars with coordinates, colors, and speeds
@@ -64,42 +67,97 @@ export default function Galaxy() {
   // Track hovered node for dynamic relationships highlighting
   const [hoveredNode, setHoveredNode] = useState<PositionNode | null>(null);
 
-  // Position nodes using a Phyllotaxis Golden Spiral distribution to avoid label overlapping
+  // Orbit state: true = planets are orbiting, false = frozen
+  const [isOrbiting, setIsOrbiting] = useState(true);
+  const orbitFrameRef = useRef<number | null>(null);
+  const orbitAnglesRef = useRef<number[]>([]);
+
+  // Position nodes using orbital rings around NEKO_CORE (300, 225)
   const [nodes] = useState<PositionNode[]>(() => {
-    const width = 600;
-    const height = 450;
-    const cx = width / 2;
-    const cy = height / 2;
+    const CX = 300;
+    const CY = 225;
     const rawNodes = galaxy.nodes as unknown as Node[];
 
-    // Sort by group then by size to group similar technologies together in the spiral
+    // Sort by group to cluster similar techs in the same orbital band
     const sortedNodes = [...rawNodes].sort((a, b) => {
       if (a.group !== b.group) return a.group.localeCompare(b.group);
       return b.size - a.size;
     });
 
     return sortedNodes.map((node, index) => {
-      // Phyllotaxis Golden Spiral
-      const theta = index * 137.5 * (Math.PI / 180); // Golden angle
+      // Assign orbit radius in 3 bands based on node importance
+      const band = index % 3;
+      const orbitRadius = 75 + band * 65 + (index % 5) * 8; // 75–235px
 
-      // Compute radius with sqrt spacing and spread multiplier to prevent collisions
-      const r = 50 + Math.sqrt(index) * 31;
+      // Spread initial phase evenly + golden angle offset
+      const orbitPhase = index * 137.5 * (Math.PI / 180);
 
-      const x = cx + r * Math.cos(theta);
-      const y = cy + r * Math.sin(theta);
+      // Vary speed: inner orbits faster
+      const orbitSpeed = 8 + (band === 0 ? 12 : band === 1 ? 7 : 4) + (index % 4) * 1.5;
+
+      const x = CX + orbitRadius * Math.cos(orbitPhase);
+      const y = CY + orbitRadius * Math.sin(orbitPhase);
 
       return {
         ...node,
         x,
         y,
-        angle: theta
+        angle: orbitPhase,
+        orbitRadius,
+        orbitSpeed,
+        orbitPhase,
       };
     });
   });
 
+  // Track live positions for rendering (separate from base node data)
+  const [livePositions, setLivePositions] = useState<{ x: number; y: number }[]>(() =>
+    nodes.map(n => ({ x: n.x, y: n.y }))
+  );
+
   const [selectedNode, setSelectedNode] = useState<PositionNode | null>(() => {
     return nodes.length > 0 ? nodes[0] : null;
   });
+
+  // Initialize orbit angles from each node's initial phase
+  useEffect(() => {
+    orbitAnglesRef.current = nodes.map(n => n.orbitPhase);
+  }, [nodes]);
+
+  // Orbit animation loop using requestAnimationFrame
+  useEffect(() => {
+    const CX = 300;
+    const CY = 225;
+    let lastTime = performance.now();
+
+    const tick = (now: number) => {
+      if (!isOrbiting) {
+        orbitFrameRef.current = requestAnimationFrame(tick);
+        lastTime = now;
+        return;
+      }
+      const dt = (now - lastTime) / 1000; // seconds
+      lastTime = now;
+
+      orbitAnglesRef.current = orbitAnglesRef.current.map((angle, i) => {
+        return angle + (nodes[i].orbitSpeed * Math.PI / 180) * dt;
+      });
+
+      setLivePositions(
+        orbitAnglesRef.current.map((angle, i) => ({
+          x: CX + nodes[i].orbitRadius * Math.cos(angle),
+          y: CY + nodes[i].orbitRadius * Math.sin(angle),
+        }))
+      );
+
+      orbitFrameRef.current = requestAnimationFrame(tick);
+    };
+
+    orbitFrameRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (orbitFrameRef.current) cancelAnimationFrame(orbitFrameRef.current);
+    };
+  }, [isOrbiting, nodes]);
 
   // Main GSAP entrance animations, wrapped in matchMedia for reduced-motion support
   useEffect(() => {
@@ -207,11 +265,16 @@ export default function Galaxy() {
     return "url(#glow-green)";
   };
 
-  // Resolve links between nodes
+  // Resolve links between nodes — use live positions for edges
   const activeLinks = galaxy.links.map(link => {
-    const sourceNode = nodes.find(n => n.id === link.source);
-    const targetNode = nodes.find(n => n.id === link.target);
+    const sourceIdx = nodes.findIndex(n => n.id === link.source);
+    const targetIdx = nodes.findIndex(n => n.id === link.target);
+    const sourceNode = nodes[sourceIdx];
+    const targetNode = nodes[targetIdx];
     if (sourceNode && targetNode) {
+      const sPos = livePositions[sourceIdx] ?? { x: sourceNode.x, y: sourceNode.y };
+      const tPos = livePositions[targetIdx] ?? { x: targetNode.x, y: targetNode.y };
+
       let isHighlighted = false;
       let isDimmed = false;
 
@@ -229,10 +292,10 @@ export default function Galaxy() {
 
       return {
         id: `${link.source}-${link.target}`,
-        x1: sourceNode.x,
-        y1: sourceNode.y,
-        x2: targetNode.x,
-        y2: targetNode.y,
+        x1: sPos.x,
+        y1: sPos.y,
+        x2: tPos.x,
+        y2: tPos.y,
         sourceId: link.source,
         targetId: link.target,
         color: getNodeColor(sourceNode.group),
@@ -257,6 +320,17 @@ export default function Galaxy() {
               Interactive simulation of software projects. Hover over a planet to scan its connection network.
             </p>
           </div>
+          {/* Orbit toggle button */}
+          <button
+            onClick={() => setIsOrbiting(prev => !prev)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs font-mono font-bold transition-all ${isOrbiting
+              ? "bg-[#00ff66]/10 border-[#00ff66]/40 text-[#00ff66] hover:bg-[#00ff66]/20"
+              : "bg-[#ff5555]/10 border-[#ff5555]/40 text-[#ff5555] hover:bg-[#ff5555]/20"
+              }`}
+          >
+            <Orbit size={14} className={isOrbiting ? "animate-spin-slow" : ""} />
+            {isOrbiting ? "⏸ FREEZE ORBIT" : "▶ RESUME ORBIT"}
+          </button>
         </div>
 
         {/* Layout Grid */}
@@ -358,6 +432,7 @@ export default function Galaxy() {
 
               {/* Repository Planets */}
               {nodes.map((node, idx) => {
+                const pos = livePositions[idx] ?? { x: node.x, y: node.y };
                 const isSelected = selectedNode?.id === node.id;
                 const isHovered = hoveredNode?.id === node.id;
 
@@ -383,7 +458,6 @@ export default function Galaxy() {
                     onClick={() => setSelectedNode(node)}
                     onMouseEnter={(e) => {
                       setHoveredNode(node);
-                      // Animate connected edges in
                       const svgEl = (e.currentTarget as SVGGElement).closest("svg");
                       if (svgEl) {
                         activeLinks.forEach(link => {
@@ -397,7 +471,6 @@ export default function Galaxy() {
                     }}
                     onMouseLeave={(e) => {
                       setHoveredNode(null);
-                      // Animate connected edges out
                       const svgEl = (e.currentTarget as SVGGElement).closest("svg");
                       if (svgEl) {
                         activeLinks.forEach(link => {
@@ -412,8 +485,8 @@ export default function Galaxy() {
                   >
                     {(isSelected || isHovered) && (
                       <circle
-                        cx={node.x}
-                        cy={node.y}
+                        cx={pos.x}
+                        cy={pos.y}
                         r={node.size + 4.5}
                         fill="none"
                         stroke={getNodeColor(node.group)}
@@ -423,22 +496,24 @@ export default function Galaxy() {
                       />
                     )}
                     <circle
-                      cx={node.x}
-                      cy={node.y}
-                      r={node.size + 1.5}
+                      cx={pos.x}
+                      cy={pos.y}
+                      r={(node.size || 6) + 1.5}
                       fill={getNodeGradient(node.group)}
                       filter={(isSelected || isHovered) ? getNodeGlow(node.group) : undefined}
                       opacity={nodeOpacity}
-                      className="transition-all duration-300 transform group-hover:scale-110 origin-center"
+                      className="transition-opacity duration-300"
                     />
                     <text
-                      x={node.x}
-                      y={node.y + labelOffsetY}
+                      x={pos.x}
+                      y={pos.y + labelOffsetY}
                       textAnchor="middle"
                       fill={labelColor}
                       fontWeight={(isSelected || isHovered) ? "bold" : "normal"}
                       opacity={nodeOpacity}
-                      className="text-[7.5px] font-mono select-none pointer-events-none transition-all duration-300"
+                      fontSize="7.5"
+                      fontFamily="monospace"
+                      className="select-none pointer-events-none"
                     >
                       {node.id}
                     </text>

@@ -42,11 +42,11 @@ const playBeep = (freq: number, duration: number, type: OscillatorType = "sine",
 
     const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
     if (!AudioContextClass) return;
-    
+
     if (!globalAudioCtx) {
       globalAudioCtx = new AudioContextClass();
     }
-    
+
     if (globalAudioCtx.state === "suspended") {
       globalAudioCtx.resume();
     }
@@ -54,16 +54,16 @@ const playBeep = (freq: number, duration: number, type: OscillatorType = "sine",
     const ctx = globalAudioCtx;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
-    
+
     osc.type = type;
     osc.frequency.setValueAtTime(freq, ctx.currentTime);
-    
+
     gain.gain.setValueAtTime(volume, ctx.currentTime);
     gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + duration);
-    
+
     osc.connect(gain);
     gain.connect(ctx.destination);
-    
+
     osc.start();
     osc.stop(ctx.currentTime + duration);
   } catch {
@@ -81,7 +81,7 @@ export default function Terminal() {
   ]);
   const [cmdHistory, setCmdHistory] = useState<string[]>([]);
   const [historyIdx, setHistoryIdx] = useState(-1);
-  
+
   // New States
   const [theme, setTheme] = useState<"default" | "matrix" | "amber" | "cyber" | "dracula">("default");
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -147,7 +147,7 @@ export default function Terminal() {
         setTimeout(() => playBeep(659.25, 0.1, "sine", 0.08), 80); // E5
         setTimeout(() => playBeep(783.99, 0.2, "sine", 0.08), 160); // G5
       }, 150);
-      
+
       setHistory((prev) => [
         ...prev,
         { text: `✨ LEVEL UP! You are now Explorer Level ${newLvl}! (+${amount} XP)`, type: "system" }
@@ -167,7 +167,7 @@ export default function Terminal() {
 
       // Add input line
       setHistory((prev) => [...prev, { text: trimmedInput, type: "input" }]);
-      
+
       // Execute command
       executeCommand(trimmedInput);
       setInput("");
@@ -193,7 +193,7 @@ export default function Terminal() {
       e.preventDefault();
       const currentInput = input.trim().toLowerCase();
       if (!currentInput) return;
-      
+
       const commands = ["help", "whoami", "timeline", "workshop-board", "experiment-log", "graveyard", "skill-tree", "galaxy", "brain", "changelog", "achievements", "nexus", "clear", "theme", "sound", "guestbook", "xp"];
       const match = commands.find(c => c.startsWith(currentInput));
       if (match) {
@@ -438,7 +438,7 @@ export default function Terminal() {
         const xpForNext = 100 - (xp % 100);
         const barLength = Math.floor((xp % 100) / 10);
         const progressBar = "█".repeat(barLength) + "░".repeat(10 - barLength);
-        
+
         outputs = [
           { text: "=== HỆ THỐNG TRẢI NGHIỆM (EXPLORER STATUS) ===", type: "heading" },
           { text: `Cấp độ khám phá: Level ${currentLvl}`, type: "output" },
@@ -452,13 +452,13 @@ export default function Terminal() {
       case "guestbook":
         const guestName = parts[1];
         const guestMessage = parts.slice(2).join(" ");
-        
+
         // Retrieve existing guestbook from local storage
         let guestbookList: { name: string; message: string; date: string }[] = [];
         try {
           const savedGB = localStorage.getItem("neko_guestbook");
           if (savedGB) guestbookList = JSON.parse(savedGB);
-        } catch {}
+        } catch { }
 
         if (guestName && guestMessage) {
           // Write message
@@ -471,10 +471,10 @@ export default function Terminal() {
           // Limit to 20 entries
           const trimmedGB = guestbookList.slice(0, 20);
           localStorage.setItem("neko_guestbook", JSON.stringify(trimmedGB));
-          
+
           playBeep(523.25, 0.1, "sine");
           setTimeout(() => playBeep(659.25, 0.15, "sine"), 80);
-          
+
           outputs = [
             { text: "Guestbook message successfully registered in local browser storage!", type: "system" },
             { text: `${guestName} >> ${guestMessage}`, type: "output" }
@@ -486,7 +486,7 @@ export default function Terminal() {
             { text: "Sử dụng: guestbook [tên_bạn] [lời_nhắn_của_bạn]", type: "system" },
             { text: "", type: "output" }
           ];
-          
+
           if (guestbookList.length === 0) {
             outputs.push({ text: "Sổ lưu bút hiện tại trống. Hãy để lại lời nhắn đầu tiên!", type: "output" });
           } else {
@@ -584,7 +584,7 @@ export default function Terminal() {
   };
 
   return (
-    <div 
+    <div
       onClick={focusInput}
       className={`flex-grow flex flex-col p-4 min-h-[500px] shadow-2xl relative select-text overflow-hidden rounded-lg border transition-all duration-300 ${getContainerStyle()}`}
     >
@@ -605,8 +605,8 @@ export default function Terminal() {
           }
 
           return (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`${colorClass} leading-relaxed whitespace-pre-wrap`}
             >
               {line.text}
@@ -631,12 +631,12 @@ export default function Terminal() {
             playBeep(600 + Math.random() * 200, 0.015, "triangle", 0.015);
           }}
           onKeyDown={handleKeyDown}
-          className={`flex-grow bg-transparent outline-none font-mono caret-transparent select-text ${getPromptColor()}`}
+          className={`flex-grow bg-transparent outline-none font-mono select-text ${getPromptColor()}`}
+          style={{ caretColor: "inherit" }}
           maxLength={100}
           autoComplete="off"
           autoFocus
         />
-        <span className="blinking-cursor shrink-0"></span>
       </div>
     </div>
   );
