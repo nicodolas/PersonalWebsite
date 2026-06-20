@@ -1,66 +1,66 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:05.825Z",
+  "generatedAt": "2026-06-20T06:20:56.653Z",
   "data": {
     "trends": [
       {
-        "language": "JavaScript",
-        "repos_count": 5,
-        "percentage": 11.1,
-        "trend": "rising"
-      },
-      {
         "language": "HTML",
         "repos_count": 5,
-        "percentage": 11.1,
+        "percentage": 22.7,
         "trend": "declining"
       },
       {
-        "language": "TypeScript",
-        "repos_count": 3,
-        "percentage": 6.7,
+        "language": "JavaScript",
+        "repos_count": 4,
+        "percentage": 18.2,
         "trend": "rising"
       },
       {
         "language": "Python",
         "repos_count": 3,
-        "percentage": 6.7,
+        "percentage": 13.6,
+        "trend": "rising"
+      },
+      {
+        "language": "TypeScript",
+        "repos_count": 2,
+        "percentage": 9.1,
         "trend": "rising"
       },
       {
         "language": "C#",
         "repos_count": 2,
-        "percentage": 4.4,
+        "percentage": 9.1,
         "trend": "rising"
       },
       {
         "language": "C++",
         "repos_count": 2,
-        "percentage": 4.4,
+        "percentage": 9.1,
         "trend": "declining"
       },
       {
-        "language": "Node.js",
-        "repos_count": 2,
-        "percentage": 4.4,
+        "language": "Lua",
+        "repos_count": 1,
+        "percentage": 4.5,
+        "trend": "declining"
+      },
+      {
+        "language": "Dart",
+        "repos_count": 1,
+        "percentage": 4.5,
         "trend": "rising"
       },
       {
-        "language": "express.js",
-        "repos_count": 2,
-        "percentage": 4.4,
-        "trend": "rising"
+        "language": "Handlebars",
+        "repos_count": 1,
+        "percentage": 4.5,
+        "trend": "declining"
       },
       {
-        "language": "PostgreSQL",
-        "repos_count": 2,
-        "percentage": 4.4,
-        "trend": "rising"
-      },
-      {
-        "language": "React",
-        "repos_count": 2,
-        "percentage": 4.4,
+        "language": "Blade",
+        "repos_count": 1,
+        "percentage": 4.5,
         "trend": "rising"
       }
     ]

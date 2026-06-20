@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:06.682Z",
+  "generatedAt": "2026-06-20T06:20:59.206Z",
   "data": {
     "clusters": [
       {
@@ -10,12 +10,9 @@
         "description": "Intelligent tools, Model Context Protocol integration, LLM pipelines, and automated reasoning projects.",
         "description_vi": "Công cụ thông minh, tích hợp giao thức MCP, đường ống mô hình ngôn ngữ lớn (LLM) và tác nhân tự động.",
         "technologies": [
-          "Python",
-          "AI API"
+          "Python"
         ],
-        "repositories": [
-          "Age Prediction App"
-        ],
+        "repositories": [],
         "eras": [
           2026,
           2025
@@ -33,21 +30,9 @@
         "technologies": [
           "JavaScript",
           "TypeScript",
-          "Next.js",
-          "Node.js",
-          "Express",
-          "PostgreSQL",
-          "React",
           "Dart",
           "Handlebars",
-          "Blade",
-          "TanStack Query",
-          "Shadcn UI",
-          "Prisma",
-          "SePay",
-          "Netlify",
-          "Three.js",
-          "Zustand"
+          "Blade"
         ],
         "repositories": [
           "PersonalWebsite",
@@ -55,10 +40,7 @@
           "MobileWatchShop",
           "flower_shop",
           "flowershop",
-          "PHP_WebBanHoa",
-          "ReviewLecturers_HUIT",
-          "Milk-tea Web Shop",
-          "3D Portfolio"
+          "PHP_WebBanHoa"
         ],
         "eras": [
           2025,
@@ -77,9 +59,7 @@
         "label_vi": "Quy Trình Tự Động Hóa & CI/CD",
         "description": "Workflow orchestration with n8n, automated testing runners, containerization, and daily scripts.",
         "description_vi": "Điều phối công việc với n8n, kiểm thử tự động, đóng gói Docker và kịch bản tự động hóa.",
-        "technologies": [
-          "n8n"
-        ],
+        "technologies": [],
         "repositories": [],
         "eras": [
           2026,
@@ -99,11 +79,11 @@
           "Lua"
         ],
         "repositories": [
+          "nicodolas",
           "Claw-OMX-9Router-AI",
           "Valk_Hub",
           "SJF",
           "RR",
-          "nicodolas",
           "myroom",
           "Kmeans_AdvisoryMajor",
           "IoTKhoaBaoMat",

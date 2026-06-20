@@ -1,21 +1,15 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:06.590Z",
+  "generatedAt": "2026-06-20T06:20:59.111Z",
   "data": {
-    "success_rate": 44.4,
+    "success_rate": 0,
     "failure_learnings": [
-      "Built automated ETL data pipelines with n8n and Google Drive API",
-      "Optimized database query performance with Prisma and Postgres",
-      "Designed complex relational database schema (membership tiers, orders)",
-      "Integrated QR Code payment gateway",
-      "Handled asynchronous state smoothly for visual feedback"
+      "Explored development environment setup",
+      "Practiced version control workflows"
     ],
     "failure_learnings_vi": [
-      "Xây dựng data pipeline tự động (ETL) với n8n và Google Drive API",
-      "Tối ưu hiệu suất query database với Prisma và Postgres",
-      "Thiết kế cơ sở dữ liệu quan hệ phức tạp (hạng thành viên, đơn hàng)",
-      "Tích hợp cổng thanh toán QR Code",
-      "Xử lý state bất đồng bộ mượt mà cho visual feedback"
+      "Tìm hiểu thiết lập môi trường phát triển",
+      "Thực hành quy trình quản lý phiên bản"
     ],
     "ai_insights": "Experiments show strong capabilities in Next.js, full-stack, n8n automation, and AI integrations.",
     "ai_insights_vi": "Các bài thử nghiệm cho thấy thế mạnh trong lập trình Next.js, full-stack, tự động hóa n8n và tích hợp AI."
