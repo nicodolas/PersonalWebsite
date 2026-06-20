@@ -112,7 +112,7 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
       >
         {/* Full-screen invisible click target — bắt click ở bất kỳ đâu */}
         <div
-          className="absolute inset-0 cursor-pointer z-10"
+          className="absolute inset-0 cursor-pointer z-30"
           onClick={startBoot}
         />
         <div className="scanline-effect" />
