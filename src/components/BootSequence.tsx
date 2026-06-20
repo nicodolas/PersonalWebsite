@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 
 interface BootSequenceProps {
@@ -26,31 +26,63 @@ const bootLines = [
 ];
 
 export default function BootSequence({ onComplete }: BootSequenceProps) {
+  const [booting, setBooting] = useState(false);
   const [logs, setLogs] = useState<Array<{ text: string; time: string }>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const skipRef = useRef<HTMLButtonElement>(null);
+  const timerIdsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
+  const startBoot = () => {
+    if (booting) return;
+    // Trusted gesture → unlock audio
+    window.dispatchEvent(new Event("neko:interaction"));
+    setBooting(true);
+  };
+
+  // Keydown listener trên màn hình press
   useEffect(() => {
-    let completed = false; // guard: onComplete chỉ được gọi 1 lần
-    const timerIds: ReturnType<typeof setTimeout>[] = [];
+    if (booting) return;
+    const onKey = (e: KeyboardEvent) => {
+      // Bỏ qua modifier keys
+      if (e.key === "Tab" || e.key === "Shift" || e.key === "Control" || e.key === "Alt") return;
+      startBoot();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [booting]);
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        skipRef.current,
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.5 }
-      );
-    }, containerRef);
+  // Chạy boot lines sau khi booting = true
+  useEffect(() => {
+    if (!booting) return;
 
-    // setTimeout nằm ngoài gsap.context nên phải track và cancel thủ công
+    let completed = false;
+    const ids: ReturnType<typeof setTimeout>[] = [];
+    timerIdsRef.current = ids;
+
+    // Animate skip button vào
+    const animCtx = gsap.context(() => {
+      if (skipRef.current) {
+        gsap.fromTo(
+          skipRef.current,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 1, delay: 0.3 }
+        );
+      }
+    });
+
     let delay = 0.1;
     bootLines.forEach((line, index) => {
       const id = setTimeout(() => {
         const time = new Date().toLocaleTimeString();
         setLogs((prev) => [...prev, { text: line, time }]);
-        if (containerRef.current) {
-          containerRef.current.scrollTop = containerRef.current.scrollHeight;
-        }
+        // Scroll xuống cuối
+        requestAnimationFrame(() => {
+          if (containerRef.current) {
+            containerRef.current.scrollTop = containerRef.current.scrollHeight;
+          }
+        });
+        // Sau dòng cuối → gọi onComplete
         if (index === bootLines.length - 1) {
           const finishId = setTimeout(() => {
             if (!completed) {
@@ -58,28 +90,58 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
               onComplete();
             }
           }, 1200);
-          timerIds.push(finishId);
+          ids.push(finishId);
         }
       }, delay * 1000);
 
-      timerIds.push(id);
+      ids.push(id);
       delay += 0.15 + Math.random() * 0.25;
     });
 
     return () => {
-      ctx.revert();
-      timerIds.forEach(clearTimeout);
+      animCtx.revert();
+      ids.forEach(clearTimeout);
     };
-  }, [onComplete]);
+  }, [booting, onComplete]);
 
+  // ── Màn hình PRESS ANY KEY ────────────────────────────────────────────
+  if (!booting) {
+    return (
+      <div
+        onClick={startBoot}
+        className="fixed inset-0 z-50 bg-[#05070a] text-[#00ff66] font-mono flex flex-col items-center justify-center gap-8 cursor-pointer select-none crt-screen"
+      >
+        <div className="scanline-effect" />
+
+        <div className="text-center space-y-2">
+          <div className="text-4xl md:text-6xl font-black tracking-widest glow-green">
+            NEKO_OS
+          </div>
+          <div className="text-xs text-[#00ccff] tracking-[0.4em] uppercase">
+            v4.0.0 — nekovibecoder.site
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 text-sm md:text-base text-[#00ff66]/80 animate-pulse">
+          <span className="text-[#ffb86c]">&gt;_</span>
+          <span>PRESS ANY KEY TO BOOT</span>
+        </div>
+
+        <div className="text-[10px] text-slate-600 tracking-widest uppercase">
+          click anywhere or press any key
+        </div>
+      </div>
+    );
+  }
+
+  // ── Màn hình boot terminal ────────────────────────────────────────────
   return (
     <div
       ref={containerRef}
       className="fixed inset-0 z-50 bg-[#05070a] text-[#00ff66] font-mono p-6 md:p-12 overflow-y-auto select-none crt-screen"
     >
-      <div className="scanline-effect"></div>
+      <div className="scanline-effect" />
 
-      {/* Top Header bar */}
       <div className="flex justify-between items-center border-b border-[#00ff66]/30 pb-3 mb-6">
         <span className="text-xs uppercase tracking-widest font-bold glow-green">
           System Boot Sequence
@@ -93,7 +155,6 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
         </button>
       </div>
 
-      {/* Logging content */}
       <div className="space-y-2 text-sm md:text-base max-w-4xl mx-auto">
         {logs.map((log, index) => (
           <div key={index} className="flex items-start">
@@ -110,7 +171,7 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
               [{logs.length > 0 ? logs[logs.length - 1].time : ""}]
             </span>
             <span className="text-[#00ff66] opacity-75">Loading system modules...</span>
-            <span className="blinking-cursor"></span>
+            <span className="blinking-cursor" />
           </div>
         )}
       </div>

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import timelineData from "@/data/generated/timeline.json";
 import dnaData from "@/data/dna.json";
 import galaxyData from "@/data/generated/galaxy.json";
 import achievementsData from "@/data/generated/achievements.json";
 import changelogData from "@/data/generated/changelog.json";
 import technologyMapData from "@/data/generated/technology-map.json";
+import { useAudioManager } from "@/lib/useAudioManager";
 
 const timeline = timelineData.data;
 const galaxy = galaxyData.data;
@@ -133,13 +134,88 @@ export default function Terminal() {
   const [theme, setTheme] = useState<"default" | "matrix" | "amber" | "cyber" | "dracula">("default");
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [xp, setXp] = useState(0);
+  // Typewriter: lines queued to be printed one-by-one
+  const [isPrinting, setIsPrinting] = useState(false);
+  const printQueueRef = useRef<LogLine[]>([]);
+  const printTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Autocomplete
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [suggestionIdx, setSuggestionIdx] = useState(-1);
 
   const terminalEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const { toggleMute, getMuted, setVolume, getVolume } = useAudioManager();
+
   // Focus input on click anywhere inside terminal
   const focusInput = () => {
     if (inputRef.current) inputRef.current.focus();
+  };
+
+  // ── Typewriter engine ─────────────────────────────────────────────────
+  // Nhận 1 batch lines, in từng line với delay để tạo cảm giác terminal load từ từ
+  const printLines = useCallback((lines: LogLine[]) => {
+    // Flush bất kỳ timer đang chạy
+    if (printTimerRef.current) clearTimeout(printTimerRef.current);
+    printQueueRef.current = [...lines];
+    setIsPrinting(true);
+
+    const printNext = (queue: LogLine[]) => {
+      if (queue.length === 0) {
+        setIsPrinting(false);
+        return;
+      }
+      const [line, ...rest] = queue;
+      setHistory((prev) => [...prev, line]);
+      printQueueRef.current = rest;
+
+      // Delay tỉ lệ với độ dài text: ngắn = 18ms, dài = max 55ms
+      const delay = line.text.length === 0 ? 10 : Math.min(18 + line.text.length * 0.3, 55);
+      printTimerRef.current = setTimeout(() => printNext(rest), delay);
+    };
+
+    printNext([...lines]);
+  }, []);
+
+  // Cleanup timers on unmount
+  useEffect(() => {
+    return () => {
+      if (printTimerRef.current) clearTimeout(printTimerRef.current);
+    };
+  }, []);
+
+  // ── Autocomplete data ─────────────────────────────────────────────────
+  const ALL_COMMANDS = [
+    "help", "whoami", "timeline", "workshop-board", "experiment-log",
+    "graveyard", "skill-tree", "galaxy", "brain", "changelog",
+    "achievements", "nexus", "clear", "theme", "sound", "guestbook", "xp",
+    // sub-commands
+    "theme default", "theme matrix", "theme amber", "theme cyber", "theme dracula",
+    "sound on", "sound off", "sound vol",
+  ];
+
+  // Commands that expect an argument after them — show a hint
+  const ARG_HINTS: Record<string, string> = {
+    "sound vol": "<0-100>",
+    "theme": "<default|matrix|amber|cyber|dracula>",
+    "guestbook": "<tên> <lời_nhắn>",
+  };
+
+  const getSuggestions = (val: string): string[] => {
+    const trimmed = val.trimStart();
+    if (!trimmed) return [];
+    return ALL_COMMANDS.filter(c => c.startsWith(trimmed.toLowerCase()) && c !== trimmed.toLowerCase());
+  };
+
+  // Returns a hint string if the current input matches a command that needs more args
+  const getArgHint = (val: string): string => {
+    const trimmed = val.trim().toLowerCase();
+    for (const [cmd, hint] of Object.entries(ARG_HINTS)) {
+      // exact match (with or without trailing space, no extra args yet)
+      if (trimmed === cmd) return hint;
+    }
+    return "";
   };
 
   useEffect(() => {
@@ -197,9 +273,39 @@ export default function Terminal() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // ── Suggestions navigation ──────────────────────────────────────────
+    if (suggestions.length > 0) {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        setSuggestionIdx(i => (i + 1) % suggestions.length);
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        setSuggestionIdx(i => (i - 1 + suggestions.length) % suggestions.length);
+        return;
+      }
+      if (e.key === "Tab" || (e.key === "Enter" && suggestionIdx >= 0)) {
+        e.preventDefault();
+        const chosen = suggestionIdx >= 0 ? suggestions[suggestionIdx] : suggestions[0];
+        setInput(chosen);
+        setSuggestions([]);
+        setSuggestionIdx(-1);
+        soundTab();
+        return;
+      }
+      if (e.key === "Escape") {
+        setSuggestions([]);
+        setSuggestionIdx(-1);
+        return;
+      }
+    }
+
     if (e.key === "Enter") {
       const trimmedInput = input.trim();
       if (!trimmedInput) return;
+      setSuggestions([]);
+      setSuggestionIdx(-1);
 
       // Add to command history
       const newCmdHistory = [trimmedInput, ...cmdHistory].slice(0, 50);
@@ -218,35 +324,52 @@ export default function Terminal() {
       if (cmdHistory.length > 0 && historyIdx < cmdHistory.length - 1) {
         const nextIdx = historyIdx + 1;
         setHistoryIdx(nextIdx);
-        setInput(cmdHistory[nextIdx]);
+        const val = cmdHistory[nextIdx];
+        setInput(val);
+        setSuggestions([]);
       }
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
       if (historyIdx > 0) {
         const nextIdx = historyIdx - 1;
         setHistoryIdx(nextIdx);
-        setInput(cmdHistory[nextIdx]);
+        const val = cmdHistory[nextIdx];
+        setInput(val);
+        setSuggestions([]);
       } else if (historyIdx === 0) {
         setHistoryIdx(-1);
         setInput("");
+        setSuggestions([]);
       }
     } else if (e.key === "Tab") {
-      // Autocomplete suggestions
       e.preventDefault();
-      const currentInput = input.trim().toLowerCase();
-      if (!currentInput) return;
-
-      const commands = ["help", "whoami", "timeline", "workshop-board", "experiment-log", "graveyard", "skill-tree", "galaxy", "brain", "changelog", "achievements", "nexus", "clear", "theme", "sound", "guestbook", "xp"];
-      const match = commands.find(c => c.startsWith(currentInput));
-      if (match) {
-        setInput(match);
+      const list = getSuggestions(input);
+      if (list.length === 1) {
+        setInput(list[0]);
+        setSuggestions([]);
+        soundTab();
+      } else if (list.length > 1) {
+        setSuggestions(list);
+        setSuggestionIdx(0);
         soundTab();
       }
+    } else if (e.key === "Escape") {
+      setSuggestions([]);
+      setSuggestionIdx(-1);
     } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
       soundType();
     } else if (e.key === "Backspace") {
       soundType();
     }
+  };
+
+  // Update suggestions live as user types
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setInput(val);
+    setSuggestionIdx(-1);
+    const list = getSuggestions(val);
+    setSuggestions(list);
   };
 
   const executeCommand = (cmdStr: string) => {
@@ -284,23 +407,39 @@ export default function Terminal() {
     switch (command) {
       case "help":
         outputs = [
-          { text: "=== HỆ THỐNG LỆNH KHẢ DỤNG ===", type: "heading" },
-          { text: "whoami         -> Thông tin tổng quan về lập trình viên (Developer DNA)", type: "output" },
-          { text: "timeline       -> Dòng thời gian các kỷ nguyên hoạt động", type: "output" },
-          { text: "workshop-board -> Bảng công việc phân loại dự án (Kanban)", type: "output" },
-          { text: "experiment-log -> Nhật ký thí nghiệm (danh sách toàn bộ dự án)", type: "output" },
-          { text: "graveyard      -> Kho lưu trữ các đồ án thất bại/lưu trữ", type: "output" },
-          { text: "skill-tree     -> Cây kỹ năng và kiến thức chuyên môn", type: "output" },
-          { text: "galaxy         -> Bản đồ trực quan chòm sao dự án", type: "output" },
-          { text: "brain          -> Trí não Neko (luồng suy nghĩ hiện tại)", type: "output" },
-          { text: "changelog      -> Nhật ký phát hành hệ thống theo từng tháng", type: "output" },
-          { text: "achievements   -> Các thành tựu và cột mốc nổi bật", type: "output" },
-          { text: "nexus          -> Tổng quan mối quan hệ hệ sinh thái Neko Nexus", type: "output" },
-          { text: "theme [name]   -> Thay đổi giao diện [default|matrix|amber|cyber|dracula]", type: "output" },
-          { text: "sound [on|off] -> Bật/Tắt hiệu ứng âm thanh cổ điển", type: "output" },
-          { text: "guestbook [n] [m] -> Ghi lại lời nhắn địa phương (guestbook [tên] [lời_nhắn])", type: "output" },
-          { text: "xp             -> Xem điểm tích lũy và level khám phá hiện tại", type: "output" },
-          { text: "clear          -> Xóa màn hình terminal", type: "output" },
+          { text: "┌─────────────────────────────────────────────────────┐", type: "heading" },
+          { text: "│           NEKO.OS — HỆ THỐNG LỆNH KHẢ DỤNG         │", type: "heading" },
+          { text: "└─────────────────────────────────────────────────────┘", type: "heading" },
+          { text: "", type: "output" },
+          { text: "── 📁 KHÁM PHÁ ─────────────────────────────────────", type: "heading" },
+          { text: "  whoami          Thông tin lập trình viên & Developer DNA", type: "output" },
+          { text: "  timeline        Dòng thời gian các kỷ nguyên hoạt động", type: "output" },
+          { text: "  galaxy          Bản đồ chòm sao dự án (3D visualization)", type: "output" },
+          { text: "  brain           Luồng suy nghĩ & định hướng hiện tại", type: "output" },
+          { text: "  skill-tree      Cây kỹ năng & kiến thức chuyên môn", type: "output" },
+          { text: "  achievements    Các thành tựu và cột mốc nổi bật", type: "output" },
+          { text: "", type: "output" },
+          { text: "── 🗂️  DỰ ÁN ──────────────────────────────────────", type: "heading" },
+          { text: "  workshop-board  Bảng Kanban phân loại dự án", type: "output" },
+          { text: "  experiment-log  Nhật ký thí nghiệm — toàn bộ dự án", type: "output" },
+          { text: "  graveyard       Nghĩa trang dự án thất bại / lưu trữ", type: "output" },
+          { text: "  changelog       Nhật ký phát hành hệ thống theo tháng", type: "output" },
+          { text: "  nexus           Tổng quan hệ sinh thái Neko Nexus", type: "output" },
+          { text: "", type: "output" },
+          { text: "── ⚙️  HỆ THỐNG ────────────────────────────────────", type: "heading" },
+          { text: "  theme <name>    Đổi giao diện terminal", type: "output" },
+          { text: "    └─ tên hợp lệ: default · matrix · amber · cyber · dracula", type: "output" },
+          { text: "  sound on|off    Bật / tắt toàn bộ âm thanh", type: "output" },
+          { text: "  sound vol <0-100>  Chỉnh âm lượng nhạc nền (0 = tắt, 100 = max)", type: "output" },
+          { text: "  xp              Xem điểm tích lũy & level khám phá", type: "output" },
+          { text: "  clear           Xóa màn hình terminal", type: "output" },
+          { text: "", type: "output" },
+          { text: "── 📝 GUESTBOOK ────────────────────────────────────", type: "heading" },
+          { text: "  guestbook                   Xem toàn bộ lời nhắn", type: "output" },
+          { text: "  guestbook <tên> <lời_nhắn>  Ghi lại lời nhắn mới", type: "output" },
+          { text: "", type: "output" },
+          { text: "  💡 Tip: Nhấn Tab để auto-complete lệnh", type: "system" },
+          { text: "  💡 Tip: Nhấn ↑↓ để duyệt lệnh đã gõ trước đó", type: "system" },
         ];
         break;
 
@@ -443,16 +582,70 @@ export default function Terminal() {
         if (soundArg === "on") {
           setSoundEnabled(true);
           localStorage.setItem("neko_sound_enabled", "true");
+          if (getMuted()) toggleMute();
+          window.dispatchEvent(new Event("neko:audio-change"));
           soundOn();
-          outputs = [{ text: "System sound effects ENABLED.", type: "system" }];
+          outputs = [
+            { text: "✔ Sound effects  : ENABLED", type: "system" },
+            { text: "✔ Background music: ENABLED", type: "system" },
+          ];
         } else if (soundArg === "off") {
           setSoundEnabled(false);
           localStorage.setItem("neko_sound_enabled", "false");
-          outputs = [{ text: "System sound effects DISABLED.", type: "system" }];
-        } else {
+          if (!getMuted()) toggleMute();
+          window.dispatchEvent(new Event("neko:audio-change"));
           outputs = [
-            { text: "Usage: sound [on|off]", type: "error" },
-            { text: `Current state: ${soundEnabled ? "ENABLED" : "DISABLED"}`, type: "output" }
+            { text: "✖ Sound effects  : DISABLED", type: "system" },
+            { text: "✖ Background music: DISABLED", type: "system" },
+          ];
+        } else if (soundArg === "vol") {
+          const rawVol = parts[2];
+          const volNum = parseInt(rawVol, 10);
+          if (!rawVol) {
+            soundError();
+            outputs = [
+              { text: "Error: missing volume value.", type: "error" },
+              { text: "Usage  : sound vol <0-100>", type: "output" },
+              { text: "Example: sound vol 60", type: "output" },
+            ];
+          } else if (isNaN(volNum) || rawVol !== String(volNum)) {
+            soundError();
+            outputs = [
+              { text: `Error: '${rawVol}' is not a valid integer.`, type: "error" },
+              { text: "Usage: sound vol <0-100>", type: "output" },
+            ];
+          } else if (volNum < 0) {
+            soundError();
+            outputs = [
+              { text: `Error: volume cannot be negative (got: ${volNum}).`, type: "error" },
+              { text: "Valid : sound vol <0-100>", type: "output" },
+            ];
+          } else if (volNum > 100) {
+            soundError();
+            outputs = [
+              { text: `Error: volume exceeds maximum of 100 (got: ${volNum}).`, type: "error" },
+              { text: "Valid : sound vol <0-100>", type: "output" },
+            ];
+          } else {
+            const fraction = volNum / 100;
+            setVolume(fraction);
+            if (volNum > 0 && getMuted()) toggleMute();
+            if (volNum === 0 && !getMuted()) toggleMute();
+            window.dispatchEvent(new Event("neko:audio-change"));
+            const filled = Math.round(volNum / 10);
+            const bar = "█".repeat(filled) + "░".repeat(10 - filled);
+            outputs = [
+              { text: `Background music volume: [${bar}] ${volNum}%`, type: "system" },
+            ];
+          }
+        } else {
+          const sfxState = soundEnabled ? "ENABLED" : "DISABLED";
+          const musicState = getMuted() ? "MUTED" : "PLAYING";
+          const currentVol = Math.round(getVolume() * 100);
+          outputs = [
+            { text: "Usage: sound [on|off|vol <0-100>]", type: "error" },
+            { text: `  Sound effects  : ${sfxState}`, type: "output" },
+            { text: `  Background music: ${musicState} (${currentVol}%)`, type: "output" },
           ];
         }
         break;
@@ -541,6 +734,10 @@ export default function Terminal() {
         break;
 
       case "clear":
+        // Flush print queue trước khi clear
+        if (printTimerRef.current) clearTimeout(printTimerRef.current);
+        printQueueRef.current = [];
+        setIsPrinting(false);
         setHistory([]);
         return;
 
@@ -551,7 +748,7 @@ export default function Terminal() {
         ];
     }
 
-    setHistory((prev) => [...prev, ...outputs, { text: "", type: "output" }]);
+    printLines([...outputs, { text: "", type: "output" }]);
   };
 
   // Theme styles resolver
@@ -660,25 +857,69 @@ export default function Terminal() {
       </div>
 
       {/* Terminal prompt input */}
-      <div className="flex items-center text-xs md:text-sm border-t border-slate-800 pt-3 mt-auto select-none">
-        <span className={`font-bold mr-2 ${getPromptColor()}`}>
-          visitor@{theme === "default" ? "neko" : theme === "cyber" ? "cyberpunk" : theme}:~$
-        </span>
-        <input
-          ref={inputRef}
-          type="text"
-          value={input}
-          onChange={(e) => {
-            setInput(e.target.value);
-            // Play physical keypress tick sound — handled in onKeyDown
-          }}
-          onKeyDown={handleKeyDown}
-          className={`flex-grow bg-transparent outline-none font-mono select-text ${getPromptColor()}`}
-          style={{ caretColor: "inherit" }}
-          maxLength={100}
-          autoComplete="off"
-          autoFocus
-        />
+      <div className="relative flex flex-col border-t border-slate-800 pt-3 mt-auto select-none">
+        {/* Suggestions dropdown */}
+        {suggestions.length > 0 && (
+          <div className="absolute bottom-full mb-1 left-0 right-0 bg-[#0d1117] border border-[#00ff66]/30 rounded shadow-[0_0_16px_rgba(0,255,102,0.1)] overflow-hidden z-20 max-h-48 overflow-y-auto">
+            {suggestions.map((s, i) => {
+              const isActive = i === suggestionIdx;
+              // highlight phần đã gõ
+              const typed = input.trimStart().toLowerCase();
+              const matchEnd = typed.length;
+              return (
+                <div
+                  key={s}
+                  onMouseDown={(e) => { e.preventDefault(); setInput(s); setSuggestions([]); setSuggestionIdx(-1); soundTab(); inputRef.current?.focus(); }}
+                  className={`flex items-center gap-3 px-3 py-1.5 text-xs font-mono cursor-pointer transition-colors ${isActive ? "bg-[#00ff66]/15 text-[#00ff66]" : "text-slate-300 hover:bg-slate-800/60"}`}
+                >
+                  <span className="text-[#00ff66]/40 text-[10px] select-none">›_</span>
+                  <span>
+                    <span className={isActive ? "text-[#00ff66] font-bold" : "text-[#00ccff] font-bold"}>
+                      {s.slice(0, matchEnd)}
+                    </span>
+                    <span className="opacity-60">{s.slice(matchEnd)}</span>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        <div className="flex items-center text-xs md:text-sm">
+          <span className={`font-bold mr-2 shrink-0 ${getPromptColor()}`}>
+            visitor@{theme === "default" ? "neko" : theme === "cyber" ? "cyberpunk" : theme}:~$
+          </span>
+          {/* Input + inline hint wrapper */}
+          <div className="relative flex-grow flex items-center min-w-0">
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              className={`w-full bg-transparent outline-none font-mono select-text ${getPromptColor()} ${isPrinting ? "opacity-50" : ""}`}
+              style={{ caretColor: "inherit" }}
+              maxLength={100}
+              autoComplete="off"
+              autoFocus
+              disabled={isPrinting}
+            />
+            {/* Ghost hint — rendered as invisible mirror text + colored hint right after */}
+            {getArgHint(input) && (
+              <span
+                className="absolute left-0 top-0 font-mono text-xs md:text-sm pointer-events-none select-none whitespace-pre"
+                aria-hidden="true"
+              >
+                {/* invisible mirror of typed text to push hint to correct position */}
+                <span className="invisible">{input}</span>
+                <span className="text-slate-500"> {getArgHint(input)}</span>
+              </span>
+            )}
+          </div>
+          {suggestions.length > 0 && (
+            <span className="text-[10px] text-slate-600 ml-2 shrink-0 hidden sm:inline">Tab ↑↓ Esc</span>
+          )}
+        </div>
       </div>
     </div>
   );

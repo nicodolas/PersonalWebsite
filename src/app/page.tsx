@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
+import React, { useEffect, useRef, useState } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import IdentityCard from "@/components/IdentityCard";
 import Terminal from "@/components/Terminal";
@@ -12,12 +11,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap-config";
 import { counterUp, staggerCards } from "@/lib/animations";
 import { GitBranch, TrendingUp, Skull, Zap, Terminal as TerminalIcon, Layers, Activity } from "lucide-react";
 
-// Disable SSR for BootSequence — it uses Date.now() and random delays
-// that cause hydration mismatches when server-rendered
-const BootSequence = dynamic(() => import("@/components/BootSequence"), { ssr: false });
-
 export default function Home() {
-  const [isBooted, setIsBooted] = useState(false);
   const [activeTab, setActiveTab] = useState<"nexus" | "terminal">("nexus");
   const dashboardRef = useRef<HTMLDivElement>(null);
   const repoCountRef = useRef<HTMLSpanElement>(null);
@@ -30,16 +24,7 @@ export default function Home() {
   const repoNetwork = repositoryNetworkData.data;
 
   useEffect(() => {
-    const sessionBooted = sessionStorage.getItem("neko_booted");
-    if (sessionBooted === "true") {
-      setTimeout(() => {
-        setIsBooted(true);
-      }, 0);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isBooted && activeTab === "nexus" && dashboardRef.current) {
+    if (activeTab === "nexus" && dashboardRef.current) {
       const ctx = gsap.context(() => {
         if (repoCountRef.current) {
           counterUp(repoCountRef.current, repoNetwork.nodes.length, "");
@@ -66,16 +51,7 @@ export default function Home() {
       }, dashboardRef);
       return () => ctx.revert();
     }
-  }, [isBooted, activeTab, clusters.length, repoNetwork.nodes.length, repoNetwork.links.length]);
-
-  const handleBootComplete = () => {
-    sessionStorage.setItem("neko_booted", "true");
-    setIsBooted(true);
-  };
-
-  if (!isBooted) {
-    return <BootSequence onComplete={handleBootComplete} />;
-  }
+  }, [activeTab, clusters.length, repoNetwork.nodes.length, repoNetwork.links.length]);
 
   return (
     <LayoutWrapper>
@@ -112,7 +88,7 @@ export default function Home() {
             github.com/nicodolas
           </a>{" "}
           · LinkedIn:{" "}
-          <a href="https://www.linkedin.com/in/nguyenvanhieu-nicodolas" rel="me" tabIndex={-1}>
+          <a href="https://www.linkedin.com/in/nicodolas" rel="me" tabIndex={-1}>
             linkedin.com/in/nguyenvanhieu-nicodolas
           </a>
         </p>

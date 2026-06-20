@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import skillTreeData from "@/data/generated/skill-tree.json";
 import { gsap } from "@/lib/gsap-config";
-import { fadeInUp } from "@/lib/animations";
 import { Award, Code, Shield, Wrench, Cpu, Lock, CheckCircle2, Circle, Sparkles } from "lucide-react";
 
 // Icon mapping based on category ID
@@ -89,7 +88,12 @@ export default function SkillTree() {
     }, 0);
 
     const ctx = gsap.context(() => {
-      fadeInUp(".skill-category", containerRef.current!, 0.15);
+      gsap.from(".skill-header", {
+        y: 16,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      });
     }, containerRef);
 
     return () => ctx.revert();
@@ -162,7 +166,7 @@ export default function SkillTree() {
         )}
 
         {/* Header & Level Progress */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#090d16]/40 border border-slate-850 p-5 rounded-lg">
+        <div className="skill-header flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-[#090d16]/40 border border-slate-850 p-5 rounded-lg">
           <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-bold text-[#00ff66] flex items-center gap-2">
               <Award size={24} /> Skill Tree
@@ -194,13 +198,16 @@ export default function SkillTree() {
 
         {/* Tree categories list */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-4">
-          {skillTreeData.data.trees.map((cat) => {
+          {skillTreeData.data.trees.map((cat, catIdx) => {
             const meta = categoryMeta[cat.id] || { icon: Code, color: "text-[#ff5555]", glow: "" };
             const Icon = meta.icon;
 
             return (
               <div
                 key={cat.id}
+                style={{
+                  animation: `fadeSlideUp 0.5s ease-out ${catIdx * 0.1}s both`,
+                }}
                 className={`skill-category bg-[#090d16]/70 border border-slate-800 rounded-lg p-6 shadow-xl flex flex-col gap-4 transition-all hover:border-slate-700 ${meta.glow}`}
               >
                 {/* Category Header */}
