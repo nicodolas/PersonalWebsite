@@ -108,12 +108,16 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
   if (!booting) {
     return (
       <div
-        onClick={startBoot}
-        className="fixed inset-0 z-50 bg-[#05070a] text-[#00ff66] font-mono flex flex-col items-center justify-center gap-8 cursor-pointer select-none crt-screen"
+        className="fixed inset-0 z-50 bg-[#05070a] text-[#00ff66] font-mono flex flex-col items-center justify-center gap-8 select-none crt-screen"
       >
+        {/* Full-screen invisible click target — bắt click ở bất kỳ đâu */}
+        <div
+          className="absolute inset-0 cursor-pointer z-30"
+          onClick={startBoot}
+        />
         <div className="scanline-effect" />
 
-        <div className="text-center space-y-2">
+        <div className="relative z-20 text-center space-y-2">
           <div className="text-4xl md:text-6xl font-black tracking-widest glow-green">
             NEKO_OS
           </div>
@@ -122,12 +126,12 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-sm md:text-base text-[#00ff66]/80 animate-pulse">
+        <div className="relative z-20 flex items-center gap-2 text-sm md:text-base text-[#00ff66]/80 animate-pulse">
           <span className="text-[#ffb86c]">&gt;_</span>
           <span>PRESS ANY KEY TO BOOT</span>
         </div>
 
-        <div className="text-[10px] text-slate-600 tracking-widest uppercase">
+        <div className="relative z-20 text-[10px] text-slate-600 tracking-widest uppercase">
           click anywhere or press any key
         </div>
       </div>

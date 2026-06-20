@@ -120,7 +120,7 @@ function stopAudio() {
 }
 
 // ── Interaction unlock ────────────────────────────────────────────────────
-function registerInteractionUnlock() {
+export function registerInteractionUnlock() {
     if (typeof window === "undefined" || interactionListenersAdded) return;
     interactionListenersAdded = true;
 
