@@ -1,98 +1,31 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:05.827Z",
+  "generatedAt": "2026-06-20T06:20:56.655Z",
   "data": {
     "projects": [
-      {
-        "id": "review-lecturers",
-        "title": "ReviewLecturers_HUIT",
-        "status": "building",
-        "progress": 85,
-        "commits_count": 280,
-        "tech_stack": [
-          "Next.js 16",
-          "Node.js",
-          "express.js",
-          "TypeScript",
-          "TanStack Query",
-          "Shadcn UI",
-          "PostgreSQL",
-          "Prisma",
-          "n8n"
-        ],
-        "description": "An academic review platform helping HUIT students view and rate lecturers.",
-        "description_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
-        "demo_url": "https://reviewgiangvienhuit.vercel.app/",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "milk-tea-shop",
-        "title": "Milk-tea Web Shop",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 150,
-        "tech_stack": [
-          "Node.js",
-          "express.js",
-          "Next.js",
-          "JavaScript",
-          "PostgreSQL",
-          "SePay",
-          "Netlify"
-        ],
-        "description": "E-commerce platform for a milk tea shop featuring online payment.",
-        "description_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
-        "demo_url": "https://htea-milk-tea.netlify.app/",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "age-prediction",
-        "title": "Age Prediction App",
-        "status": "archived",
-        "progress": 100,
-        "commits_count": 150,
-        "tech_stack": [
-          "React",
-          "AI API",
-          "Async/Await"
-        ],
-        "description": "Real-time age and gender prediction application using AI.",
-        "description_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
-        "demo_url": "https://dudoantuoi.netlify.app/",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "portfolio-3d",
-        "title": "3D Portfolio",
-        "status": "building",
-        "progress": 90,
-        "commits_count": 150,
-        "tech_stack": [
-          "React",
-          "Three.js",
-          "R3F",
-          "Zustand"
-        ],
-        "description": "Interactive 3D portfolio website with a playable character.",
-        "description_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
-        "demo_url": "https://roofolio.vercel.app/",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 61,
+        "commits_count": 8860,
         "tech_stack": [
           "TypeScript"
         ],
         "description": "No description available.",
         "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "nicodolas",
+        "title": "nicodolas",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 23,
+        "tech_stack": [],
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "stars": 0,
         "forks": 0
       },
@@ -163,18 +96,6 @@
         ],
         "description": "C++ implementation of the Round Robin (RR) CPU scheduling algorithm with configurable time quantum.",
         "description_vi": "C++ implementation of the Round Robin (RR) CPU scheduling algorithm with configurable time quantum.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "nicodolas",
-        "title": "nicodolas",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 22,
-        "tech_stack": [],
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "stars": 0,
         "forks": 0
       },

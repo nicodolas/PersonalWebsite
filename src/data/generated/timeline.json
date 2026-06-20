@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:04.830Z",
+  "generatedAt": "2026-06-20T06:20:55.152Z",
   "data": {
     "eras": [
       {
@@ -9,26 +9,17 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 2277,
+        "commits": 16908,
         "technologies": [
           "TypeScript",
-          "Python",
-          "Next.js 16",
-          "Node.js",
-          "express.js",
-          "TanStack Query",
-          "Shadcn UI",
-          "PostgreSQL",
-          "Prisma",
-          "n8n"
+          "Python"
         ],
         "repos": [
           "PersonalWebsite",
-          "Claw-OMX-9Router-AI",
           "nicodolas",
+          "Claw-OMX-9Router-AI",
           "ziwei-doushu",
-          "claw-code",
-          "ReviewLecturers_HUIT"
+          "claw-code"
         ]
       },
       {
@@ -37,7 +28,7 @@
         "title_vi": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
         "description": "Developing comprehensive web applications, integrating IoT security systems, and deploying machine learning/AI models.",
         "description_vi": "Phát triển các ứng dụng web toàn diện, tích hợp hệ thống bảo mật IoT và triển khai các mô hình học máy/AI.",
-        "commits": 60457,
+        "commits": 60352,
         "technologies": [
           "C#",
           "JavaScript",
@@ -45,19 +36,7 @@
           "Python",
           "HTML",
           "TypeScript",
-          "Blade",
-          "Node.js",
-          "express.js",
-          "Next.js",
-          "PostgreSQL",
-          "SePay",
-          "Netlify",
-          "React",
-          "AI API",
-          "Async/Await",
-          "Three.js",
-          "R3F",
-          "Zustand"
+          "Blade"
         ],
         "repos": [
           "Watchshopmanager",
@@ -72,10 +51,7 @@
           "Bookstoremanagement",
           "Bigdata",
           "ai-smoke-detect",
-          "PHP_WebBanHoa",
-          "Milk-tea Web Shop",
-          "Age Prediction App",
-          "3D Portfolio"
+          "PHP_WebBanHoa"
         ]
       },
       {

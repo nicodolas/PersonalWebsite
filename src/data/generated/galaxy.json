@@ -1,71 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:06.592Z",
+  "generatedAt": "2026-06-20T06:20:59.113Z",
   "data": {
     "nodes": [
-      {
-        "id": "ReviewLecturers_HUIT",
-        "description": "An academic review platform helping HUIT students view and rate lecturers.",
-        "description_vi": "Nền tảng giúp sinh viên HUIT xem và đánh giá giảng viên.",
-        "group": "Next.js 16",
-        "size": 15,
-        "tech": [
-          "Next.js 16",
-          "Node.js",
-          "express.js",
-          "TypeScript",
-          "TanStack Query",
-          "Shadcn UI",
-          "PostgreSQL",
-          "Prisma",
-          "n8n"
-        ],
-        "isBackup": true
-      },
-      {
-        "id": "Milk-tea Web Shop",
-        "description": "E-commerce platform for a milk tea shop featuring online payment.",
-        "description_vi": "Website thương mại điện tử mua bán trà sữa với tính năng thanh toán online.",
-        "group": "Node.js",
-        "size": 15,
-        "tech": [
-          "Node.js",
-          "express.js",
-          "Next.js",
-          "JavaScript",
-          "PostgreSQL",
-          "SePay",
-          "Netlify"
-        ],
-        "isBackup": true
-      },
-      {
-        "id": "Age Prediction App",
-        "description": "Real-time age and gender prediction application using AI.",
-        "description_vi": "Ứng dụng dự đoán tuổi và giới tính theo thời gian thực sử dụng AI.",
-        "group": "React",
-        "size": 15,
-        "tech": [
-          "React",
-          "AI API",
-          "Async/Await"
-        ],
-        "isBackup": true
-      },
-      {
-        "id": "3D Portfolio",
-        "description": "Interactive 3D portfolio website with a playable character.",
-        "description_vi": "Website portfolio tương tác 3D với nhân vật di chuyển được.",
-        "group": "React",
-        "size": 15,
-        "tech": [
-          "React",
-          "Three.js",
-          "R3F",
-          "Zustand"
-        ],
-        "isBackup": true
-      },
       {
         "id": "PersonalWebsite",
         "description": "No description available.",
@@ -75,6 +12,14 @@
         "tech": [
           "TypeScript"
         ]
+      },
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Others",
+        "size": null,
+        "tech": []
       },
       {
         "id": "Claw-OMX-9Router-AI",
@@ -125,14 +70,6 @@
         "tech": [
           "C++"
         ]
-      },
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Others",
-        "size": null,
-        "tech": []
       },
       {
         "id": "myroom",
@@ -312,46 +249,6 @@
       }
     ],
     "links": [
-      {
-        "source": "ReviewLecturers_HUIT",
-        "target": "Milk-tea Web Shop",
-        "label": "Both use Node.js"
-      },
-      {
-        "source": "ReviewLecturers_HUIT",
-        "target": "PersonalWebsite",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "ReviewLecturers_HUIT",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "Milk-tea Web Shop",
-        "target": "myroom",
-        "label": "Both use JavaScript"
-      },
-      {
-        "source": "Milk-tea Web Shop",
-        "target": "FE-Smoke-AI-React",
-        "label": "Both use JavaScript"
-      },
-      {
-        "source": "Milk-tea Web Shop",
-        "target": "ChatBot_NiFi",
-        "label": "Both use JavaScript"
-      },
-      {
-        "source": "Milk-tea Web Shop",
-        "target": "ai-smoke-detect",
-        "label": "Both use JavaScript"
-      },
-      {
-        "source": "Age Prediction App",
-        "target": "3D Portfolio",
-        "label": "Both use React"
-      },
       {
         "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
