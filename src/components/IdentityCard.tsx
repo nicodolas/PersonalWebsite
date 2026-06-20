@@ -142,7 +142,7 @@ export default function IdentityCard() {
                             <span className="hidden sm:inline">Email</span>
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/nguyenvanhieu-nicodolas"
+                            href="https://www.linkedin.com/in/nicodolas"
                             target="_blank"
                             rel="noopener noreferrer me"
                             title="LinkedIn"

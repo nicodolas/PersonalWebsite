@@ -31,11 +31,16 @@ export default function Brain() {
   const pulseRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const timeoutIds: ReturnType<typeof setTimeout>[] = [];
     let delay = 0.5;
+
     thoughtStreams.forEach((stream) => {
-      setTimeout(() => {
-        setThoughts((prev) => [...prev, stream]);
-        // Animate the brain pulsing faster on new thoughts
+      const id = setTimeout(() => {
+        setThoughts((prev) => {
+          // Guard: không thêm nếu đã có dòng này (StrictMode double-invoke)
+          if (prev[prev.length - 1] === stream) return prev;
+          return [...prev, stream];
+        });
         if (pulseRef.current) {
           gsap.fromTo(
             pulseRef.current,
@@ -44,19 +49,21 @@ export default function Brain() {
           );
         }
       }, delay * 1000);
+      timeoutIds.push(id);
       delay += 1 + Math.random() * 1.2;
     });
 
-    // Animate brain waves
     const ctx = gsap.context(() => {
       fadeInUp(".brain-header", containerRef.current!, 0);
-      fadeInUp(".interest-card", containerRef.current!, 0.1);
       gsap.from(".interest-bar-fill", { width: "0%", duration: 1, ease: "power2.out", stagger: 0.05 });
       gsap.to(".orbit-inner", { rotation: 360, svgOrigin: "50 50", duration: 10, repeat: -1, ease: "none" });
       gsap.to(".orbit-outer", { rotation: -360, svgOrigin: "50 50", duration: 20, repeat: -1, ease: "none" });
     }, containerRef);
 
-    return () => ctx.revert();
+    return () => {
+      timeoutIds.forEach(clearTimeout);
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -201,10 +208,13 @@ export default function Brain() {
             <Award size={12} /> Skills & Interest Matrix
           </span>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {brain.interests.map((interest) => (
+            {brain.interests.map((interest, idx) => (
               <div
                 key={interest.name}
-                className="interest-card bg-[#0b1322] border border-slate-800/80 p-3.5 rounded flex flex-col gap-2 transition-all hover:border-[#00ff66]/20"
+                style={{
+                  animation: `fadeSlideUp 0.4s ease-out ${idx * 0.06}s both`,
+                }}
+                className="bg-[#0b1322] border border-slate-800/80 p-3.5 rounded flex flex-col gap-2 transition-all hover:border-[#00ff66]/20"
               >
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-bold text-slate-200 font-mono">{interest.name}</span>

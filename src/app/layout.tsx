@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import BootGateLoader from "@/components/BootGateLoader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -89,7 +90,7 @@ export default function RootLayout({
     },
     "sameAs": [
       "https://github.com/nicodolas",
-      "https://www.linkedin.com/in/nguyenvanhieu-nicodolas"
+      "https://www.linkedin.com/in/nicodolas"
     ]
   };
 
@@ -104,7 +105,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <BootGateLoader>{children}</BootGateLoader>
+      </body>
     </html>
   );
 }
