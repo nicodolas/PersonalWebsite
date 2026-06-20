@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:05.826Z",
+  "generatedAt": "2026-06-20T06:20:56.654Z",
   "data": {
     "achievements": [
       {
@@ -27,7 +27,7 @@
         "icon": "🎓",
         "desc": "Earned certification: English CEFR (B2)",
         "desc_vi": "Đạt chứng nhận: English CEFR (B2)",
-        "url": "https://photos.app.goo.gl/bTJM8ja6j1SpD7Tf9 "
+        "url": "https://photos.app.goo.gl/bTJM8ja6j1SpD7Tf9"
       },
       {
         "title": "1000 Commits Milestone",
@@ -48,7 +48,7 @@
       {
         "title": "Repository Collector",
         "title_vi": "Bộ Sưu Tập Đồ Đồ Đồ",
-        "date": "2026-06-19",
+        "date": "2026-06-20",
         "icon": "📦",
         "desc": "Created more than 10 repositories on GitHub",
         "desc_vi": "Xây dựng hơn 10 dự án mã nguồn trên GitHub"

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-19T15:58:06.682Z",
+  "generatedAt": "2026-06-20T06:20:59.205Z",
   "data": {
     "nodes": [
       {
@@ -45,13 +45,13 @@
         "type": "technology"
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "technology"
       },
       {
-        "id": "Python",
-        "label": "Python",
+        "id": "TypeScript",
+        "label": "TypeScript",
         "type": "technology"
       },
       {
@@ -62,31 +62,6 @@
       {
         "id": "C++",
         "label": "C++",
-        "type": "technology"
-      },
-      {
-        "id": "Next.js",
-        "label": "Next.js",
-        "type": "technology"
-      },
-      {
-        "id": "Node.js",
-        "label": "Node.js",
-        "type": "technology"
-      },
-      {
-        "id": "Express",
-        "label": "Express",
-        "type": "technology"
-      },
-      {
-        "id": "PostgreSQL",
-        "label": "PostgreSQL",
-        "type": "technology"
-      },
-      {
-        "id": "React",
-        "label": "React",
         "type": "technology"
       },
       {
@@ -110,65 +85,10 @@
         "type": "technology"
       },
       {
-        "id": "TanStack Query",
-        "label": "TanStack Query",
-        "type": "technology"
-      },
-      {
-        "id": "Shadcn UI",
-        "label": "Shadcn UI",
-        "type": "technology"
-      },
-      {
-        "id": "Prisma",
-        "label": "Prisma",
-        "type": "technology"
-      },
-      {
-        "id": "n8n",
-        "label": "n8n",
-        "type": "technology"
-      },
-      {
-        "id": "SePay",
-        "label": "SePay",
-        "type": "technology"
-      },
-      {
-        "id": "Netlify",
-        "label": "Netlify",
-        "type": "technology"
-      },
-      {
-        "id": "AI API",
-        "label": "AI API",
-        "type": "technology"
-      },
-      {
-        "id": "Three.js",
-        "label": "Three.js",
-        "type": "technology"
-      },
-      {
-        "id": "Zustand",
-        "label": "Zustand",
-        "type": "technology"
-      },
-      {
         "id": "era-2026",
         "label": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "type": "era",
         "year": 2026
-      },
-      {
-        "id": "Next.js 16",
-        "label": "Next.js 16",
-        "type": "technology"
-      },
-      {
-        "id": "express.js",
-        "label": "express.js",
-        "type": "technology"
       },
       {
         "id": "era-2025",
@@ -179,16 +99,6 @@
       {
         "id": "HTML",
         "label": "HTML",
-        "type": "technology"
-      },
-      {
-        "id": "Async/Await",
-        "label": "Async/Await",
-        "type": "technology"
-      },
-      {
-        "id": "R3F",
-        "label": "R3F",
         "type": "technology"
       },
       {
@@ -277,46 +187,6 @@
         "weight": 70
       },
       {
-        "source": "era-2026",
-        "target": "Next.js 16",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "Node.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "express.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "TanStack Query",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "Shadcn UI",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "PostgreSQL",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "Prisma",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "n8n",
-        "weight": 70
-      },
-      {
         "source": "current-brain",
         "target": "era-2026",
         "weight": 100
@@ -354,66 +224,6 @@
       {
         "source": "era-2025",
         "target": "Blade",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Node.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "express.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Next.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "PostgreSQL",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "SePay",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Netlify",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "React",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "AI API",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Async/Await",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Three.js",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "R3F",
-        "weight": 70
-      },
-      {
-        "source": "era-2025",
-        "target": "Zustand",
         "weight": 70
       },
       {
@@ -462,11 +272,6 @@
         "weight": 80
       },
       {
-        "source": "achievement-3D Graphics Integration",
-        "target": "Three.js",
-        "weight": 85
-      },
-      {
         "source": "era-2026",
         "target": "achievement-Repository Collector",
         "weight": 80
@@ -474,11 +279,6 @@
       {
         "source": "AI Agents & MCP",
         "target": "Python",
-        "weight": 95
-      },
-      {
-        "source": "AI Agents & MCP",
-        "target": "AI API",
         "weight": 95
       },
       {
@@ -490,36 +290,6 @@
         "source": "Next.js Full-Stack",
         "target": "TypeScript",
         "weight": 95
-      },
-      {
-        "source": "Next.js Full-Stack",
-        "target": "Next.js",
-        "weight": 95
-      },
-      {
-        "source": "Next.js Full-Stack",
-        "target": "PostgreSQL",
-        "weight": 95
-      },
-      {
-        "source": "Next.js Full-Stack",
-        "target": "React",
-        "weight": 95
-      },
-      {
-        "source": "Next.js Full-Stack",
-        "target": "Prisma",
-        "weight": 95
-      },
-      {
-        "source": "Workflow Automation",
-        "target": "n8n",
-        "weight": 92
-      },
-      {
-        "source": "3D Graphics & Three.js",
-        "target": "Three.js",
-        "weight": 80
       },
       {
         "source": "IoT & Embedded Security",
@@ -543,22 +313,7 @@
       },
       {
         "source": "IoT & Embedded Security",
-        "target": "React",
-        "weight": 75
-      },
-      {
-        "source": "IoT & Embedded Security",
         "target": "Lua",
-        "weight": 75
-      },
-      {
-        "source": "IoT & Embedded Security",
-        "target": "TanStack Query",
-        "weight": 75
-      },
-      {
-        "source": "IoT & Embedded Security",
-        "target": "Shadcn UI",
         "weight": 75
       }
     ]
