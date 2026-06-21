@@ -1,22 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-20T06:20:56.655Z",
+  "generatedAt": "2026-06-21T06:50:58.181Z",
   "data": {
     "projects": [
-      {
-        "id": "PersonalWebsite",
-        "title": "PersonalWebsite",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 8860,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
@@ -26,6 +12,20 @@
         "tech_stack": [],
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "PersonalWebsite",
+        "title": "PersonalWebsite",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 8863,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
         "stars": 0,
         "forks": 0
       },
