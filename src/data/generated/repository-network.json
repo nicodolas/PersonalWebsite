@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-21T06:50:58.510Z",
+  "generatedAt": "2026-06-21T08:35:45.542Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "name": "nicodolas",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Unknown",
-        "size": 5,
-        "tech": [],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",
@@ -22,6 +12,16 @@
         "tech": [
           "TypeScript"
         ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Unknown",
+        "size": 5,
+        "tech": [],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
