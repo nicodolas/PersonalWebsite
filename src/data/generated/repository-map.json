@@ -1,8 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-21T08:35:45.433Z",
+  "generatedAt": "2026-06-22T07:23:55.353Z",
   "data": {
     "nodes": [
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Others",
+        "size": null,
+        "tech": []
+      },
       {
         "id": "PersonalWebsite",
         "description": "No description available.",
@@ -12,14 +20,6 @@
         "tech": [
           "TypeScript"
         ]
-      },
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Others",
-        "size": null,
-        "tech": []
       },
       {
         "id": "Claw-OMX-9Router-AI",
