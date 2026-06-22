@@ -21,6 +21,13 @@ export default function BootGate({ children }: BootGateProps) {
         registerInteractionUnlock();
     }, []);
 
+    // Đăng ký interaction unlock sớm — trước khi LayoutWrapper mount
+    // Quan trọng: BootGate render trước LayoutWrapper, nếu không đăng ký ở đây
+    // thì neko:interaction từ BootSequence sẽ bị bỏ qua vì chưa có listener nào
+    useEffect(() => {
+        registerInteractionUnlock();
+    }, []);
+
     const handleBootComplete = () => {
         setIsBooted(true);
     };
