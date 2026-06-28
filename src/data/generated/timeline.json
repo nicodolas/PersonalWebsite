@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-28T06:17:31.551Z",
+  "generatedAt": "2026-06-28T07:52:18.596Z",
   "data": {
     "eras": [
       {
@@ -9,14 +9,14 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 17674,
+        "commits": 17675,
         "technologies": [
           "TypeScript",
           "Python"
         ],
         "repos": [
-          "nicodolas",
           "PersonalWebsite",
+          "nicodolas",
           "Claw-OMX-9Router-AI",
           "ziwei-doushu",
           "claw-code"
