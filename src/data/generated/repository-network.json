@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-28T07:52:19.309Z",
+  "generatedAt": "2026-06-29T06:46:26.855Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
+        "id": "nicoquote",
+        "name": "nicoquote",
         "description_vi": "Chưa có mô tả.",
-        "group": "TypeScript",
+        "group": "HTML",
         "size": 5,
         "tech": [
-          "TypeScript"
+          "HTML"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -22,6 +22,18 @@
         "group": "Unknown",
         "size": 5,
         "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "Chưa có mô tả.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },

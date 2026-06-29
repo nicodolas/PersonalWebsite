@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-28T07:52:19.256Z",
+  "generatedAt": "2026-06-29T06:46:26.807Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
+        "id": "nicoquote",
         "description": "No description available.",
         "description_vi": "No description available.",
-        "group": "TypeScript",
+        "group": "HTML",
         "size": null,
         "tech": [
-          "TypeScript"
+          "HTML"
         ]
       },
       {
@@ -20,6 +20,16 @@
         "group": "Others",
         "size": null,
         "tech": []
+      },
+      {
+        "id": "PersonalWebsite",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
       },
       {
         "id": "Claw-OMX-9Router-AI",
@@ -249,6 +259,31 @@
       }
     ],
     "links": [
+      {
+        "source": "nicoquote",
+        "target": "IoTKhoaBaoMat",
+        "label": "Both use HTML"
+      },
+      {
+        "source": "nicoquote",
+        "target": "flower_shop",
+        "label": "Both use HTML"
+      },
+      {
+        "source": "nicoquote",
+        "target": "dongcuuanhoa",
+        "label": "Both use HTML"
+      },
+      {
+        "source": "nicoquote",
+        "target": "Demo-Cipher-O",
+        "label": "Both use HTML"
+      },
+      {
+        "source": "nicoquote",
+        "target": "Demo-Cipher",
+        "label": "Both use HTML"
+      },
       {
         "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
