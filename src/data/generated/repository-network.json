@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.855Z",
+  "generatedAt": "2026-06-30T06:11:23.148Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicoquote",
-        "name": "nicoquote",
-        "description_vi": "Chưa có mô tả.",
-        "group": "HTML",
-        "size": 5,
-        "tech": [
-          "HTML"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -22,6 +10,18 @@
         "group": "Unknown",
         "size": 5,
         "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicoquote",
+        "name": "nicoquote",
+        "description_vi": "Vietnamese API Quote Server",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
@@ -314,6 +314,16 @@
       }
     ],
     "links": [
+      {
+        "source": "nicoquote",
+        "target": "PersonalWebsite",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
       {
         "source": "PersonalWebsite",
         "target": "frontend-milk-tea",

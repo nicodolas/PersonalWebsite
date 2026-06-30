@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.384Z",
+  "generatedAt": "2026-06-30T06:11:22.302Z",
   "data": {
     "trends": [
       {
         "language": "HTML",
-        "repos_count": 6,
-        "percentage": 26.1,
-        "trend": "stable"
+        "repos_count": 5,
+        "percentage": 21.7,
+        "trend": "declining"
       },
       {
         "language": "JavaScript",
@@ -16,15 +16,15 @@
         "trend": "rising"
       },
       {
-        "language": "Python",
+        "language": "TypeScript",
         "repos_count": 3,
         "percentage": 13,
         "trend": "rising"
       },
       {
-        "language": "TypeScript",
-        "repos_count": 2,
-        "percentage": 8.7,
+        "language": "Python",
+        "repos_count": 3,
+        "percentage": 13,
         "trend": "rising"
       },
       {

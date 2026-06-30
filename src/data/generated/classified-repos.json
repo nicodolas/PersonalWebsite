@@ -1,22 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:25.425Z",
+  "generatedAt": "2026-06-30T06:11:21.214Z",
   "data": [
-    {
-      "id": "nicoquote",
-      "name": "nicoquote",
-      "description": "No description available.",
-      "description_vi": "Chưa có mô tả.",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "size": 109,
-      "url": "https://github.com/nicodolas/nicoquote",
-      "created_at": "2026-06-28T14:41:15Z",
-      "updated_at": "2026-06-29T06:40:47Z",
-      "topics": [],
-      "category": "HTML Development"
-    },
     {
       "id": "nicodolas",
       "name": "nicodolas",
@@ -25,12 +10,27 @@
       "language": null,
       "stars": 0,
       "forks": 0,
-      "size": 269,
+      "size": 75,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
-      "updated_at": "2026-06-28T19:04:13Z",
+      "updated_at": "2026-06-29T19:44:29Z",
       "topics": [],
       "category": "Software Engineering"
+    },
+    {
+      "id": "nicoquote",
+      "name": "nicoquote",
+      "description": "Vietnamese API Quote Server",
+      "description_vi": "Vietnamese API Quote Server",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "size": 200,
+      "url": "https://github.com/nicodolas/nicoquote",
+      "created_at": "2026-06-28T14:41:15Z",
+      "updated_at": "2026-06-29T11:00:51Z",
+      "topics": [],
+      "category": "TypeScript Development"
     },
     {
       "id": "PersonalWebsite",
@@ -40,10 +40,10 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93081,
+      "size": 93084,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
-      "updated_at": "2026-06-28T07:53:04Z",
+      "updated_at": "2026-06-29T06:47:17Z",
       "topics": [],
       "category": "TypeScript Development"
     },
