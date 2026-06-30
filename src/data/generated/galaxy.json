@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.807Z",
+  "generatedAt": "2026-06-30T06:11:23.034Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicoquote",
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "group": "HTML",
-        "size": null,
-        "tech": [
-          "HTML"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -20,6 +10,16 @@
         "group": "Others",
         "size": null,
         "tech": []
+      },
+      {
+        "id": "nicoquote",
+        "description": "Vietnamese API Quote Server",
+        "description_vi": "Vietnamese API Quote Server",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
       },
       {
         "id": "PersonalWebsite",
@@ -261,28 +261,13 @@
     "links": [
       {
         "source": "nicoquote",
-        "target": "IoTKhoaBaoMat",
-        "label": "Both use HTML"
+        "target": "PersonalWebsite",
+        "label": "Both use TypeScript"
       },
       {
         "source": "nicoquote",
-        "target": "flower_shop",
-        "label": "Both use HTML"
-      },
-      {
-        "source": "nicoquote",
-        "target": "dongcuuanhoa",
-        "label": "Both use HTML"
-      },
-      {
-        "source": "nicoquote",
-        "target": "Demo-Cipher-O",
-        "label": "Both use HTML"
-      },
-      {
-        "source": "nicoquote",
-        "target": "Demo-Cipher",
-        "label": "Both use HTML"
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
       },
       {
         "source": "PersonalWebsite",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.855Z",
+  "generatedAt": "2026-06-30T06:11:23.147Z",
   "data": {
     "nodes": [
       {
@@ -45,13 +45,13 @@
         "type": "technology"
       },
       {
-        "id": "Python",
-        "label": "Python",
+        "id": "TypeScript",
+        "label": "TypeScript",
         "type": "technology"
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "technology"
       },
       {
@@ -91,15 +91,15 @@
         "year": 2026
       },
       {
-        "id": "HTML",
-        "label": "HTML",
-        "type": "technology"
-      },
-      {
         "id": "era-2025",
         "label": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
         "type": "era",
         "year": 2025
+      },
+      {
+        "id": "HTML",
+        "label": "HTML",
+        "type": "technology"
       },
       {
         "id": "era-2024",
@@ -175,11 +175,6 @@
         "source": "current-brain",
         "target": "IoT & Embedded Security",
         "weight": 75
-      },
-      {
-        "source": "era-2026",
-        "target": "HTML",
-        "weight": 70
       },
       {
         "source": "era-2026",

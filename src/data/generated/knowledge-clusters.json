@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.856Z",
+  "generatedAt": "2026-06-30T06:11:23.148Z",
   "data": {
     "clusters": [
       {
@@ -79,8 +79,8 @@
           "Lua"
         ],
         "repositories": [
-          "nicoquote",
           "nicodolas",
+          "nicoquote",
           "Claw-OMX-9Router-AI",
           "Valk_Hub",
           "SJF",

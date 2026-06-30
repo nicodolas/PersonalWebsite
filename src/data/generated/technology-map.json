@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T06:46:26.855Z",
+  "generatedAt": "2026-06-30T06:11:23.147Z",
   "data": {
     "nodes": [
       {
@@ -10,16 +10,16 @@
         "count": 4
       },
       {
-        "id": "Python",
-        "label": "Python",
+        "id": "TypeScript",
+        "label": "TypeScript",
         "type": "language",
         "count": 3
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "language",
-        "count": 2
+        "count": 3
       },
       {
         "id": "C#",
