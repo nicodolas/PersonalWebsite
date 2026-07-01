@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-30T06:11:23.148Z",
+  "generatedAt": "2026-07-01T06:25:59.175Z",
   "data": {
     "nodes": [
       {
@@ -14,9 +14,9 @@
         "currentBrainConnection": false
       },
       {
-        "id": "nicoquote",
-        "name": "nicoquote",
-        "description_vi": "Vietnamese API Quote Server",
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "Chưa có mô tả.",
         "group": "TypeScript",
         "size": 5,
         "tech": [
@@ -26,9 +26,9 @@
         "currentBrainConnection": false
       },
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "Chưa có mô tả.",
+        "id": "nicoquote",
+        "name": "nicoquote",
+        "description_vi": "Vietnamese API Quote Server",
         "group": "TypeScript",
         "size": 5,
         "tech": [
@@ -315,17 +315,17 @@
     ],
     "links": [
       {
-        "source": "nicoquote",
-        "target": "PersonalWebsite",
-        "weight": 1
-      },
-      {
-        "source": "nicoquote",
-        "target": "frontend-milk-tea",
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
         "weight": 1
       },
       {
         "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
         "target": "frontend-milk-tea",
         "weight": 1
       },
