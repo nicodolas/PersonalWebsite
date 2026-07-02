@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T06:25:59.174Z",
+  "generatedAt": "2026-07-02T05:58:48.989Z",
   "data": {
     "nodes": [
       {
@@ -16,12 +16,6 @@
         "count": 3
       },
       {
-        "id": "Python",
-        "label": "Python",
-        "type": "language",
-        "count": 3
-      },
-      {
         "id": "C#",
         "label": "C#",
         "type": "language",
@@ -30,6 +24,12 @@
       {
         "id": "C++",
         "label": "C++",
+        "type": "language",
+        "count": 2
+      },
+      {
+        "id": "Python",
+        "label": "Python",
         "type": "language",
         "count": 2
       },
