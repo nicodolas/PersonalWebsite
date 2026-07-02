@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T06:25:58.496Z",
+  "generatedAt": "2026-07-02T05:58:48.070Z",
   "data": {
     "projects": [
       {
@@ -8,7 +8,7 @@
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 13,
+        "commits_count": 14,
         "tech_stack": [],
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -20,7 +20,7 @@
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 9313,
+        "commits_count": 9314,
         "tech_stack": [
           "TypeScript"
         ],
@@ -40,20 +40,6 @@
         ],
         "description": "Vietnamese API Quote Server",
         "description_vi": "Vietnamese API Quote Server",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "Claw-OMX-9Router-AI",
-        "title": "Claw-OMX-9Router-AI",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 550,
-        "tech_stack": [
-          "Python"
-        ],
-        "description": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
-        "description_vi": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
         "stars": 0,
         "forks": 0
       },

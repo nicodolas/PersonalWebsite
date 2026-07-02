@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T06:25:59.174Z",
+  "generatedAt": "2026-07-02T05:58:48.990Z",
   "data": {
     "nodes": [
       {
@@ -50,11 +50,6 @@
         "type": "technology"
       },
       {
-        "id": "Python",
-        "label": "Python",
-        "type": "technology"
-      },
-      {
         "id": "C#",
         "label": "C#",
         "type": "technology"
@@ -62,6 +57,11 @@
       {
         "id": "C++",
         "label": "C++",
+        "type": "technology"
+      },
+      {
+        "id": "Python",
+        "label": "Python",
         "type": "technology"
       },
       {
@@ -179,11 +179,6 @@
       {
         "source": "era-2026",
         "target": "TypeScript",
-        "weight": 70
-      },
-      {
-        "source": "era-2026",
-        "target": "Python",
         "weight": 70
       },
       {

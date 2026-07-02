@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T06:25:59.103Z",
+  "generatedAt": "2026-07-02T05:58:48.883Z",
   "data": {
     "nodes": [
       {
@@ -29,16 +29,6 @@
         "size": null,
         "tech": [
           "TypeScript"
-        ]
-      },
-      {
-        "id": "Claw-OMX-9Router-AI",
-        "description": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
-        "description_vi": "AI-powered network router configuration tool — automates OMX-9 router setup and optimization via intelligent agents.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
         ]
       },
       {
@@ -273,16 +263,6 @@
         "source": "nicoquote",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
-      },
-      {
-        "source": "Claw-OMX-9Router-AI",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "Claw-OMX-9Router-AI",
-        "target": "Bigdata",
-        "label": "Both use Python"
       },
       {
         "source": "Watchshopmanager",
