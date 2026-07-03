@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T05:58:48.990Z",
+  "generatedAt": "2026-07-03T05:52:58.331Z",
   "data": {
     "nodes": [
       {
@@ -62,6 +62,11 @@
       {
         "id": "Python",
         "label": "Python",
+        "type": "technology"
+      },
+      {
+        "id": "Go",
+        "label": "Go",
         "type": "technology"
       },
       {
@@ -175,6 +180,11 @@
         "source": "current-brain",
         "target": "IoT & Embedded Security",
         "weight": 75
+      },
+      {
+        "source": "era-2026",
+        "target": "Go",
+        "weight": 70
       },
       {
         "source": "era-2026",
