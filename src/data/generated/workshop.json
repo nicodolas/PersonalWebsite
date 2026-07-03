@@ -1,14 +1,28 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T05:58:48.070Z",
+  "generatedAt": "2026-07-03T05:52:57.282Z",
   "data": {
     "projects": [
+      {
+        "id": "Kashy",
+        "title": "Kashy",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 11,
+        "tech_stack": [
+          "Go"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 14,
+        "commits_count": 15,
         "tech_stack": [],
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",

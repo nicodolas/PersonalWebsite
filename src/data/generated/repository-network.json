@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T05:58:48.990Z",
+  "generatedAt": "2026-07-03T05:52:58.331Z",
   "data": {
     "nodes": [
+      {
+        "id": "Kashy",
+        "name": "Kashy",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Go",
+        "size": 5,
+        "tech": [
+          "Go"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
