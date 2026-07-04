@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-03T05:52:58.331Z",
+  "generatedAt": "2026-07-04T05:44:52.251Z",
   "data": {
     "nodes": [
+      {
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Unknown",
+        "size": 5,
+        "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "Kashy",
         "name": "Kashy",
@@ -12,16 +22,6 @@
         "tech": [
           "Go"
         ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "nicodolas",
-        "name": "nicodolas",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Unknown",
-        "size": 5,
-        "tech": [],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
