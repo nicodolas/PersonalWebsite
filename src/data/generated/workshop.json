@@ -1,14 +1,26 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-03T05:52:57.282Z",
+  "generatedAt": "2026-07-04T05:44:51.941Z",
   "data": {
     "projects": [
+      {
+        "id": "nicodolas",
+        "title": "nicodolas",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 16,
+        "tech_stack": [],
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "stars": 0,
+        "forks": 0
+      },
       {
         "id": "Kashy",
         "title": "Kashy",
         "status": "building",
         "progress": 75,
-        "commits_count": 11,
+        "commits_count": 12,
         "tech_stack": [
           "Go"
         ],
@@ -18,23 +30,11 @@
         "forks": 0
       },
       {
-        "id": "nicodolas",
-        "title": "nicodolas",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 15,
-        "tech_stack": [],
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 9314,
+        "commits_count": 9315,
         "tech_stack": [
           "TypeScript"
         ],
