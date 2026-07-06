@@ -1,10 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T07:26:34.920Z",
+  "generatedAt": "2026-07-06T06:27:42.054Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Others",
+        "size": null,
+        "tech": []
+      },
+      {
+        "id": "pricechecker",
         "description": "No description available.",
         "description_vi": "No description available.",
         "group": "TypeScript",
@@ -14,12 +22,24 @@
         ]
       },
       {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Others",
+        "id": "OdooDataQualitySuiteAddons",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
         "size": null,
-        "tech": []
+        "tech": [
+          "Python"
+        ]
+      },
+      {
+        "id": "PersonalWebsite",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
       },
       {
         "id": "Kashy",
@@ -259,6 +279,31 @@
       }
     ],
     "links": [
+      {
+        "source": "pricechecker",
+        "target": "PersonalWebsite",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "pricechecker",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "pricechecker",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "OdooDataQualitySuiteAddons",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooDataQualitySuiteAddons",
+        "target": "Bigdata",
+        "label": "Both use Python"
+      },
       {
         "source": "PersonalWebsite",
         "target": "nicoquote",

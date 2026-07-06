@@ -1,11 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T07:26:35.297Z",
+  "generatedAt": "2026-07-06T06:27:42.083Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Unknown",
+        "size": 5,
+        "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "pricechecker",
+        "name": "pricechecker",
         "description_vi": "Chưa có mô tả.",
         "group": "TypeScript",
         "size": 5,
@@ -16,12 +26,26 @@
         "currentBrainConnection": false
       },
       {
-        "id": "nicodolas",
-        "name": "nicodolas",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Unknown",
+        "id": "OdooDataQualitySuiteAddons",
+        "name": "OdooDataQualitySuiteAddons",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
         "size": 5,
-        "tech": [],
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "Chưa có mô tả.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
@@ -314,6 +338,31 @@
       }
     ],
     "links": [
+      {
+        "source": "pricechecker",
+        "target": "PersonalWebsite",
+        "weight": 1
+      },
+      {
+        "source": "pricechecker",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "pricechecker",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "OdooDataQualitySuiteAddons",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "OdooDataQualitySuiteAddons",
+        "target": "Bigdata",
+        "weight": 1
+      },
       {
         "source": "PersonalWebsite",
         "target": "nicoquote",

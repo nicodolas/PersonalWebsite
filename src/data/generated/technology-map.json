@@ -1,8 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T07:26:35.296Z",
+  "generatedAt": "2026-07-06T06:27:42.082Z",
   "data": {
     "nodes": [
+      {
+        "id": "TypeScript",
+        "label": "TypeScript",
+        "type": "language",
+        "count": 4
+      },
       {
         "id": "JavaScript",
         "label": "JavaScript",
@@ -10,8 +16,8 @@
         "count": 4
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "language",
         "count": 3
       },
@@ -24,12 +30,6 @@
       {
         "id": "C++",
         "label": "C++",
-        "type": "language",
-        "count": 2
-      },
-      {
-        "id": "Python",
-        "label": "Python",
         "type": "language",
         "count": 2
       },

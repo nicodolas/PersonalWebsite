@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T07:26:35.297Z",
+  "generatedAt": "2026-07-06T06:27:42.084Z",
   "data": {
     "clusters": [
       {
@@ -28,8 +28,8 @@
         "description": "Responsive React/Next.js frameworks, Odoo ERP custom business flows, and relational databases.",
         "description_vi": "Hệ sinh thái React/Next.js, giải pháp doanh nghiệp Odoo ERP và cơ sở dữ liệu quan hệ.",
         "technologies": [
-          "JavaScript",
           "TypeScript",
+          "JavaScript",
           "Dart",
           "Handlebars",
           "Blade"
@@ -81,6 +81,8 @@
         ],
         "repositories": [
           "nicodolas",
+          "pricechecker",
+          "OdooDataQualitySuiteAddons",
           "Kashy",
           "nicoquote",
           "Valk_Hub",
