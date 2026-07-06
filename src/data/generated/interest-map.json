@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T07:26:35.296Z",
+  "generatedAt": "2026-07-06T06:27:42.083Z",
   "data": {
     "nodes": [
       {
@@ -40,13 +40,18 @@
         "score": 75
       },
       {
+        "id": "TypeScript",
+        "label": "TypeScript",
+        "type": "technology"
+      },
+      {
         "id": "JavaScript",
         "label": "JavaScript",
         "type": "technology"
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "technology"
       },
       {
@@ -57,11 +62,6 @@
       {
         "id": "C++",
         "label": "C++",
-        "type": "technology"
-      },
-      {
-        "id": "Python",
-        "label": "Python",
         "type": "technology"
       },
       {
@@ -188,6 +188,11 @@
       },
       {
         "source": "era-2026",
+        "target": "Python",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
         "target": "Go",
         "weight": 70
       },
@@ -288,22 +293,22 @@
       },
       {
         "source": "Next.js Full-Stack",
-        "target": "JavaScript",
+        "target": "TypeScript",
         "weight": 95
       },
       {
         "source": "Next.js Full-Stack",
-        "target": "TypeScript",
+        "target": "JavaScript",
         "weight": 95
       },
       {
         "source": "IoT & Embedded Security",
-        "target": "JavaScript",
+        "target": "TypeScript",
         "weight": 75
       },
       {
         "source": "IoT & Embedded Security",
-        "target": "TypeScript",
+        "target": "JavaScript",
         "weight": 75
       },
       {
