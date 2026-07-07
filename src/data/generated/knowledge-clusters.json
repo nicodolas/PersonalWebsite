@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-06T06:27:42.084Z",
+  "generatedAt": "2026-07-07T06:07:21.207Z",
   "data": {
     "clusters": [
       {
@@ -80,6 +80,7 @@
           "Lua"
         ],
         "repositories": [
+          "frontend-milk-tea",
           "nicodolas",
           "pricechecker",
           "OdooDataQualitySuiteAddons",
@@ -91,7 +92,6 @@
           "myroom",
           "Kmeans_AdvisoryMajor",
           "IoTKhoaBaoMat",
-          "frontend-milk-tea",
           "FE-Smoke-AI-React",
           "dongcuuanhoa",
           "Demo-Cipher-O",

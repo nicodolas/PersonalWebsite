@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-06T06:27:42.083Z",
+  "generatedAt": "2026-07-07T06:07:21.207Z",
   "data": {
     "nodes": [
+      {
+        "id": "frontend-milk-tea",
+        "name": "frontend-milk-tea",
+        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
+        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
+        "currentBrainConnection": false
+      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -10,6 +22,18 @@
         "group": "Unknown",
         "size": 5,
         "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "Chưa có mô tả.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
@@ -33,18 +57,6 @@
         "size": 5,
         "tech": [
           "Python"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "Chưa có mô tả.",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -168,18 +180,6 @@
         "size": 5,
         "tech": [
           "HTML"
-        ],
-        "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "frontend-milk-tea",
-        "name": "frontend-milk-tea",
-        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
         ],
         "era": "Kỷ Nguyên Full-Stack, IoT & Tích Hợp AI",
         "currentBrainConnection": false
@@ -339,18 +339,33 @@
     ],
     "links": [
       {
-        "source": "pricechecker",
+        "source": "frontend-milk-tea",
         "target": "PersonalWebsite",
         "weight": 1
       },
       {
-        "source": "pricechecker",
+        "source": "frontend-milk-tea",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "frontend-milk-tea",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
       },
       {
         "source": "pricechecker",
-        "target": "frontend-milk-tea",
+        "target": "nicoquote",
         "weight": 1
       },
       {
@@ -361,21 +376,6 @@
       {
         "source": "OdooDataQualitySuiteAddons",
         "target": "Bigdata",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "nicoquote",
-        "target": "frontend-milk-tea",
         "weight": 1
       },
       {
