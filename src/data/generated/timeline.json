@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-06T06:27:41.243Z",
+  "generatedAt": "2026-07-07T06:07:19.230Z",
   "data": {
     "eras": [
       {
@@ -9,7 +9,7 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 17051,
+        "commits": 17053,
         "technologies": [
           "TypeScript",
           "Python",
@@ -17,9 +17,9 @@
         ],
         "repos": [
           "nicodolas",
+          "PersonalWebsite",
           "pricechecker",
           "OdooDataQualitySuiteAddons",
-          "PersonalWebsite",
           "Kashy",
           "nicoquote",
           "ziwei-doushu",
@@ -34,21 +34,21 @@
         "description_vi": "Phát triển các ứng dụng web toàn diện, tích hợp hệ thống bảo mật IoT và triển khai các mô hình học máy/AI.",
         "commits": 60352,
         "technologies": [
+          "TypeScript",
           "C#",
           "JavaScript",
           "Dart",
           "Python",
           "HTML",
-          "TypeScript",
           "Blade"
         ],
         "repos": [
+          "frontend-milk-tea",
           "Watchshopmanager",
           "myroom",
           "MobileWatchShop",
           "Kmeans_AdvisoryMajor",
           "IoTKhoaBaoMat",
-          "frontend-milk-tea",
           "FE-Smoke-AI-React",
           "dongcuuanhoa",
           "ChatBot_NiFi",
