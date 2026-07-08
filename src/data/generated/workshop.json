@@ -1,22 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-07T06:07:19.611Z",
+  "generatedAt": "2026-07-08T05:20:38.317Z",
   "data": {
     "projects": [
-      {
-        "id": "frontend-milk-tea",
-        "title": "frontend-milk-tea",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 158,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
-        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
@@ -30,16 +16,42 @@
         "forks": 0
       },
       {
+        "id": "MediaCrawler",
+        "title": "MediaCrawler",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 2959,
+        "tech_stack": [],
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+        "description_vi": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+        "stars": 0,
+        "forks": 0
+      },
+      {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 9316,
+        "commits_count": 9317,
         "tech_stack": [
           "TypeScript"
         ],
         "description": "No description available.",
         "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "frontend-milk-tea",
+        "title": "frontend-milk-tea",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 158,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
         "stars": 0,
         "forks": 0
       },

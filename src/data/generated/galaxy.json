@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-07T06:07:21.116Z",
+  "generatedAt": "2026-07-08T05:20:38.719Z",
   "data": {
     "nodes": [
-      {
-        "id": "frontend-milk-tea",
-        "description": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
-        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -22,9 +12,27 @@
         "tech": []
       },
       {
+        "id": "MediaCrawler",
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+        "description_vi": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+        "group": "Others",
+        "size": null,
+        "tech": []
+      },
+      {
         "id": "PersonalWebsite",
         "description": "No description available.",
         "description_vi": "No description available.",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
+      },
+      {
+        "id": "frontend-milk-tea",
+        "description": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
+        "description_vi": "TypeScript frontend for the Milk-Tea Web Shop — built with Next.js, featuring cart, checkout, and product catalog.",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -280,27 +288,27 @@
     ],
     "links": [
       {
-        "source": "frontend-milk-tea",
-        "target": "PersonalWebsite",
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
-        "source": "frontend-milk-tea",
+        "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
       {
-        "source": "frontend-milk-tea",
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "frontend-milk-tea",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "frontend-milk-tea",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
