@@ -1,15 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T06:13:54.514Z",
+  "generatedAt": "2026-07-10T06:02:54.846Z",
   "data": {
     "nodes": [
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Others",
+        "group": "Python",
         "size": null,
-        "tech": []
+        "tech": [
+          "Python"
+        ]
       },
       {
         "id": "PersonalWebsite",
@@ -287,6 +289,21 @@
       }
     ],
     "links": [
+      {
+        "source": "nicodolas",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Bigdata",
+        "label": "Both use Python"
+      },
       {
         "source": "PersonalWebsite",
         "target": "frontend-milk-tea",

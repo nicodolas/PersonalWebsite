@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T06:13:53.653Z",
+  "generatedAt": "2026-07-10T06:02:53.711Z",
   "data": [
     {
       "id": "nicodolas",
       "name": "nicodolas",
       "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
       "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-      "language": null,
+      "language": "Python",
       "stars": 0,
       "forks": 0,
-      "size": 151,
+      "size": 194,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
-      "updated_at": "2026-07-08T19:09:18Z",
+      "updated_at": "2026-07-10T02:30:51Z",
       "topics": [],
-      "category": "Software Engineering"
+      "category": "Python Development"
     },
     {
       "id": "PersonalWebsite",
@@ -25,10 +25,10 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93130,
+      "size": 93134,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
-      "updated_at": "2026-07-08T05:21:24Z",
+      "updated_at": "2026-07-09T06:14:40Z",
       "topics": [],
       "category": "TypeScript Development"
     },
