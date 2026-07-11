@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-10T06:02:54.814Z",
+  "generatedAt": "2026-07-11T05:12:58.190Z",
   "data": {
     "experiments": [
       {
@@ -96,7 +96,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "active"
+        "status": "success"
       }
     ]
   }
