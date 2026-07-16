@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T04:51:12.082Z",
+  "generatedAt": "2026-07-16T05:09:44.346Z",
   "data": {
     "nodes": [
+      {
+        "id": "nicoquote",
+        "name": "nicoquote",
+        "description_vi": "Vietnamese API Quote Server",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -81,18 +93,6 @@
         "size": 5,
         "tech": [
           "Go"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "nicoquote",
-        "name": "nicoquote",
-        "description_vi": "Vietnamese API Quote Server",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -351,6 +351,21 @@
     ],
     "links": [
       {
+        "source": "nicoquote",
+        "target": "PersonalWebsite",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "weight": 1
@@ -376,23 +391,8 @@
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
         "source": "frontend-milk-tea",
         "target": "pricechecker",
-        "weight": 1
-      },
-      {
-        "source": "frontend-milk-tea",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "pricechecker",
-        "target": "nicoquote",
         "weight": 1
       },
       {
