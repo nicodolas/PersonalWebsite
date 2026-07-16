@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T04:51:12.082Z",
+  "generatedAt": "2026-07-16T05:09:44.346Z",
   "data": {
     "nodes": [
       {
@@ -40,13 +40,13 @@
         "score": 75
       },
       {
-        "id": "Python",
-        "label": "Python",
+        "id": "TypeScript",
+        "label": "TypeScript",
         "type": "technology"
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "technology"
       },
       {
@@ -183,12 +183,12 @@
       },
       {
         "source": "era-2026",
-        "target": "Python",
+        "target": "TypeScript",
         "weight": 70
       },
       {
         "source": "era-2026",
-        "target": "TypeScript",
+        "target": "Python",
         "weight": 70
       },
       {

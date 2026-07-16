@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T04:51:11.983Z",
+  "generatedAt": "2026-07-16T05:09:44.297Z",
   "data": {
     "nodes": [
+      {
+        "id": "nicoquote",
+        "description": "Vietnamese API Quote Server",
+        "description_vi": "Vietnamese API Quote Server",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
+      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -69,16 +79,6 @@
         "size": null,
         "tech": [
           "Go"
-        ]
-      },
-      {
-        "id": "nicoquote",
-        "description": "Vietnamese API Quote Server",
-        "description_vi": "Vietnamese API Quote Server",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
         ]
       },
       {
@@ -290,6 +290,21 @@
     ],
     "links": [
       {
+        "source": "nicoquote",
+        "target": "PersonalWebsite",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicoquote",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicoquote",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "label": "Both use Python"
@@ -315,23 +330,8 @@
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
         "source": "frontend-milk-tea",
         "target": "pricechecker",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "frontend-milk-tea",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "pricechecker",
-        "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
