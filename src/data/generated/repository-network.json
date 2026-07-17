@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T05:09:44.346Z",
+  "generatedAt": "2026-07-17T05:13:13.464Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicoquote",
-        "name": "nicoquote",
-        "description_vi": "Vietnamese API Quote Server",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -31,6 +19,18 @@
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",
         "description_vi": "Chưa có mô tả.",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicoquote",
+        "name": "nicoquote",
+        "description_vi": "Vietnamese API Quote Server",
         "group": "TypeScript",
         "size": 5,
         "tech": [
@@ -351,21 +351,6 @@
     ],
     "links": [
       {
-        "source": "nicoquote",
-        "target": "PersonalWebsite",
-        "weight": 1
-      },
-      {
-        "source": "nicoquote",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "nicoquote",
-        "target": "pricechecker",
-        "weight": 1
-      },
-      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "weight": 1
@@ -382,11 +367,26 @@
       },
       {
         "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "weight": 1
       },
       {
         "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "nicoquote",
         "target": "pricechecker",
         "weight": 1
       },

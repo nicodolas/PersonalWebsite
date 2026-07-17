@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T05:09:44.297Z",
+  "generatedAt": "2026-07-17T05:13:13.435Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicoquote",
-        "description": "Vietnamese API Quote Server",
-        "description_vi": "Vietnamese API Quote Server",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -27,6 +17,16 @@
         "id": "PersonalWebsite",
         "description": "No description available.",
         "description_vi": "No description available.",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
+      },
+      {
+        "id": "nicoquote",
+        "description": "Vietnamese API Quote Server",
+        "description_vi": "Vietnamese API Quote Server",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -290,21 +290,6 @@
     ],
     "links": [
       {
-        "source": "nicoquote",
-        "target": "PersonalWebsite",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "nicoquote",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "nicoquote",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
-      },
-      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "label": "Both use Python"
@@ -321,11 +306,26 @@
       },
       {
         "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
         "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicoquote",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicoquote",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },

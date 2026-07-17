@@ -1,22 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T05:09:43.970Z",
+  "generatedAt": "2026-07-17T05:13:13.196Z",
   "data": {
     "projects": [
-      {
-        "id": "nicoquote",
-        "title": "nicoquote",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 25,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "Vietnamese API Quote Server",
-        "description_vi": "Vietnamese API Quote Server",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
@@ -42,6 +28,20 @@
         ],
         "description": "No description available.",
         "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "nicoquote",
+        "title": "nicoquote",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 25,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "Vietnamese API Quote Server",
+        "description_vi": "Vietnamese API Quote Server",
         "stars": 0,
         "forks": 0
       },
