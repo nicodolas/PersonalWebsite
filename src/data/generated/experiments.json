@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T04:48:11.649Z",
+  "generatedAt": "2026-07-19T05:21:48.507Z",
   "data": {
     "experiments": [
       {
@@ -20,7 +20,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "active"
+        "status": "success"
       },
       {
         "id": "Kmeans_AdvisoryMajor",
@@ -39,7 +39,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "active"
+        "status": "success"
       },
       {
         "id": "ChatBot_NiFi",
@@ -58,7 +58,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "active"
+        "status": "success"
       },
       {
         "id": "ai-smoke-detect",
@@ -77,7 +77,7 @@
           "Tìm hiểu thiết lập môi trường phát triển",
           "Thực hành quy trình quản lý phiên bản"
         ],
-        "status": "active"
+        "status": "success"
       },
       {
         "id": "ziwei-doushu",
