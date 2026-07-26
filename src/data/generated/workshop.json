@@ -1,22 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-26T05:31:30.675Z",
+  "generatedAt": "2026-07-26T06:37:08.929Z",
   "data": {
     "projects": [
-      {
-        "id": "nicodolas",
-        "title": "nicodolas",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 38,
-        "tech_stack": [
-          "Python"
-        ],
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
@@ -28,6 +14,20 @@
         ],
         "description": "https://www.nekovibecoder.site/",
         "description_vi": "https://www.nekovibecoder.site/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "nicodolas",
+        "title": "nicodolas",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 38,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "stars": 0,
         "forks": 0
       },
