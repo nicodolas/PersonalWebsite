@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-02T05:26:04.502Z",
+  "generatedAt": "2026-08-02T06:33:29.467Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "PersonalWebsite",
         "description": "https://www.nekovibecoder.site/",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -290,21 +290,6 @@
     ],
     "links": [
       {
-        "source": "nicodolas",
-        "target": "OdooDataQualitySuiteAddons",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "Bigdata",
-        "label": "Both use Python"
-      },
-      {
         "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
@@ -318,6 +303,21 @@
         "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicodolas",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Bigdata",
+        "label": "Both use Python"
       },
       {
         "source": "nicoquote",
