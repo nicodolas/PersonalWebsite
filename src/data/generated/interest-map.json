@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T03:40:39.285Z",
+  "generatedAt": "2026-08-09T05:05:07.621Z",
   "data": {
     "nodes": [
       {
@@ -40,18 +40,23 @@
         "score": 75
       },
       {
-        "id": "Python",
-        "label": "Python",
-        "type": "technology"
-      },
-      {
         "id": "TypeScript",
         "label": "TypeScript",
         "type": "technology"
       },
       {
+        "id": "Python",
+        "label": "Python",
+        "type": "technology"
+      },
+      {
         "id": "JavaScript",
         "label": "JavaScript",
+        "type": "technology"
+      },
+      {
+        "id": "Dart",
+        "label": "Dart",
         "type": "technology"
       },
       {
@@ -72,11 +77,6 @@
       {
         "id": "Lua",
         "label": "Lua",
-        "type": "technology"
-      },
-      {
-        "id": "Dart",
-        "label": "Dart",
         "type": "technology"
       },
       {
@@ -183,12 +183,17 @@
       },
       {
         "source": "era-2026",
-        "target": "Python",
+        "target": "Dart",
         "weight": 70
       },
       {
         "source": "era-2026",
         "target": "TypeScript",
+        "weight": 70
+      },
+      {
+        "source": "era-2026",
+        "target": "Python",
         "weight": 70
       },
       {
