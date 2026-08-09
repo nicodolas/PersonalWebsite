@@ -1,8 +1,36 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T03:40:39.105Z",
+  "generatedAt": "2026-08-09T05:05:06.995Z",
   "data": {
     "projects": [
+      {
+        "id": "nicogym",
+        "title": "nicogym",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 30,
+        "tech_stack": [
+          "Dart"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "PersonalWebsite",
+        "title": "PersonalWebsite",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 9329,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "stars": 0,
+        "forks": 0
+      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
@@ -14,20 +42,6 @@
         ],
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "PersonalWebsite",
-        "title": "PersonalWebsite",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 9328,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
         "stars": 0,
         "forks": 0
       },
