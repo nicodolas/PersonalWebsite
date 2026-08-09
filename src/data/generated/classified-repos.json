@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-08T03:23:49.805Z",
+  "generatedAt": "2026-08-09T03:40:38.731Z",
   "data": [
     {
       "id": "nicodolas",
@@ -10,10 +10,10 @@
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "size": 498,
+      "size": 503,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
-      "updated_at": "2026-08-07T18:41:11Z",
+      "updated_at": "2026-08-08T18:23:16Z",
       "topics": [],
       "category": "Python Development"
     },
@@ -25,10 +25,10 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93235,
+      "size": 93239,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
-      "updated_at": "2026-08-07T04:25:48Z",
+      "updated_at": "2026-08-08T03:24:34Z",
       "topics": [],
       "category": "TypeScript Development"
     },
