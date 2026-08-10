@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T05:05:06.994Z",
+  "generatedAt": "2026-08-10T03:52:36.007Z",
   "data": {
     "trends": [
       {
@@ -10,13 +10,13 @@
         "trend": "declining"
       },
       {
-        "language": "TypeScript",
+        "language": "Python",
         "repos_count": 4,
         "percentage": 14.8,
         "trend": "rising"
       },
       {
-        "language": "Python",
+        "language": "TypeScript",
         "repos_count": 4,
         "percentage": 14.8,
         "trend": "rising"

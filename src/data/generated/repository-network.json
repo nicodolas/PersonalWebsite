@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T05:05:07.621Z",
+  "generatedAt": "2026-08-10T03:52:36.567Z",
   "data": {
     "nodes": [
+      {
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "nicogym",
         "name": "nicogym",
@@ -23,18 +35,6 @@
         "size": 5,
         "tech": [
           "TypeScript"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
-        "id": "nicodolas",
-        "name": "nicodolas",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": 5,
-        "tech": [
-          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -363,6 +363,21 @@
     ],
     "links": [
       {
+        "source": "nicodolas",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "Bigdata",
+        "weight": 1
+      },
+      {
         "source": "nicogym",
         "target": "MobileWatchShop",
         "weight": 1
@@ -380,21 +395,6 @@
       {
         "source": "PersonalWebsite",
         "target": "pricechecker",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "OdooDataQualitySuiteAddons",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "Kmeans_AdvisoryMajor",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "Bigdata",
         "weight": 1
       },
       {
