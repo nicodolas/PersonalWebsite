@@ -1,28 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T03:52:36.009Z",
+  "generatedAt": "2026-08-11T03:42:23.664Z",
   "data": {
     "projects": [
-      {
-        "id": "nicodolas",
-        "title": "nicodolas",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 57,
-        "tech_stack": [
-          "Python"
-        ],
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "nicogym",
         "title": "nicogym",
         "status": "building",
         "progress": 75,
-        "commits_count": 327,
+        "commits_count": 331,
         "tech_stack": [
           "Dart"
         ],
@@ -32,11 +18,25 @@
         "forks": 0
       },
       {
+        "id": "nicodolas",
+        "title": "nicodolas",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 58,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 9329,
+        "commits_count": 9326,
         "tech_stack": [
           "TypeScript"
         ],
