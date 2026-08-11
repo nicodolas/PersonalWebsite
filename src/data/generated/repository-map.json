@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T03:52:36.533Z",
+  "generatedAt": "2026-08-11T03:42:24.220Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "nicogym",
         "description": "No description available.",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "Dart"
+        ]
+      },
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -300,6 +300,11 @@
     ],
     "links": [
       {
+        "source": "nicogym",
+        "target": "MobileWatchShop",
+        "label": "Both use Dart"
+      },
+      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "label": "Both use Python"
@@ -313,11 +318,6 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
-      },
-      {
-        "source": "nicogym",
-        "target": "MobileWatchShop",
-        "label": "Both use Dart"
       },
       {
         "source": "PersonalWebsite",
