@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T03:42:23.176Z",
+  "generatedAt": "2026-08-12T04:05:55.703Z",
   "data": [
     {
       "id": "nicogym",
@@ -10,10 +10,10 @@
       "language": "Dart",
       "stars": 0,
       "forks": 0,
-      "size": 3269,
+      "size": 5304,
       "url": "https://github.com/nicodolas/nicogym",
       "created_at": "2026-08-09T03:45:10Z",
-      "updated_at": "2026-08-11T03:32:50Z",
+      "updated_at": "2026-08-12T03:41:19Z",
       "topics": [],
       "category": "Dart Development"
     },
@@ -25,10 +25,10 @@
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "size": 531,
+      "size": 540,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
-      "updated_at": "2026-08-10T18:44:40Z",
+      "updated_at": "2026-08-11T18:48:36Z",
       "topics": [],
       "category": "Python Development"
     },
@@ -40,10 +40,10 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93216,
+      "size": 93222,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
-      "updated_at": "2026-08-10T03:53:29Z",
+      "updated_at": "2026-08-11T03:43:21Z",
       "topics": [],
       "category": "TypeScript Development"
     },
