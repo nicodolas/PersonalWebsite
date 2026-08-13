@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T04:05:57.988Z",
+  "generatedAt": "2026-08-13T04:10:50.224Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicogym",
-        "name": "nicogym",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Dart",
-        "size": 5,
-        "tech": [
-          "Dart"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -23,6 +11,18 @@
         "size": 5,
         "tech": [
           "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicogym",
+        "name": "nicogym",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Dart",
+        "size": 5,
+        "tech": [
+          "Dart"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -363,11 +363,6 @@
     ],
     "links": [
       {
-        "source": "nicogym",
-        "target": "MobileWatchShop",
-        "weight": 1
-      },
-      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "weight": 1
@@ -380,6 +375,11 @@
       {
         "source": "nicodolas",
         "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "nicogym",
+        "target": "MobileWatchShop",
         "weight": 1
       },
       {

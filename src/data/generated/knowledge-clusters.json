@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T04:05:57.989Z",
+  "generatedAt": "2026-08-13T04:10:50.224Z",
   "data": {
     "clusters": [
       {
@@ -80,8 +80,8 @@
           "Lua"
         ],
         "repositories": [
-          "nicogym",
           "nicodolas",
+          "nicogym",
           "nicoquote",
           "MediaCrawler",
           "frontend-milk-tea",
