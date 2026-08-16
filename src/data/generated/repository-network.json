@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T02:49:54.730Z",
+  "generatedAt": "2026-08-16T02:57:45.247Z",
   "data": {
     "nodes": [
       {
@@ -16,18 +16,6 @@
         "currentBrainConnection": false
       },
       {
-        "id": "nicogym",
-        "name": "nicogym",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Dart",
-        "size": 5,
-        "tech": [
-          "Dart"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",
         "description_vi": "https://www.nekovibecoder.site/",
@@ -35,6 +23,18 @@
         "size": 5,
         "tech": [
           "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicogym",
+        "name": "nicogym",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Dart",
+        "size": 5,
+        "tech": [
+          "Dart"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -378,11 +378,6 @@
         "weight": 1
       },
       {
-        "source": "nicogym",
-        "target": "MobileWatchShop",
-        "weight": 1
-      },
-      {
         "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
@@ -395,6 +390,11 @@
       {
         "source": "PersonalWebsite",
         "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "nicogym",
+        "target": "MobileWatchShop",
         "weight": 1
       },
       {
