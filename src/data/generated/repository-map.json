@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T02:49:54.701Z",
+  "generatedAt": "2026-08-16T02:57:45.230Z",
   "data": {
     "nodes": [
       {
@@ -14,16 +14,6 @@
         ]
       },
       {
-        "id": "nicogym",
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "group": "Dart",
-        "size": null,
-        "tech": [
-          "Dart"
-        ]
-      },
-      {
         "id": "PersonalWebsite",
         "description": "https://www.nekovibecoder.site/",
         "description_vi": "https://www.nekovibecoder.site/",
@@ -31,6 +21,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "nicogym",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Dart",
+        "size": null,
+        "tech": [
+          "Dart"
         ]
       },
       {
@@ -315,11 +315,6 @@
         "label": "Both use Python"
       },
       {
-        "source": "nicogym",
-        "target": "MobileWatchShop",
-        "label": "Both use Dart"
-      },
-      {
         "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
@@ -333,6 +328,11 @@
         "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
+      },
+      {
+        "source": "nicogym",
+        "target": "MobileWatchShop",
+        "label": "Both use Dart"
       },
       {
         "source": "nicoquote",
