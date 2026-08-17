@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-16T04:35:42.196Z",
+  "generatedAt": "2026-08-17T02:57:45.961Z",
   "data": {
     "nodes": [
-      {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "Python"
+        ]
+      },
+      {
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
         ]
       },
       {
@@ -300,21 +300,6 @@
     ],
     "links": [
       {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
-      },
-      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "label": "Both use Python"
@@ -328,6 +313,21 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
       },
       {
         "source": "nicogym",
