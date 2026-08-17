@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-16T04:35:42.221Z",
+  "generatedAt": "2026-08-17T02:57:45.990Z",
   "data": {
     "nodes": [
-      {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "group": "TypeScript",
-        "size": 5,
-        "tech": [
-          "TypeScript"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -23,6 +11,18 @@
         "size": 5,
         "tech": [
           "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -363,21 +363,6 @@
     ],
     "links": [
       {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "weight": 1
-      },
-      {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
         "weight": 1
@@ -390,6 +375,21 @@
       {
         "source": "nicodolas",
         "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
         "weight": 1
       },
       {
