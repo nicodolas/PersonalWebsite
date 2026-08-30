@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T07:53:13.291Z",
+  "generatedAt": "2026-08-30T09:47:07.194Z",
   "data": {
     "eras": [
       {
@@ -11,14 +11,14 @@
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
         "commits": 23077,
         "technologies": [
-          "Python",
           "TypeScript",
+          "Python",
           "Dart",
           "Go"
         ],
         "repos": [
-          "nicodolas",
           "PersonalWebsite",
+          "nicodolas",
           "nicogym",
           "nicoquote",
           "MediaCrawler",
