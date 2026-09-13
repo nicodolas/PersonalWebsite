@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T07:11:02.301Z",
+  "generatedAt": "2026-09-13T09:08:53.090Z",
   "data": {
     "nodes": [
       {
-        "id": "Python",
-        "label": "Python",
+        "id": "TypeScript",
+        "label": "TypeScript",
         "type": "language",
         "count": 4
       },
       {
-        "id": "TypeScript",
-        "label": "TypeScript",
+        "id": "Python",
+        "label": "Python",
         "type": "language",
         "count": 4
       },
