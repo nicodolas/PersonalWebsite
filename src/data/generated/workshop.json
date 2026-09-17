@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T07:14:56.401Z",
+  "generatedAt": "2026-09-17T07:10:42.090Z",
   "data": {
     "projects": [
       {
@@ -144,8 +144,8 @@
       {
         "id": "Valk_Hub",
         "title": "Valk_Hub",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 82,
         "tech_stack": [
           "Lua"
@@ -158,8 +158,8 @@
       {
         "id": "SJF",
         "title": "SJF",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 10,
         "tech_stack": [
           "C++"
@@ -172,8 +172,8 @@
       {
         "id": "RR",
         "title": "RR",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 10,
         "tech_stack": [
           "C++"
@@ -242,8 +242,8 @@
       {
         "id": "flower_shop",
         "title": "flower_shop",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 297,
         "tech_stack": [
           "HTML"
@@ -256,8 +256,8 @@
       {
         "id": "flowershop",
         "title": "flowershop",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 84,
         "tech_stack": [
           "Handlebars"
@@ -298,8 +298,8 @@
       {
         "id": "Demo-Cipher-O",
         "title": "Demo-Cipher-O",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 33,
         "tech_stack": [
           "HTML"
@@ -312,8 +312,8 @@
       {
         "id": "Demo-Cipher",
         "title": "Demo-Cipher",
-        "status": "building",
-        "progress": 75,
+        "status": "archived",
+        "progress": 100,
         "commits_count": 52,
         "tech_stack": [
           "HTML"
