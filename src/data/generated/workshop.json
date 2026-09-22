@@ -1,14 +1,28 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T07:38:08.372Z",
+  "generatedAt": "2026-09-22T07:19:50.604Z",
   "data": {
     "projects": [
+      {
+        "id": "OdooAccessViusalizer",
+        "title": "OdooAccessViusalizer",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 33,
+        "tech_stack": [
+          "Python"
+        ],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 98,
+        "commits_count": 99,
         "tech_stack": [
           "Python"
         ],

@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T07:38:08.608Z",
+  "generatedAt": "2026-09-22T07:19:50.715Z",
   "data": {
     "nodes": [
+      {
+        "id": "OdooAccessViusalizer",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
+        ]
+      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -299,6 +309,26 @@
       }
     ],
     "links": [
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "nicodolas",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "label": "Both use Python"
+      },
       {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
