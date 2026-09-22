@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T07:38:08.639Z",
+  "generatedAt": "2026-09-22T07:19:50.747Z",
   "data": {
     "nodes": [
+      {
+        "id": "OdooAccessViusalizer",
+        "name": "OdooAccessViusalizer",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -362,6 +374,26 @@
       }
     ],
     "links": [
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "nicodolas",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "weight": 1
+      },
       {
         "source": "nicodolas",
         "target": "OdooDataQualitySuiteAddons",
