@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T07:19:50.747Z",
+  "generatedAt": "2026-09-23T07:21:30.263Z",
   "data": {
     "nodes": [
-      {
-        "id": "OdooAccessViusalizer",
-        "name": "OdooAccessViusalizer",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Python",
-        "size": 5,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -35,6 +23,18 @@
         "size": 5,
         "tech": [
           "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "name": "OdooAccessViusalizer",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -375,23 +375,8 @@
     ],
     "links": [
       {
-        "source": "OdooAccessViusalizer",
-        "target": "nicodolas",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
+        "source": "nicodolas",
+        "target": "OdooAccessViusalizer",
         "weight": 1
       },
       {
@@ -422,6 +407,21 @@
       {
         "source": "PersonalWebsite",
         "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
         "weight": 1
       },
       {

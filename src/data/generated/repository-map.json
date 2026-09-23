@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T07:19:50.715Z",
+  "generatedAt": "2026-09-23T07:21:30.236Z",
   "data": {
     "nodes": [
-      {
-        "id": "OdooAccessViusalizer",
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -31,6 +21,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -310,23 +310,8 @@
     ],
     "links": [
       {
-        "source": "OdooAccessViusalizer",
-        "target": "nicodolas",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
+        "source": "nicodolas",
+        "target": "OdooAccessViusalizer",
         "label": "Both use Python"
       },
       {
@@ -358,6 +343,21 @@
         "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "label": "Both use Python"
       },
       {
         "source": "nicogym",
