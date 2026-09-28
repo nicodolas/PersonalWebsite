@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T09:51:32.424Z",
+  "generatedAt": "2026-09-28T08:14:04.992Z",
   "data": {
     "nodes": [
-      {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "Python"
+        ]
+      },
+      {
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
         ]
       },
       {
@@ -310,21 +310,6 @@
     ],
     "links": [
       {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
-      },
-      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "label": "Both use Python"
@@ -343,6 +328,21 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
       },
       {
         "source": "OdooAccessViusalizer",
