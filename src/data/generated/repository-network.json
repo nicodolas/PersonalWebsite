@@ -1,12 +1,24 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T07:53:44.450Z",
+  "generatedAt": "2026-09-30T07:59:58.774Z",
   "data": {
     "nodes": [
       {
         "id": "nicodolas",
         "name": "nicodolas",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "Odoo_DeleteAnyThing",
+        "name": "Odoo_DeleteAnyThing",
+        "description_vi": "Chưa có mô tả.",
         "group": "Python",
         "size": 5,
         "tech": [
@@ -376,6 +388,11 @@
     "links": [
       {
         "source": "nicodolas",
+        "target": "Odoo_DeleteAnyThing",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "weight": 1
       },
@@ -391,6 +408,26 @@
       },
       {
         "source": "nicodolas",
+        "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "Odoo_DeleteAnyThing",
+        "target": "OdooAccessViusalizer",
+        "weight": 1
+      },
+      {
+        "source": "Odoo_DeleteAnyThing",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "Odoo_DeleteAnyThing",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "Odoo_DeleteAnyThing",
         "target": "Bigdata",
         "weight": 1
       },
