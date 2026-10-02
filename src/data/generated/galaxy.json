@@ -1,22 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T08:19:39.359Z",
+  "generatedAt": "2026-10-02T07:56:51.360Z",
   "data": {
     "nodes": [
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
-      {
-        "id": "OdooAccessViusalizer",
-        "description": "No description available.",
-        "description_vi": "No description available.",
         "group": "Python",
         "size": null,
         "tech": [
@@ -31,6 +21,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -345,6 +345,21 @@
         "label": "Both use Python"
       },
       {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
         "source": "OdooAccessViusalizer",
         "target": "Odoo_DeleteAnyThing",
         "label": "Both use Python"
@@ -363,21 +378,6 @@
         "source": "OdooAccessViusalizer",
         "target": "Bigdata",
         "label": "Both use Python"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
       },
       {
         "source": "Odoo_DeleteAnyThing",

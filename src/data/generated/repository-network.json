@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T08:19:39.389Z",
+  "generatedAt": "2026-10-02T07:56:51.380Z",
   "data": {
     "nodes": [
       {
@@ -16,18 +16,6 @@
         "currentBrainConnection": false
       },
       {
-        "id": "OdooAccessViusalizer",
-        "name": "OdooAccessViusalizer",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Python",
-        "size": 6,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",
         "description_vi": "https://www.nekovibecoder.site/",
@@ -35,6 +23,18 @@
         "size": 5,
         "tech": [
           "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "name": "OdooAccessViusalizer",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
+        "size": 6,
+        "tech": [
+          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -412,6 +412,21 @@
         "weight": 1
       },
       {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
         "source": "OdooAccessViusalizer",
         "target": "Odoo_DeleteAnyThing",
         "weight": 1
@@ -429,21 +444,6 @@
       {
         "source": "OdooAccessViusalizer",
         "target": "Bigdata",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
         "weight": 1
       },
       {
