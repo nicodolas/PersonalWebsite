@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T07:46:58.632Z",
+  "generatedAt": "2026-10-04T10:26:31.788Z",
   "data": {
     "eras": [
       {
@@ -11,14 +11,14 @@
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
         "commits": 23283,
         "technologies": [
-          "Python",
           "TypeScript",
+          "Python",
           "Dart",
           "Go"
         ],
         "repos": [
-          "nicodolas",
           "PersonalWebsite",
+          "nicodolas",
           "OdooAccessViusalizer",
           "Odoo_DeleteAnyThing",
           "nicogym",

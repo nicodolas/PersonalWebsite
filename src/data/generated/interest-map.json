@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T07:46:58.936Z",
+  "generatedAt": "2026-10-04T10:26:32.069Z",
   "data": {
     "nodes": [
       {
@@ -183,12 +183,12 @@
       },
       {
         "source": "era-2026",
-        "target": "Python",
+        "target": "TypeScript",
         "weight": 70
       },
       {
         "source": "era-2026",
-        "target": "TypeScript",
+        "target": "Python",
         "weight": 70
       },
       {

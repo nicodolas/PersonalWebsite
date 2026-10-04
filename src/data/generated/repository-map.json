@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T07:46:58.883Z",
+  "generatedAt": "2026-10-04T10:26:32.031Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "PersonalWebsite",
         "description": "https://www.nekovibecoder.site/",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -320,6 +320,21 @@
     ],
     "links": [
       {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "label": "Both use Python"
@@ -343,21 +358,6 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
       },
       {
         "source": "OdooAccessViusalizer",
