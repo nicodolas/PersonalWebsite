@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T07:46:58.936Z",
+  "generatedAt": "2026-10-04T10:26:32.070Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "name": "nicodolas",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": 5,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",
@@ -23,6 +11,18 @@
         "size": 5,
         "tech": [
           "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "nicodolas",
+        "name": "nicodolas",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": 5,
+        "tech": [
+          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -387,6 +387,21 @@
     ],
     "links": [
       {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "weight": 1
@@ -409,21 +424,6 @@
       {
         "source": "nicodolas",
         "target": "Bigdata",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
         "weight": 1
       },
       {
