@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T10:26:32.031Z",
+  "generatedAt": "2026-10-05T08:22:05.716Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "group": "TypeScript",
+        "id": "OdooAccessViusalizer",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
         "size": null,
         "tech": [
-          "TypeScript"
+          "Python"
         ]
       },
       {
@@ -24,13 +24,13 @@
         ]
       },
       {
-        "id": "OdooAccessViusalizer",
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "group": "Python",
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
         "size": null,
         "tech": [
-          "Python"
+          "TypeScript"
         ]
       },
       {
@@ -320,6 +320,51 @@
     ],
     "links": [
       {
+        "source": "OdooAccessViusalizer",
+        "target": "nicodolas",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Odoo_DeleteAnyThing",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Odoo_DeleteAnyThing",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "nicodolas",
+        "target": "Bigdata",
+        "label": "Both use Python"
+      },
+      {
         "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
@@ -333,51 +378,6 @@
         "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
-      },
-      {
-        "source": "nicodolas",
-        "target": "OdooAccessViusalizer",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "Odoo_DeleteAnyThing",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "OdooDataQualitySuiteAddons",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "nicodolas",
-        "target": "Bigdata",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Odoo_DeleteAnyThing",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
-        "label": "Both use Python"
       },
       {
         "source": "Odoo_DeleteAnyThing",
