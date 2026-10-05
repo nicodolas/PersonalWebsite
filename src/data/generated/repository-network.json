@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T10:26:32.070Z",
+  "generatedAt": "2026-10-05T08:22:05.745Z",
   "data": {
     "nodes": [
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "group": "TypeScript",
-        "size": 5,
+        "id": "OdooAccessViusalizer",
+        "name": "OdooAccessViusalizer",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
+        "size": 6,
         "tech": [
-          "TypeScript"
+          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -28,13 +28,13 @@
         "currentBrainConnection": false
       },
       {
-        "id": "OdooAccessViusalizer",
-        "name": "OdooAccessViusalizer",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Python",
-        "size": 6,
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
+        "size": 5,
         "tech": [
-          "Python"
+          "TypeScript"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -387,6 +387,51 @@
     ],
     "links": [
       {
+        "source": "OdooAccessViusalizer",
+        "target": "nicodolas",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Odoo_DeleteAnyThing",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "Odoo_DeleteAnyThing",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "nicodolas",
+        "target": "Bigdata",
+        "weight": 1
+      },
+      {
         "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
@@ -399,51 +444,6 @@
       {
         "source": "PersonalWebsite",
         "target": "pricechecker",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "OdooAccessViusalizer",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "Odoo_DeleteAnyThing",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "OdooDataQualitySuiteAddons",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "Kmeans_AdvisoryMajor",
-        "weight": 1
-      },
-      {
-        "source": "nicodolas",
-        "target": "Bigdata",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Odoo_DeleteAnyThing",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
         "weight": 1
       },
       {
