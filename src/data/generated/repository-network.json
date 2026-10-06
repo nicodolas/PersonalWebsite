@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T08:22:05.745Z",
+  "generatedAt": "2026-10-06T08:34:31.784Z",
   "data": {
     "nodes": [
-      {
-        "id": "OdooAccessViusalizer",
-        "name": "OdooAccessViusalizer",
-        "description_vi": "Chưa có mô tả.",
-        "group": "Python",
-        "size": 6,
-        "tech": [
-          "Python"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -35,6 +23,18 @@
         "size": 5,
         "tech": [
           "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "name": "OdooAccessViusalizer",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Python",
+        "size": 6,
+        "tech": [
+          "Python"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -387,28 +387,8 @@
     ],
     "links": [
       {
-        "source": "OdooAccessViusalizer",
-        "target": "nicodolas",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Odoo_DeleteAnyThing",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "weight": 1
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
+        "source": "nicodolas",
+        "target": "OdooAccessViusalizer",
         "weight": 1
       },
       {
@@ -444,6 +424,26 @@
       {
         "source": "PersonalWebsite",
         "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Odoo_DeleteAnyThing",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "weight": 1
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
         "weight": 1
       },
       {
