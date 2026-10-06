@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T08:22:05.716Z",
+  "generatedAt": "2026-10-06T08:34:31.761Z",
   "data": {
     "nodes": [
-      {
-        "id": "OdooAccessViusalizer",
-        "description": "No description available.",
-        "description_vi": "No description available.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -31,6 +21,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "OdooAccessViusalizer",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -320,28 +320,8 @@
     ],
     "links": [
       {
-        "source": "OdooAccessViusalizer",
-        "target": "nicodolas",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Odoo_DeleteAnyThing",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "OdooDataQualitySuiteAddons",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Kmeans_AdvisoryMajor",
-        "label": "Both use Python"
-      },
-      {
-        "source": "OdooAccessViusalizer",
-        "target": "Bigdata",
+        "source": "nicodolas",
+        "target": "OdooAccessViusalizer",
         "label": "Both use Python"
       },
       {
@@ -378,6 +358,26 @@
         "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Odoo_DeleteAnyThing",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "OdooDataQualitySuiteAddons",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Kmeans_AdvisoryMajor",
+        "label": "Both use Python"
+      },
+      {
+        "source": "OdooAccessViusalizer",
+        "target": "Bigdata",
+        "label": "Both use Python"
       },
       {
         "source": "Odoo_DeleteAnyThing",
