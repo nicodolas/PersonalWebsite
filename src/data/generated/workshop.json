@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T08:37:56.342Z",
+  "generatedAt": "2026-10-13T08:57:32.502Z",
   "data": {
     "projects": [
       {
@@ -18,11 +18,25 @@
         "forks": 0
       },
       {
+        "id": "ziwei-doushu",
+        "title": "ziwei-doushu",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 230,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "stars": 0,
+        "forks": 0
+      },
+      {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
         "status": "building",
         "progress": 75,
-        "commits_count": 9348,
+        "commits_count": 9349,
         "tech_stack": [
           "TypeScript"
         ],
@@ -404,18 +418,6 @@
         ],
         "description": "Real-time smoke detection system using AI/ML models with a React frontend for live camera feed analysis.",
         "description_vi": "Real-time smoke detection system using AI/ML models with a React frontend for live camera feed analysis.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "ziwei-doushu",
-        "title": "ziwei-doushu",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 16,
-        "tech_stack": [],
-        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "stars": 0,
         "forks": 0
       },

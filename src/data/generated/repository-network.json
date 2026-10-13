@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T08:37:56.462Z",
+  "generatedAt": "2026-10-13T08:57:32.682Z",
   "data": {
     "nodes": [
       {
@@ -11,6 +11,18 @@
         "size": 5,
         "tech": [
           "Python"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "ziwei-doushu",
+        "name": "ziwei-doushu",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "group": "TypeScript",
+        "size": 5,
+        "tech": [
+          "TypeScript"
         ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
@@ -353,16 +365,6 @@
         "currentBrainConnection": false
       },
       {
-        "id": "ziwei-doushu",
-        "name": "ziwei-doushu",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "group": "Unknown",
-        "size": 5,
-        "tech": [],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
-      {
         "id": "claw-code",
         "name": "claw-code",
         "description_vi": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
@@ -409,6 +411,26 @@
       {
         "source": "nicodolas",
         "target": "Bigdata",
+        "weight": 1
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "PersonalWebsite",
+        "weight": 1
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "pricechecker",
         "weight": 1
       },
       {

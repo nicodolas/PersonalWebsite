@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T08:37:56.441Z",
+  "generatedAt": "2026-10-13T08:57:32.654Z",
   "data": {
     "nodes": [
       {
@@ -11,6 +11,16 @@
         "size": null,
         "tech": [
           "Python"
+        ]
+      },
+      {
+        "id": "ziwei-doushu",
+        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
         ]
       },
       {
@@ -292,14 +302,6 @@
         ]
       },
       {
-        "id": "ziwei-doushu",
-        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "group": "Others",
-        "size": null,
-        "tech": []
-      },
-      {
         "id": "claw-code",
         "description": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
         "description_vi": "The fastest repo in history to surpass 50K stars ⭐, reaching the milestone in just 2 hours after publication. Better Harness Tools that make real things done. Now writing in Rust using oh-my-codex.",
@@ -343,6 +345,26 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "PersonalWebsite",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "ziwei-doushu",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
       },
       {
         "source": "PersonalWebsite",
