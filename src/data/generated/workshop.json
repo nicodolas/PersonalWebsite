@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T08:57:32.502Z",
+  "generatedAt": "2026-10-14T07:06:26.218Z",
   "data": {
     "projects": [
       {
@@ -8,26 +8,12 @@
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 123,
+        "commits_count": 124,
         "tech_stack": [
           "Python"
         ],
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
         "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "ziwei-doushu",
-        "title": "ziwei-doushu",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 230,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "stars": 0,
         "forks": 0
       },
@@ -42,6 +28,20 @@
         ],
         "description": "https://www.nekovibecoder.site/",
         "description_vi": "https://www.nekovibecoder.site/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "ziwei-doushu",
+        "title": "ziwei-doushu",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 230,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "stars": 0,
         "forks": 0
       },
