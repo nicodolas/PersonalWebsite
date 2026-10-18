@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T06:58:04.755Z",
+  "generatedAt": "2026-10-18T08:36:46.532Z",
   "data": {
     "nodes": [
-      {
-        "id": "nicodolas",
-        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
-        "group": "Python",
-        "size": null,
-        "tech": [
-          "Python"
-        ]
-      },
       {
         "id": "PersonalWebsite",
         "description": "https://www.nekovibecoder.site/",
@@ -21,6 +11,16 @@
         "size": null,
         "tech": [
           "TypeScript"
+        ]
+      },
+      {
+        "id": "nicodolas",
+        "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "description_vi": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
+        "group": "Python",
+        "size": null,
+        "tech": [
+          "Python"
         ]
       },
       {
@@ -322,6 +322,26 @@
     ],
     "links": [
       {
+        "source": "PersonalWebsite",
+        "target": "ziwei-doushu",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "label": "Both use Python"
@@ -345,26 +365,6 @@
         "source": "nicodolas",
         "target": "Bigdata",
         "label": "Both use Python"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "ziwei-doushu",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
       },
       {
         "source": "ziwei-doushu",
