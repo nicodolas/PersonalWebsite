@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T07:19:05.620Z",
+  "generatedAt": "2026-10-28T07:55:44.995Z",
   "data": {
     "nodes": [
       {
@@ -14,9 +14,9 @@
         ]
       },
       {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
+        "id": "HUIT-DRL",
+        "description": "No description available.",
+        "description_vi": "No description available.",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -24,9 +24,9 @@
         ]
       },
       {
-        "id": "ziwei-doushu",
-        "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -347,37 +347,37 @@
         "label": "Both use Python"
       },
       {
-        "source": "PersonalWebsite",
-        "target": "ziwei-doushu",
+        "source": "HUIT-DRL",
+        "target": "PersonalWebsite",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },

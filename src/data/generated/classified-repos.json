@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T07:19:05.045Z",
+  "generatedAt": "2026-10-28T07:55:44.244Z",
   "data": [
     {
       "id": "nicodolas",
@@ -10,12 +10,27 @@
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "size": 1326,
+      "size": 1332,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
-      "updated_at": "2026-10-26T22:06:43Z",
+      "updated_at": "2026-10-27T21:37:09Z",
       "topics": [],
       "category": "Python Development"
+    },
+    {
+      "id": "HUIT-DRL",
+      "name": "HUIT-DRL",
+      "description": "No description available.",
+      "description_vi": "Chưa có mô tả.",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 1,
+      "size": 7322,
+      "url": "https://github.com/nicodolas/HUIT-DRL",
+      "created_at": "2026-10-25T17:51:14Z",
+      "updated_at": "2026-10-27T10:47:39Z",
+      "topics": [],
+      "category": "TypeScript Development"
     },
     {
       "id": "PersonalWebsite",
@@ -25,27 +40,12 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93476,
+      "size": 93480,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
-      "updated_at": "2026-10-26T07:26:31Z",
+      "updated_at": "2026-10-27T07:20:12Z",
       "topics": [],
       "category": "TypeScript Development"
-    },
-    {
-      "id": "ziwei-doushu",
-      "name": "ziwei-doushu",
-      "description": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "size": 2253,
-      "url": "https://github.com/nicodolas/ziwei-doushu",
-      "created_at": "2026-06-11T03:37:34Z",
-      "updated_at": "2026-10-12T09:43:16Z",
-      "topics": [],
-      "category": "AI & Agents"
     },
     {
       "id": "OdooAccessViusalizer",

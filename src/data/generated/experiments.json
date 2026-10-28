@@ -1,27 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T07:19:05.585Z",
+  "generatedAt": "2026-10-28T07:55:44.947Z",
   "data": {
     "experiments": [
-      {
-        "id": "ziwei-doushu",
-        "name": "ziwei-doushu",
-        "problem": "Need to explore ziwei-doushu development.",
-        "problem_vi": "Nhu cầu thử nghiệm phát triển ziwei-doushu.",
-        "approach": "Creating a workspace using TypeScript.",
-        "approach_vi": "Khởi tạo không gian phát triển sử dụng TypeScript.",
-        "outcome": "Repository created and pushed to GitHub.",
-        "outcome_vi": "Kho lưu trữ đã được khởi tạo và đẩy lên GitHub.",
-        "lessons_learned": [
-          "Explored development environment setup",
-          "Practiced version control workflows"
-        ],
-        "lessons_learned_vi": [
-          "Tìm hiểu thiết lập môi trường phát triển",
-          "Thực hành quy trình quản lý phiên bản"
-        ],
-        "status": "active"
-      },
       {
         "id": "myroom",
         "name": "myroom",

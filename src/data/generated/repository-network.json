@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T07:19:05.650Z",
+  "generatedAt": "2026-10-28T07:55:45.035Z",
   "data": {
     "nodes": [
       {
@@ -16,11 +16,11 @@
         "currentBrainConnection": false
       },
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "https://www.nekovibecoder.site/",
+        "id": "HUIT-DRL",
+        "name": "HUIT-DRL",
+        "description_vi": "Chưa có mô tả.",
         "group": "TypeScript",
-        "size": 5,
+        "size": 6,
         "tech": [
           "TypeScript"
         ],
@@ -28,9 +28,9 @@
         "currentBrainConnection": false
       },
       {
-        "id": "ziwei-doushu",
-        "name": "ziwei-doushu",
-        "description_vi": "紫微斗数开源排盘引擎 — 基于倪海夏《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
         "size": 5,
         "tech": [
@@ -414,37 +414,37 @@
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
-        "target": "ziwei-doushu",
+        "source": "HUIT-DRL",
+        "target": "PersonalWebsite",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "nicoquote",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "frontend-milk-tea",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "pricechecker",
         "weight": 1
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "weight": 1
       },
       {
-        "source": "ziwei-doushu",
+        "source": "PersonalWebsite",
         "target": "pricechecker",
         "weight": 1
       },
