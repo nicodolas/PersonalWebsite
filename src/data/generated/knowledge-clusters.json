@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T07:55:45.035Z",
+  "generatedAt": "2026-10-29T08:02:10.968Z",
   "data": {
     "clusters": [
       {
@@ -80,8 +80,8 @@
           "Lua"
         ],
         "repositories": [
-          "nicodolas",
           "HUIT-DRL",
+          "nicodolas",
           "OdooAccessViusalizer",
           "Odoo_DeleteAnyThing",
           "nicogym",

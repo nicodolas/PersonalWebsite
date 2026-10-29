@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T07:55:44.650Z",
+  "generatedAt": "2026-10-29T08:02:10.039Z",
   "data": {
     "eras": [
       {
@@ -9,16 +9,16 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 24537,
+        "commits": 24549,
         "technologies": [
-          "Python",
           "TypeScript",
+          "Python",
           "Dart",
           "Go"
         ],
         "repos": [
-          "nicodolas",
           "HUIT-DRL",
+          "nicodolas",
           "PersonalWebsite",
           "OdooAccessViusalizer",
           "Odoo_DeleteAnyThing",
