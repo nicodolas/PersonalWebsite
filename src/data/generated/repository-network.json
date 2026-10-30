@@ -1,20 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T08:02:10.967Z",
+  "generatedAt": "2026-10-30T08:03:40.407Z",
   "data": {
     "nodes": [
-      {
-        "id": "HUIT-DRL",
-        "name": "HUIT-DRL",
-        "description_vi": "Chưa có mô tả.",
-        "group": "TypeScript",
-        "size": 6,
-        "tech": [
-          "TypeScript"
-        ],
-        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
-        "currentBrainConnection": false
-      },
       {
         "id": "nicodolas",
         "name": "nicodolas",
@@ -33,6 +21,18 @@
         "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
         "size": 5,
+        "tech": [
+          "TypeScript"
+        ],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
+      {
+        "id": "HUIT-DRL",
+        "name": "HUIT-DRL",
+        "description_vi": "Chưa có mô tả.",
+        "group": "TypeScript",
+        "size": 6,
         "tech": [
           "TypeScript"
         ],
@@ -389,26 +389,6 @@
     ],
     "links": [
       {
-        "source": "HUIT-DRL",
-        "target": "PersonalWebsite",
-        "weight": 1
-      },
-      {
-        "source": "HUIT-DRL",
-        "target": "nicoquote",
-        "weight": 1
-      },
-      {
-        "source": "HUIT-DRL",
-        "target": "frontend-milk-tea",
-        "weight": 1
-      },
-      {
-        "source": "HUIT-DRL",
-        "target": "pricechecker",
-        "weight": 1
-      },
-      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "weight": 1
@@ -435,6 +415,11 @@
       },
       {
         "source": "PersonalWebsite",
+        "target": "HUIT-DRL",
+        "weight": 1
+      },
+      {
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
       },
@@ -445,6 +430,21 @@
       },
       {
         "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "weight": 1
+      },
+      {
+        "source": "HUIT-DRL",
+        "target": "nicoquote",
+        "weight": 1
+      },
+      {
+        "source": "HUIT-DRL",
+        "target": "frontend-milk-tea",
+        "weight": 1
+      },
+      {
+        "source": "HUIT-DRL",
         "target": "pricechecker",
         "weight": 1
       },
