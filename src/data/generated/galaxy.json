@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T08:43:42.034Z",
+  "generatedAt": "2026-11-01T11:04:26.248Z",
   "data": {
     "nodes": [
+      {
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "group": "TypeScript",
+        "size": null,
+        "tech": [
+          "TypeScript"
+        ]
+      },
       {
         "id": "nicodolas",
         "description": "GitHub profile README — personal introduction, tech stack, stats, and project highlights for @nicodolas.",
@@ -17,16 +27,6 @@
         "id": "HUIT-DRL",
         "description": "No description available.",
         "description_vi": "No description available.",
-        "group": "TypeScript",
-        "size": null,
-        "tech": [
-          "TypeScript"
-        ]
-      },
-      {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -322,6 +322,26 @@
     ],
     "links": [
       {
+        "source": "PersonalWebsite",
+        "target": "HUIT-DRL",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "nicoquote",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "frontend-milk-tea",
+        "label": "Both use TypeScript"
+      },
+      {
+        "source": "PersonalWebsite",
+        "target": "pricechecker",
+        "label": "Both use TypeScript"
+      },
+      {
         "source": "nicodolas",
         "target": "OdooAccessViusalizer",
         "label": "Both use Python"
@@ -348,11 +368,6 @@
       },
       {
         "source": "HUIT-DRL",
-        "target": "PersonalWebsite",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "HUIT-DRL",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
@@ -363,21 +378,6 @@
       },
       {
         "source": "HUIT-DRL",
-        "target": "pricechecker",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "nicoquote",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
-        "target": "frontend-milk-tea",
-        "label": "Both use TypeScript"
-      },
-      {
-        "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
