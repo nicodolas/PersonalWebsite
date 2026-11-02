@@ -1,28 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T11:04:26.131Z",
+  "generatedAt": "2026-11-02T08:54:30.245Z",
   "data": {
     "projects": [
-      {
-        "id": "PersonalWebsite",
-        "title": "PersonalWebsite",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 9355,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
-        "stars": 0,
-        "forks": 0
-      },
       {
         "id": "nicodolas",
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 140,
+        "commits_count": 143,
         "tech_stack": [
           "Python"
         ],
@@ -36,12 +22,26 @@
         "title": "HUIT-DRL",
         "status": "building",
         "progress": 75,
-        "commits_count": 763,
+        "commits_count": 755,
         "tech_stack": [
           "TypeScript"
         ],
         "description": "No description available.",
         "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
+      {
+        "id": "PersonalWebsite",
+        "title": "PersonalWebsite",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 9355,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
         "stars": 0,
         "forks": 0
       },
