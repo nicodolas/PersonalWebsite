@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T08:54:30.411Z",
+  "generatedAt": "2026-11-03T09:01:47.889Z",
   "data": {
     "nodes": [
       {
@@ -14,9 +14,9 @@
         ]
       },
       {
-        "id": "HUIT-DRL",
-        "description": "No description available.",
-        "description_vi": "No description available.",
+        "id": "PersonalWebsite",
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -24,9 +24,9 @@
         ]
       },
       {
-        "id": "PersonalWebsite",
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
+        "id": "HUIT-DRL",
+        "description": "No description available.",
+        "description_vi": "No description available.",
         "group": "TypeScript",
         "size": null,
         "tech": [
@@ -347,37 +347,37 @@
         "label": "Both use Python"
       },
       {
-        "source": "HUIT-DRL",
-        "target": "PersonalWebsite",
+        "source": "PersonalWebsite",
+        "target": "HUIT-DRL",
         "label": "Both use TypeScript"
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "nicoquote",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "frontend-milk-tea",
         "label": "Both use TypeScript"
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "pricechecker",
         "label": "Both use TypeScript"
       },
