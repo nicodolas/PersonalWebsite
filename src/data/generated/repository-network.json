@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T08:54:30.444Z",
+  "generatedAt": "2026-11-03T09:01:47.920Z",
   "data": {
     "nodes": [
       {
@@ -16,11 +16,11 @@
         "currentBrainConnection": false
       },
       {
-        "id": "HUIT-DRL",
-        "name": "HUIT-DRL",
-        "description_vi": "Chưa có mô tả.",
+        "id": "PersonalWebsite",
+        "name": "PersonalWebsite",
+        "description_vi": "https://www.nekovibecoder.site/",
         "group": "TypeScript",
-        "size": 6,
+        "size": 5,
         "tech": [
           "TypeScript"
         ],
@@ -28,11 +28,11 @@
         "currentBrainConnection": false
       },
       {
-        "id": "PersonalWebsite",
-        "name": "PersonalWebsite",
-        "description_vi": "https://www.nekovibecoder.site/",
+        "id": "HUIT-DRL",
+        "name": "HUIT-DRL",
+        "description_vi": "Chưa có mô tả.",
         "group": "TypeScript",
-        "size": 5,
+        "size": 6,
         "tech": [
           "TypeScript"
         ],
@@ -414,37 +414,37 @@
         "weight": 1
       },
       {
-        "source": "HUIT-DRL",
-        "target": "PersonalWebsite",
+        "source": "PersonalWebsite",
+        "target": "HUIT-DRL",
         "weight": 1
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "nicoquote",
         "weight": 1
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "frontend-milk-tea",
         "weight": 1
       },
       {
-        "source": "HUIT-DRL",
+        "source": "PersonalWebsite",
         "target": "pricechecker",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "nicoquote",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "frontend-milk-tea",
         "weight": 1
       },
       {
-        "source": "PersonalWebsite",
+        "source": "HUIT-DRL",
         "target": "pricechecker",
         "weight": 1
       },

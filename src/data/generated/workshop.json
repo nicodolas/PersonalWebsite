@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T08:54:30.245Z",
+  "generatedAt": "2026-11-03T09:01:47.625Z",
   "data": {
     "projects": [
       {
@@ -18,6 +18,20 @@
         "forks": 0
       },
       {
+        "id": "PersonalWebsite",
+        "title": "PersonalWebsite",
+        "status": "building",
+        "progress": 75,
+        "commits_count": 9356,
+        "tech_stack": [
+          "TypeScript"
+        ],
+        "description": "https://www.nekovibecoder.site/",
+        "description_vi": "https://www.nekovibecoder.site/",
+        "stars": 0,
+        "forks": 0
+      },
+      {
         "id": "HUIT-DRL",
         "title": "HUIT-DRL",
         "status": "building",
@@ -28,20 +42,6 @@
         ],
         "description": "No description available.",
         "description_vi": "No description available.",
-        "stars": 0,
-        "forks": 0
-      },
-      {
-        "id": "PersonalWebsite",
-        "title": "PersonalWebsite",
-        "status": "building",
-        "progress": 75,
-        "commits_count": 9355,
-        "tech_stack": [
-          "TypeScript"
-        ],
-        "description": "https://www.nekovibecoder.site/",
-        "description_vi": "https://www.nekovibecoder.site/",
         "stars": 0,
         "forks": 0
       },
