@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T11:47:32.947Z",
+  "generatedAt": "2026-11-16T09:01:03.386Z",
   "data": {
     "nodes": [
+      {
+        "id": "Nicord",
+        "name": "Nicord",
+        "description_vi": "Chưa có mô tả.",
+        "group": "Unknown",
+        "size": 5,
+        "tech": [],
+        "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
+        "currentBrainConnection": false
+      },
       {
         "id": "PersonalWebsite",
         "name": "PersonalWebsite",

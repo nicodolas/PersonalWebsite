@@ -1,8 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T11:47:32.921Z",
+  "generatedAt": "2026-11-16T09:01:03.359Z",
   "data": {
     "nodes": [
+      {
+        "id": "Nicord",
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "group": "Others",
+        "size": null,
+        "tech": []
+      },
       {
         "id": "PersonalWebsite",
         "description": "https://www.nekovibecoder.site/",
