@@ -1,8 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T11:47:32.761Z",
+  "generatedAt": "2026-11-16T09:01:03.239Z",
   "data": {
     "projects": [
+      {
+        "id": "Nicord",
+        "title": "Nicord",
+        "status": "researching",
+        "progress": 20,
+        "commits_count": 10,
+        "tech_stack": [],
+        "description": "No description available.",
+        "description_vi": "No description available.",
+        "stars": 0,
+        "forks": 0
+      },
       {
         "id": "PersonalWebsite",
         "title": "PersonalWebsite",
@@ -22,7 +34,7 @@
         "title": "nicodolas",
         "status": "building",
         "progress": 75,
-        "commits_count": 152,
+        "commits_count": 155,
         "tech_stack": [
           "Python"
         ],
