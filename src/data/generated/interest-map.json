@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:01:03.386Z",
+  "generatedAt": "2026-11-17T10:13:27.233Z",
   "data": {
     "nodes": [
       {
@@ -67,6 +67,11 @@
       {
         "id": "C++",
         "label": "C++",
+        "type": "technology"
+      },
+      {
+        "id": "Rust",
+        "label": "Rust",
         "type": "technology"
       },
       {
@@ -180,6 +185,11 @@
         "source": "current-brain",
         "target": "IoT & Embedded Security",
         "weight": 75
+      },
+      {
+        "source": "era-2026",
+        "target": "Rust",
+        "weight": 70
       },
       {
         "source": "era-2026",

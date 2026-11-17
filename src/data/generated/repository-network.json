@@ -1,15 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:01:03.386Z",
+  "generatedAt": "2026-11-17T10:13:27.233Z",
   "data": {
     "nodes": [
       {
         "id": "Nicord",
         "name": "Nicord",
         "description_vi": "Chưa có mô tả.",
-        "group": "Unknown",
+        "group": "Rust",
         "size": 5,
-        "tech": [],
+        "tech": [
+          "Rust"
+        ],
         "era": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "currentBrainConnection": false
       },
