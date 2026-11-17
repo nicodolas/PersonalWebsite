@@ -1,15 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:01:03.359Z",
+  "generatedAt": "2026-11-17T10:13:27.204Z",
   "data": {
     "nodes": [
       {
         "id": "Nicord",
         "description": "No description available.",
         "description_vi": "No description available.",
-        "group": "Others",
+        "group": "Rust",
         "size": null,
-        "tech": []
+        "tech": [
+          "Rust"
+        ]
       },
       {
         "id": "PersonalWebsite",

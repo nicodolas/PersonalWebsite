@@ -1,66 +1,66 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T09:01:03.237Z",
+  "generatedAt": "2026-11-17T10:13:27.065Z",
   "data": {
     "trends": [
       {
         "language": "Python",
         "repos_count": 6,
-        "percentage": 20,
+        "percentage": 19.4,
         "trend": "rising"
       },
       {
         "language": "TypeScript",
         "repos_count": 5,
-        "percentage": 16.7,
+        "percentage": 16.1,
         "trend": "rising"
       },
       {
         "language": "HTML",
         "repos_count": 5,
-        "percentage": 16.7,
+        "percentage": 16.1,
         "trend": "declining"
       },
       {
         "language": "JavaScript",
         "repos_count": 4,
-        "percentage": 13.3,
+        "percentage": 12.9,
         "trend": "rising"
       },
       {
         "language": "Dart",
         "repos_count": 2,
-        "percentage": 6.7,
+        "percentage": 6.5,
         "trend": "rising"
       },
       {
         "language": "C#",
         "repos_count": 2,
-        "percentage": 6.7,
+        "percentage": 6.5,
         "trend": "rising"
       },
       {
         "language": "C++",
         "repos_count": 2,
-        "percentage": 6.7,
+        "percentage": 6.5,
         "trend": "declining"
+      },
+      {
+        "language": "Rust",
+        "repos_count": 1,
+        "percentage": 3.2,
+        "trend": "rising"
       },
       {
         "language": "Go",
         "repos_count": 1,
-        "percentage": 3.3,
+        "percentage": 3.2,
         "trend": "rising"
       },
       {
         "language": "Lua",
         "repos_count": 1,
-        "percentage": 3.3,
-        "trend": "declining"
-      },
-      {
-        "language": "Handlebars",
-        "repos_count": 1,
-        "percentage": 3.3,
+        "percentage": 3.2,
         "trend": "declining"
       }
     ]
