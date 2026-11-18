@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T10:13:26.679Z",
+  "generatedAt": "2026-11-18T09:45:25.509Z",
   "data": [
     {
       "id": "Nicord",
@@ -10,7 +10,7 @@
       "language": "Rust",
       "stars": 0,
       "forks": 0,
-      "size": 576,
+      "size": 1490,
       "url": "https://github.com/nicodolas/Nicord",
       "created_at": "2026-11-16T07:37:32Z",
       "updated_at": "2026-11-16T16:48:20Z",
@@ -25,7 +25,7 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "size": 93533,
+      "size": 93537,
       "url": "https://github.com/nicodolas/PersonalWebsite",
       "created_at": "2026-01-21T12:06:45Z",
       "updated_at": "2026-11-12T10:26:11Z",
@@ -40,7 +40,7 @@
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "size": 1510,
+      "size": 1515,
       "url": "https://github.com/nicodolas/nicodolas",
       "created_at": "2026-01-22T17:52:47Z",
       "updated_at": "2026-11-12T00:52:09Z",
@@ -264,7 +264,7 @@
       "description_vi": "Interactive personal room visualization project — JavaScript-based 3D room scene with customizable furniture layout.",
       "language": "JavaScript",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "size": 100337,
       "url": "https://github.com/nicodolas/myroom",
       "created_at": "2025-11-24T16:44:26Z",
