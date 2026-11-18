@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T10:13:27.233Z",
+  "generatedAt": "2026-11-18T09:45:26.018Z",
   "data": {
     "nodes": [
       {
@@ -213,7 +213,7 @@
         "name": "myroom",
         "description_vi": "Interactive personal room visualization project — JavaScript-based 3D room scene with customizable furniture layout.",
         "group": "JavaScript",
-        "size": 6,
+        "size": 7,
         "tech": [
           "JavaScript"
         ],
