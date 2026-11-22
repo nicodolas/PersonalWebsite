@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T09:14:14.015Z",
+  "generatedAt": "2026-11-22T09:23:10.484Z",
   "data": {
     "eras": [
       {
@@ -9,7 +9,7 @@
         "title_vi": "Kỷ Nguyên AI Tác Nhân & Hệ Thống Cao Cấp",
         "description": "Mastering advanced web engineering, workflow automation, and agentic systems built with Next.js 15/16 and n8n.",
         "description_vi": "Làm chủ kỹ nghệ web nâng cao, tự động hóa quy trình và hệ thống AI tác nhân sử dụng Next.js 15/16 và n8n.",
-        "commits": 25252,
+        "commits": 25253,
         "technologies": [
           "Rust",
           "TypeScript",
